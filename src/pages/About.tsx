@@ -6,6 +6,8 @@ import { AboutSection } from "@/sections/AboutSection";
 import { WhyChooseSection } from "@/sections/WhyChooseSection";
 import { CallToAction } from "@/sections/CallToAction";
 
+import photo from "@/assets/images/photo.png";
+
 export const AboutPage = () => {
     return (
         <div className="text-neutral-800 font-roboto_68d44c">
@@ -25,12 +27,9 @@ export const AboutPage = () => {
                     <div className="flex flex-wrap items-center -mx-3">
                         <div className="w-full md:w-1/2 px-3 mb-8 md:mb-0">
                             <img
-                                src="src/assets/images/md_profile.jpg"
+                                src={photo}
                                 alt="S. Mabubasha Shah Hussain"
                                 className="rounded-lg shadow-lg w-full max-w-[400px] mx-auto"
-                                onError={(e) => {
-                                    (e.target as HTMLImageElement).src = "https://leza-react.envytheme.com/images/expert/expert1.jpg"; // Fallback
-                                }}
                             />
                         </div>
                         <div className="w-full md:w-1/2 px-3">
