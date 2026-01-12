@@ -2,101 +2,14 @@
 import logo from "@/assets/images/healthy.png";
 import arrow1 from "@/assets/images/First arrow.png";
 import arrow2 from "@/assets/images/second arrow.png";
+import { Navbar } from "@/sections/Navbar";
 import { Footer } from "@/sections/Footer";
 import { Copyright } from "@/sections/Copyright";
 
 export const LoansPage = () => {
     return (
         <div className="min-h-screen bg-white">
-            {/* Header */}
-            <header className="bg-white py-2.5 md:py-0">
-                <div className="max-w-[1470px] w-full mx-auto px-3">
-                    <nav className="relative flex flex-wrap md:flex-nowrap items-center justify-between">
-                        {/* Logo */}
-                        <a href="/" className="text-black text-xl mr-4 py-[5px]">
-                            <img
-                                alt="logo"
-                                src={logo}
-                                className="w-[150px] scale-[1.8]"
-                            />
-                        </a>
-
-                        {/* Mobile Menu Button */}
-                        <button
-                            type="button"
-                            aria-label="Toggle navigation"
-                            className="text-black/70 text-xl bg-zinc-100 p-2.5 md:hidden"
-                        >
-                            <span className="relative bg-red-500 block h-0.5 w-7"></span>
-                            <span className="bg-red-500 block h-0.5 w-7 my-1.5"></span>
-                            <span className="relative bg-red-500 block h-0.5 w-7"></span>
-                        </button>
-
-                        {/* Desktop Menu */}
-                        <div className="hidden md:flex items-center basis-auto grow">
-                            <ul className="flex flex-row ml-auto">
-                                <li className="relative mx-2.5">
-                                    <a href="/" className="text-neutral-900 font-medium capitalize py-[25px] block hover:text-red-500">
-                                        Home
-                                    </a>
-                                </li>
-                                <li className="relative mx-2.5">
-                                    <a href="/pages" className="text-neutral-900 font-medium capitalize py-[25px] block hover:text-red-500">
-                                        Pages
-                                    </a>
-                                </li>
-                                <li className="relative mx-2.5">
-                                    <a href="/services" className="text-neutral-900 font-medium capitalize py-[25px] block hover:text-red-500">
-                                        Services
-                                    </a>
-                                </li>
-                                <li className="relative mx-2.5">
-                                    <a href="/loans" className="text-red-500 font-medium capitalize py-[25px] block">
-                                        Loans
-                                    </a>
-                                </li>
-                                <li className="relative mx-2.5">
-                                    <a href="/funding" className="text-neutral-900 font-medium capitalize py-[25px] block hover:text-red-500">
-                                        Funding
-                                    </a>
-                                </li>
-                                <li className="relative mx-2.5">
-                                    <a href="/news" className="text-neutral-900 font-medium capitalize py-[25px] block hover:text-red-500">
-                                        News
-                                    </a>
-                                </li>
-                                <li className="relative mx-2.5">
-                                    <a href="/contact" className="text-neutral-900 font-medium capitalize py-[25px] block hover:text-red-500">
-                                        Contact
-                                    </a>
-                                </li>
-                            </ul>
-
-                            {/* Header Actions */}
-                            <div className="flex items-center ml-[15px]">
-                                <div className="relative mr-[30px]">
-                                    <div className="relative pl-[45px]">
-                                        <span className="text-zinc-600 text-base">Call Now</span>
-                                        <p className="text-zinc-600 text-base font-medium">
-                                            <a href="tel:+919677719848" className="text-neutral-900">
-                                                +91 96777 19848
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="relative">
-                                    <a
-                                        href="/apply-now"
-                                        className="relative text-white text-base bg-red-500 inline-block text-center z-[1] overflow-hidden px-8 py-3 rounded-[5px] hover:bg-neutral-900"
-                                    >
-                                        Apply now
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </header>
+            <Navbar />
 
             {/* Page Header */}
             <div className="relative bg-fixed bg-[url('https://leza-react.envytheme.com/images/page-title/bg-8.jpg')] bg-no-repeat bg-cover h-[265px] md:h-[400px] z-[1] bg-center before:bg-white before:block before:h-full before:w-full before:opacity-[0.77] before:absolute before:left-0 before:top-0 before:z-[-1]">
