@@ -411,7 +411,7 @@ export const LoansPage = () => {
                                     </div>
                                     <div className="mb-4">
                                         <label className="text-white inline-block capitalize mb-2">Tenure (Months/Years)</label>
-                                        <select className="text-zinc-600 block h-[50px] w-full pl-3 pr-9 py-1.5">
+                                        <select className="text-zinc-600 block h-[50px] w-full pl-3 pr-9 py-1.5 appearance-none bg-white bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%201L6%206L11%201%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E')] bg-[length:12px_8px] bg-[right_12px_center] bg-no-repeat">
                                             <option value="5">1 month</option>
                                             <option value="1">2 month</option>
                                             <option value="2">3 month</option>

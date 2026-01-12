@@ -16,7 +16,7 @@ export const LoanCalculator = () => {
                             Type The Money
                         </label>
                         <input
-                            placeholder="$1000"
+                            placeholder="₹1000"
                             type="text"
                             className="text-zinc-600 bg-clip-padding box-border caret-transparent block h-[50px] w-full px-3 py-1.5"
                         />
@@ -25,7 +25,7 @@ export const LoanCalculator = () => {
                         <label className="text-zinc-600 box-border caret-transparent inline-block capitalize mb-2 font-rubik_0b5097">
                             Select The Month/Years
                         </label>
-                        <select className="text-zinc-600 bg-[url(data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2016%2016%27%3e%3cpath%20fill=%27none%27%20stroke=%27%23343a40%27%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27%20stroke-width=%272%27%20d=%27m2%205%206%206%206-6%27/%3e%3c/svg%3e)] bg-size-[16px_12px,16px_12px] caret-transparent block h-[50px] w-full bg-[position:calc(100%_-_12px),calc(100%_-_12px)_50%,50%] pl-3 pr-9 py-1.5">
+                        <select className="text-zinc-600 appearance-none bg-white bg-[url(data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2016%2016%27%3e%3cpath%20fill=%27none%27%20stroke=%27%23343a40%27%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27%20stroke-width=%272%27%20d=%27m2%205%206%206%206-6%27/%3e%3c/svg%3e)] bg-[length:12px_8px] bg-[right_12px_center] bg-no-repeat caret-transparent block h-[50px] w-full pl-3 pr-9 py-1.5">
                             <option
                                 value="5"
                                 className="items-center box-border caret-transparent gap-x-2 min-h-6 min-w-6 gap-y-2"
@@ -81,7 +81,7 @@ export const LoanCalculator = () => {
                             Borrowing
                         </label>
                         <input
-                            placeholder="$10000"
+                            placeholder="₹10000"
                             type="text"
                             className="text-zinc-600 bg-clip-padding box-border caret-transparent block h-[50px] w-full px-3 py-1.5"
                         />
@@ -101,7 +101,7 @@ export const LoanCalculator = () => {
                             The total you will pay
                         </label>
                         <input
-                            placeholder="$11200"
+                            placeholder="₹11200"
                             type="text"
                             className="text-zinc-600 bg-clip-padding box-border caret-transparent block h-[50px] w-full px-3 py-1.5"
                         />
