@@ -34,8 +34,10 @@ export const WhyChooseContent = () => {
                     src="https://leza-react.envytheme.com/images/choose.png"
                     className="text-transparent aspect-[auto_565_/_460] box-border max-w-full text-center w-[565px] md:text-start"
                 />
-                <div className="absolute bg-white shadow-[rgba(0,0,0,0.09)_0px_2px_28px_0px] box-border caret-transparent h-20 leading-[90px] text-center translate-y-[-135.0%] w-20 z-[1] m-auto rounded-[50%] -bottom-10 inset-x-0 md:left-[45px] hover:text-white hover:bg-primary hover:border-white transition-colors group">
-                    <i className="relative text-primary text-[55px] italic box-border caret-transparent leading-[normal] left-0 top-2.5 group-hover:text-white transition-colors before:accent-auto before:box-border before:caret-transparent before:text-inherit before:text-[55px] before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[normal] before:list-outside before:list-disc before:pointer-events-auto before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-flaticon"></i>
+                <div className="absolute bg-white shadow-[rgba(0,0,0,0.09)_0px_2px_28px_0px] box-border caret-transparent h-20 flex items-center justify-center w-20 z-[1] m-auto rounded-[50%] -bottom-10 inset-x-0 md:left-[45px] hover:text-white hover:bg-primary hover:border-white transition-colors group cursor-pointer">
+                    <svg className="w-10 h-10 text-primary group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5.14v14l11-7-11-7z" />
+                    </svg>
                 </div>
             </div>
         </div>

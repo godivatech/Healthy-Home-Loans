@@ -30,8 +30,10 @@ export const TestimonialCard = (props: TestimonialCardProps) => {
                             src={props.imageUrl}
                             className="text-transparent box-border max-w-full m-auto"
                         />
-                        <div className="absolute box-border caret-transparent left-[90px] bottom-[55px]">
-                            <i className="text-red-500 text-[50px] italic bg-white shadow-[rgba(0,0,0,0.09)_0px_2px_28px_0px] box-border caret-transparent inline-block h-20 leading-[80px] w-20 rounded-[50px] before:accent-auto before:box-border before:caret-transparent before:text-red-500 before:text-[50px] before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[80px] before:list-outside before:list-none before:pointer-events-auto before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-flaticon hover:text-white hover:bg-red-500 hover:border-white"></i>
+                        <div className="absolute box-border caret-transparent left-[90px] bottom-[55px] bg-white shadow-[rgba(0,0,0,0.09)_0px_2px_28px_0px] flex items-center justify-center h-20 w-20 rounded-[50px] hover:bg-red-500 transition-colors group">
+                            <svg className="w-10 h-10 text-red-500 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                            </svg>
                         </div>
                     </div>
                 </div>
