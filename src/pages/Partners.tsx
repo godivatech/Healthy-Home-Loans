@@ -2,21 +2,14 @@ import { Navbar } from "@/sections/Navbar";
 import { Footer } from "@/sections/Footer";
 import { Copyright } from "@/sections/Copyright";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { PageBanner } from "@/components/PageBanner";
 
 export const PartnersPage = () => {
     return (
         <div className="text-neutral-800 font-roboto_68d44c">
             <Navbar />
 
-            {/* Page Header */}
-            <div className="bg-gray-50 py-[50px] md:py-[80px]">
-                <div className="max-w-[1140px] w-full mx-auto px-3 text-center">
-                    <h1 className="text-neutral-900 text-3xl md:text-5xl font-medium mb-4">Our Partners</h1>
-                    <p className="text-zinc-600 text-[15px] md:text-base">
-                        We collaborate with top banks and NBFCs to bring you the best financial solutions.
-                    </p>
-                </div>
-            </div>
+            <PageBanner title="Our Partners" />
 
             {/* Partners Grid */}
             <div className="py-[50px] md:py-[100px]">

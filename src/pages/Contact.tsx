@@ -2,16 +2,14 @@ import { Navbar } from "@/sections/Navbar";
 import { Footer } from "@/sections/Footer";
 import { Copyright } from "@/sections/Copyright";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { PageBanner } from "@/components/PageBanner";
 
 export const ContactPage = () => {
     return (
         <div className="text-neutral-800 font-roboto_68d44c">
             <Navbar />
 
-            <div className="bg-neutral-900 py-[80px] text-center">
-                <h1 className="text-white text-4xl font-bold font-rubik_0b5097 mb-2">Contact Us</h1>
-                <p className="text-zinc-400">Home / Contact Us</p>
-            </div>
+            <PageBanner title="Contact Us" />
 
             <div className="py-[100px] bg-white">
                 <div className="max-w-[1140px] mx-auto px-3">

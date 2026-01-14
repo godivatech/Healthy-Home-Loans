@@ -5,34 +5,14 @@ import arrow2 from "@/assets/images/second-arrow.png";
 import { Navbar } from "@/sections/Navbar";
 import { Footer } from "@/sections/Footer";
 import { Copyright } from "@/sections/Copyright";
+import { PageBanner } from "@/components/PageBanner";
 
 export const LoansPage = () => {
     return (
         <div className="min-h-screen bg-white">
             <Navbar />
 
-            {/* Page Header */}
-            <div className="relative bg-fixed bg-[url('https://leza-react.envytheme.com/images/page-title/bg-8.jpg')] bg-no-repeat bg-cover h-[265px] md:h-[400px] z-[1] bg-center before:bg-white before:block before:h-full before:w-full before:opacity-[0.77] before:absolute before:left-0 before:top-0 before:z-[-1]">
-                <div className="table h-full w-full">
-                    <div className="table-cell align-middle">
-                        <div className="max-w-[1140px] w-full mx-auto px-3">
-                            <div className="text-center -mt-2.5">
-                                <h2 className="text-neutral-900 text-3xl md:text-5xl font-semibold">Loans</h2>
-                                <ul className="mt-3 pl-0">
-                                    <li className="relative text-zinc-600 text-[17px] font-medium inline-block mr-[30px] before:bg-zinc-600 before:block before:h-[18px] before:w-px before:absolute before:-right-3.5 before:top-[5px] before:rotate-[20deg]">
-                                        <a href="/" className="text-neutral-900 inline-block hover:text-red-500">
-                                            Home
-                                        </a>
-                                    </li>
-                                    <li className="relative text-red-500 text-[17px] font-medium inline-block">
-                                        Loans
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <PageBanner title="Loans" />
 
             {/* Loan Intro Section */}
             <div className="py-[50px] md:py-[100px]">

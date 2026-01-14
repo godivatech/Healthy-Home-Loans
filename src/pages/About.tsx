@@ -5,6 +5,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { AboutSection } from "@/sections/AboutSection";
 import { WhyChooseSection } from "@/sections/WhyChooseSection";
 import { CallToAction } from "@/sections/CallToAction";
+import { PageBanner } from "@/components/PageBanner";
 
 import photo from "@/assets/images/photo.png";
 
@@ -13,11 +14,7 @@ export const AboutPage = () => {
         <div className="text-neutral-800 font-roboto_68d44c">
             <Navbar />
 
-            {/* Page Banner */}
-            <div className="bg-neutral-900 py-[80px] text-center">
-                <h1 className="text-white text-4xl font-bold font-rubik_0b5097 mb-2">About Us</h1>
-                <p className="text-zinc-400">Home / About Us</p>
-            </div>
+            <PageBanner title="About Us" />
 
             <AboutSection />
 
