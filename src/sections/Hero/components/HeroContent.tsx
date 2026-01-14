@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export const HeroContent = () => {
     return (
         <div className="box-border caret-transparent max-w-full md:max-w-[800px]">
-            <span className="text-secondary text-lg font-medium box-border caret-transparent leading-[27px] uppercase tracking-wider">
+            <span className="text-neutral-900 text-lg font-medium box-border caret-transparent leading-[27px] uppercase tracking-wider">
                 Welcome to Healthy Home Loans
             </span>
             <h1 className="text-neutral-900 text-[33px] font-bold box-border caret-transparent leading-[1.2] mt-2.5 mb-6 font-rubik_0b5097 md:text-[60px] md:leading-[1.1]">
