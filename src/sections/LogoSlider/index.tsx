@@ -1,7 +1,7 @@
-import hdfcLogo from "@/assets/images/bank partners/hdfc-bank-logo.svg";
-import iciciLogo from "@/assets/images/bank partners/ICCI.svg";
-import axisLogo from "@/assets/images/bank partners/axis-bank-logo.png";
-import kotakLogo from "@/assets/images/bank partners/kotak_mahindra_bank-logo.png";
+import hdfcLogo from "@/assets/images/bank-partners/hdfc-bank-logo.svg";
+import iciciLogo from "@/assets/images/bank-partners/ICCI.svg";
+import axisLogo from "@/assets/images/bank-partners/axis-bank-logo.png";
+import kotakLogo from "@/assets/images/bank-partners/kotak_mahindra_bank-logo.png";
 
 export const LogoSlider = () => {
     const partners = [

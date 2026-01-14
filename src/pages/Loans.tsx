@@ -1,7 +1,7 @@
 
 import logo from "@/assets/images/healthy.png";
-import arrow1 from "@/assets/images/First arrow.png";
-import arrow2 from "@/assets/images/second arrow.png";
+import arrow1 from "@/assets/images/first-arrow.png";
+import arrow2 from "@/assets/images/second-arrow.png";
 import { Navbar } from "@/sections/Navbar";
 import { Footer } from "@/sections/Footer";
 import { Copyright } from "@/sections/Copyright";

@@ -1,6 +1,6 @@
 import { HeroContent } from "@/sections/Hero/components/HeroContent";
 import { SocialLinks } from "@/components/SocialLinks";
-import bannerImage from "@/assets/images/banner 1.png";
+import bannerImage from "@/assets/images/banner-1.png";
 
 export const Hero = () => {
     return (
