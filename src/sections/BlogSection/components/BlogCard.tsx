@@ -13,7 +13,7 @@ export const BlogCard = (props: BlogCardProps) => {
             <div className="box-border caret-transparent">
                 <a
                     href={props.detailsUrl}
-                    className="text-neutral-900 box-border caret-transparent hover:text-red-500 hover:border-red-500"
+                    className="text-neutral-900 box-border caret-transparent hover:text-primary hover:border-primary"
                 >
                     <img
                         alt={props.imageAlt}
@@ -23,13 +23,13 @@ export const BlogCard = (props: BlogCardProps) => {
                 </a>
             </div>
             <div className="box-border caret-transparent mt-[25px]">
-                <span className="text-red-500 text-sm box-border caret-transparent leading-[21px] font-rubik_0b5097">
+                <span className="text-primary text-sm box-border caret-transparent leading-[21px] font-rubik_0b5097">
                     {props.date}
                 </span>
                 <h3 className="text-neutral-900 text-xl font-medium box-border caret-transparent leading-7 mt-3 mb-3.5 font-rubik_0b5097 md:text-[25px] md:leading-[35px]">
                     <a
                         href={props.detailsUrl}
-                        className="text-xl box-border caret-transparent leading-7 md:text-[25px] md:leading-[35px] hover:text-red-500 hover:border-red-500"
+                        className="text-xl box-border caret-transparent leading-7 md:text-[25px] md:leading-[35px] hover:text-primary hover:border-primary"
                     >
                         {props.title}
                     </a>

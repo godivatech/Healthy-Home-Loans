@@ -8,6 +8,7 @@ import { FundingSection } from "@/sections/FundingSection";
 import { CallToAction } from "@/sections/CallToAction";
 import { ServicesSection } from "@/sections/ServicesSection";
 import { TestimonialsSection } from "@/sections/TestimonialsSection";
+import { EligibilitySection } from "@/sections/EligibilitySection";
 import { Footer } from "@/sections/Footer";
 import { Copyright } from "@/sections/Copyright";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -22,9 +23,10 @@ const HomePage = () => {
             <AboutSection />
             <WhyChooseSection />
             <FundingSection />
-            <CallToAction />
+            <EligibilitySection />
             <ServicesSection />
             <TestimonialsSection />
+            <CallToAction />
             <Footer />
             <Copyright />
             <ScrollToTop />

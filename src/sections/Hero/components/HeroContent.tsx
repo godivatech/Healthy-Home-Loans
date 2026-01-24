@@ -17,7 +17,7 @@ export const HeroContent = () => {
             <div className="box-border caret-transparent flex gap-4">
                 <Link
                     to="/contact"
-                    className="relative text-white text-[15px] bg-primary box-border caret-transparent inline-block leading-[22.5px] text-center z-[1] overflow-hidden px-[30px] py-3.5 rounded-[5px] font-medium md:text-base md:leading-6 md:px-[45px] hover:bg-red-800 transition-colors"
+                    className="relative text-white text-[15px] bg-primary box-border caret-transparent inline-block leading-[22.5px] text-center z-[1] overflow-hidden px-[30px] py-3.5 rounded-[5px] font-medium md:text-base md:leading-6 md:px-[45px] hover:bg-neutral-900 transition-colors"
                 >
                     Get Loan
                 </Link>

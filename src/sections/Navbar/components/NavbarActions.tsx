@@ -28,7 +28,7 @@ export const NavbarActions = () => {
             <div className="relative box-border caret-transparent min-h-0 min-w-0 md:min-h-[auto] md:min-w-[auto] w-full md:w-auto">
                 <Link
                     to="/contact"
-                    className="relative text-neutral-900 text-[13px] bg-accent box-border caret-transparent block md:inline-block leading-[19.5px] text-center z-[1] overflow-hidden mt-[5px] px-5 py-3 rounded-[5px] font-medium md:text-base md:leading-6 md:px-8 hover:bg-yellow-400 transition-colors w-full md:w-auto"
+                    className="relative text-neutral-900 text-[13px] bg-accent box-border caret-transparent block md:inline-block leading-[19.5px] text-center z-[1] overflow-hidden mt-[5px] px-5 py-3 rounded-[5px] font-medium md:text-base md:leading-6 md:px-8 hover:bg-accent/80 transition-colors w-full md:w-auto"
                 >
                     Get Loan
                 </Link>

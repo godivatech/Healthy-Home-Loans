@@ -1,11 +1,11 @@
-
-import logo from "@/assets/images/healthy.png";
 import arrow1 from "@/assets/images/first-arrow.png";
 import arrow2 from "@/assets/images/second-arrow.png";
 import { Navbar } from "@/sections/Navbar";
 import { Footer } from "@/sections/Footer";
 import { Copyright } from "@/sections/Copyright";
 import { PageBanner } from "@/components/PageBanner";
+import { CallToAction } from "@/sections/CallToAction";
+import { EligibilitySection } from "@/sections/EligibilitySection";
 
 export const LoansPage = () => {
     return (
@@ -13,9 +13,8 @@ export const LoansPage = () => {
             <Navbar />
 
             <PageBanner title="Loans" />
-
-            {/* Loan Intro Section */}
-            <div className="py-[50px] md:py-[100px]">
+            {/* Loan Intro Section - HIDDEN */}
+            {/* <div className="py-[50px] md:py-[100px]">
                 <div className="max-w-[1140px] w-full mx-auto px-3">
                     <div className="flex flex-wrap items-center -mx-3">
                         <div className="w-full md:w-6/12 px-3">
@@ -45,16 +44,16 @@ export const LoansPage = () => {
                                 Your journey to home ownership should be smooth and transparent. At Healthy Home Loans, we simplify finance with personalized solutions, quick approvals, and dedicated support every step of the way.
                             </p>
                             <ul className="mt-4 mb-[18px] pl-0">
-                                <li className="relative text-zinc-600 font-medium list-none capitalize mb-3 pl-[18px] before:bg-red-600 before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
+                                <li className="relative text-zinc-600 font-medium list-none capitalize mb-3 pl-[18px] before:bg-primary before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
                                     Direct access to MD for complex cases
                                 </li>
-                                <li className="relative text-zinc-600 font-medium list-none capitalize mb-3 pl-[18px] before:bg-red-600 before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
+                                <li className="relative text-zinc-600 font-medium list-none capitalize mb-3 pl-[18px] before:bg-primary before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
                                     Doorstep service for documents collection
                                 </li>
-                                <li className="relative text-zinc-600 font-medium list-none capitalize mb-3 pl-[18px] before:bg-red-600 before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
+                                <li className="relative text-zinc-600 font-medium list-none capitalize mb-3 pl-[18px] before:bg-primary before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
                                     Transparent processing with no hidden charges
                                 </li>
-                                <li className="relative text-zinc-600 font-medium list-none capitalize pl-[18px] before:bg-red-600 before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
+                                <li className="relative text-zinc-600 font-medium list-none capitalize pl-[18px] before:bg-primary before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
                                     Expert legal and technical guidance
                                 </li>
                             </ul>
@@ -75,7 +74,7 @@ export const LoansPage = () => {
                             <div>
                                 <a
                                     href="/contact"
-                                    className="relative text-white text-[15px] md:text-base bg-red-500 inline-block text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
+                                    className="relative text-white text-[15px] md:text-base bg-primary inline-block text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
                                 >
                                     Apply now
                                 </a>
@@ -83,13 +82,13 @@ export const LoansPage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Process Section */}
             <div className="relative bg-gray-50 z-[1] pt-[50px] md:pt-[100px] pb-5 md:pb-[70px]">
                 <div className="max-w-[1140px] w-full mx-auto px-3 relative">
                     <div className="max-w-[570px] text-center mb-[45px] mx-auto">
-                        <span className="text-red-500">What’s the process?</span>
+                        <span className="text-primary">What’s the process?</span>
                         <h2 className="text-neutral-900 text-[28px] md:text-[40px] font-medium leading-[39.2px] md:leading-[56px] mt-2.5">
                             The Loans have helped us move our business forward
                         </h2>
@@ -101,7 +100,7 @@ export const LoansPage = () => {
                                     <span className="relative text-neutral-900 text-xl font-medium shadow-[rgba(102,102,102,0.1)_0px_0px_29px_0px] inline-block h-[100px] leading-[100px] w-[100px] z-[1] rounded-[50px]">
                                         Apply
                                     </span>
-                                    <strong className="absolute text-rose-200 text-[70px] font-semibold block leading-[0px] top-[50px] inset-x-0">
+                                    <strong className="absolute text-primary/10 text-[70px] font-semibold block leading-[0px] top-[50px] inset-x-0">
                                         1
                                     </strong>
                                 </div>
@@ -120,7 +119,7 @@ export const LoansPage = () => {
                                     <span className="relative text-neutral-900 text-xl font-medium shadow-[rgba(102,102,102,0.1)_0px_0px_29px_0px] inline-block h-[100px] leading-[100px] w-[100px] z-[1] rounded-[50px]">
                                         Process
                                     </span>
-                                    <strong className="absolute text-rose-200 text-[70px] font-semibold block leading-[0px] top-[50px] inset-x-0">
+                                    <strong className="absolute text-primary/10 text-[70px] font-semibold block leading-[0px] top-[50px] inset-x-0">
                                         2
                                     </strong>
                                 </div>
@@ -139,7 +138,7 @@ export const LoansPage = () => {
                                     <span className="relative text-neutral-900 text-xl font-medium shadow-[rgba(102,102,102,0.1)_0px_0px_29px_0px] inline-block h-[100px] leading-[100px] w-[100px] z-[1] rounded-[50px]">
                                         Support
                                     </span>
-                                    <strong className="absolute text-rose-200 text-[70px] font-semibold block leading-[0px] top-[50px] inset-x-0">
+                                    <strong className="absolute text-primary/10 text-[70px] font-semibold block leading-[0px] top-[50px] inset-x-0">
                                         3
                                     </strong>
                                 </div>
@@ -162,8 +161,8 @@ export const LoansPage = () => {
                             </h3>
 
                             {/* Step 1 */}
-                            <div className="relative mt-[30px] pl-[65px] before:bg-red-500 before:h-[140%] before:w-px before:absolute before:left-5 before:top-0 before:z-[-1]">
-                                <span className="absolute text-red-500 text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-red-500 rounded-[50px] left-0 top-0">
+                            <div className="relative mt-[30px] pl-[65px] before:bg-primary before:h-[140%] before:w-px before:absolute before:left-5 before:top-0 before:z-[-1]">
+                                <span className="absolute text-primary text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-primary rounded-[50px] left-0 top-0">
                                     1
                                 </span>
                                 <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
@@ -175,8 +174,8 @@ export const LoansPage = () => {
                             </div>
 
                             {/* Step 2 */}
-                            <div className="relative mt-[30px] pl-[65px] before:bg-red-500 before:h-[140%] before:w-px before:absolute before:left-5 before:top-0 before:z-[-1]">
-                                <span className="absolute text-red-500 text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-red-500 rounded-[50px] left-0 top-0">
+                            <div className="relative mt-[30px] pl-[65px] before:bg-primary before:h-[140%] before:w-px before:absolute before:left-5 before:top-0 before:z-[-1]">
+                                <span className="absolute text-primary text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-primary rounded-[50px] left-0 top-0">
                                     2
                                 </span>
                                 <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
@@ -188,8 +187,8 @@ export const LoansPage = () => {
                             </div>
 
                             {/* Step 3 */}
-                            <div className="relative mt-[30px] pl-[65px] before:bg-red-500 before:h-[140%] before:w-px before:absolute before:left-5 before:top-0 before:z-[-1]">
-                                <span className="absolute text-red-500 text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-red-500 rounded-[50px] left-0 top-0">
+                            <div className="relative mt-[30px] pl-[65px] before:bg-primary before:h-[140%] before:w-px before:absolute before:left-5 before:top-0 before:z-[-1]">
+                                <span className="absolute text-primary text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-primary rounded-[50px] left-0 top-0">
                                     3
                                 </span>
                                 <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
@@ -202,7 +201,7 @@ export const LoansPage = () => {
 
                             {/* Step 4 */}
                             <div className="relative mt-[30px] pl-[65px]">
-                                <span className="absolute text-red-500 text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-red-500 rounded-[50px] left-0 top-0">
+                                <span className="absolute text-primary text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-primary rounded-[50px] left-0 top-0">
                                     4
                                 </span>
                                 <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
@@ -216,7 +215,7 @@ export const LoansPage = () => {
                             <div className="text-center md:text-start mt-[25px]">
                                 <a
                                     href="/contact"
-                                    className="relative text-white text-[15px] md:text-base bg-red-500 inline-block text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
+                                    className="relative text-white text-[15px] md:text-base bg-primary inline-block text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
                                 >
                                     Get Started
                                 </a>
@@ -235,51 +234,7 @@ export const LoansPage = () => {
                 </div>
             </div>
 
-            {/* Eligibility Section */}
-            <div className="bg-gray-50 py-[50px] md:py-[100px]">
-                <div className="max-w-[1140px] w-full mx-auto px-3">
-                    <div className="flex flex-wrap items-center -mx-3">
-                        <div className="w-full md:w-[58.3333%] px-3">
-                            <div className="text-center md:text-start">
-                                <img
-                                    alt="image"
-                                    src="https://leza-react.envytheme.com/images/check.png"
-                                    className="w-[875px] max-w-full"
-                                />
-                            </div>
-                        </div>
-                        <div className="w-full md:w-[41.6667%] px-3">
-                            <div className="my-[30px] md:mt-0">
-                                <h3 className="text-neutral-900 text-[26px] md:text-4xl font-medium mb-3">
-                                    Eligibility Criteria
-                                </h3>
-                                <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
-                                    We assist both salaried and self-employed individuals. Our team helps optimize your profile to meet bank usage for maximum eligibility.
-                                </p>
-                            </div>
-                            <div>
-                                <h3 className="text-neutral-900 text-[26px] md:text-4xl font-medium mb-3">
-                                    Documents Required
-                                </h3>
-                                <ul className="mt-3 pl-0">
-                                    <li className="relative text-zinc-600 font-medium list-none capitalize mb-3 pl-[18px] before:bg-red-600 before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
-                                        Identity & Address Proof (Aadhar, PAN)
-                                    </li>
-                                    <li className="relative text-zinc-600 font-medium list-none capitalize mb-3 pl-[18px] before:bg-red-600 before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
-                                        Income Proof (Salary Slips / ITR)
-                                    </li>
-                                    <li className="relative text-zinc-600 font-medium list-none capitalize mb-3 pl-[18px] before:bg-red-600 before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
-                                        Bank Statements (Last 6 months)
-                                    </li>
-                                    <li className="relative text-zinc-600 font-medium list-none capitalize pl-[18px] before:bg-red-600 before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
-                                        Property Documents
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <EligibilitySection />
 
             {/* Inquiry Section */}
             <div className="py-[50px] md:py-[100px]">
@@ -365,7 +320,7 @@ export const LoansPage = () => {
                                 <div className="mt-5">
                                     <button
                                         type="submit"
-                                        className="relative text-white text-[15px] md:text-base bg-red-500 text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
+                                        className="relative text-white text-[15px] md:text-base bg-primary text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
                                     >
                                         Submit
                                     </button>
@@ -373,7 +328,7 @@ export const LoansPage = () => {
                             </form>
                         </div>
                         <div className="w-full md:w-6/12 px-3">
-                            <div className="bg-red-500 px-5 md:px-[45px] py-[30px] md:py-[50px]">
+                            <div className="bg-primary px-5 md:px-[45px] py-[30px] md:py-[50px]">
                                 <div className="text-center mb-[30px] md:mb-[35px]">
                                     <span className="text-white">Calculate your rate</span>
                                     <h3 className="text-white text-xl md:text-4xl font-medium mt-2.5">
@@ -429,7 +384,7 @@ export const LoansPage = () => {
                                     <div className="mt-[25px]">
                                         <button
                                             type="submit"
-                                            className="relative text-white text-[15px] md:text-base font-medium bg-red-800 w-full text-center z-[1] overflow-hidden px-[30px] py-[15px] rounded-[5px] hover:bg-neutral-900"
+                                            className="relative text-white text-[15px] md:text-base font-medium bg-primary w-full text-center z-[1] overflow-hidden px-[30px] py-[15px] rounded-[5px] hover:bg-neutral-900"
                                         >
                                             Apply for this loan
                                         </button>
@@ -442,28 +397,12 @@ export const LoansPage = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="relative before:bg-neutral-900 before:block before:h-[100px] before:w-full before:absolute before:left-0 before:bottom-0 before:z-[-1]">
-                <div className="max-w-[1140px] w-full mx-auto px-3">
-                    <div className="bg-red-500 text-center md:text-start px-5 md:px-[50px] py-[25px] md:py-[65px] rounded-[5px]">
-                        <div className="flex flex-wrap items-center text-center md:text-start -mx-3">
-                            <div className="w-full md:w-[58.3333%] px-3">
-                                <h3 className="text-white text-3xl md:text-4xl font-medium">
-                                    We are here to help you. Call to discuss your financial needs.
-                                </h3>
-                            </div>
-                            <div className="w-full md:w-[41.6667%] px-3">
-                                <div className="relative text-center md:text-right mt-[30px] md:mt-0 pl-0 md:pl-[85px]">
-                                    <h3 className="text-white text-[25px] md:text-4xl font-medium text-center md:text-right mt-2.5 md:mt-0">
-                                        <a href="tel:+919677719848" className="text-white">
-                                            +91 96777 19848
-                                        </a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <CallToAction
+                title="We are here to help you."
+                subtitle="Call to discuss your financial needs."
+                phone="+919677719848"
+                phoneDisplay="+91 96777 19848"
+            />
 
             {/* Footer */}
             <Footer />
@@ -472,7 +411,7 @@ export const LoansPage = () => {
             <Copyright />
 
             {/* Scroll to Top */}
-            <div className="fixed text-white text-[22px] bg-neutral-900 shadow-[rgba(0,0,0,0.1)_0px_3px_10px_0px] hidden h-[45px] leading-[33px] text-center w-[45px] z-[999] rounded-[50%] right-5 bottom-5 hover:bg-red-500">
+            <div className="fixed text-white text-[22px] bg-neutral-900 shadow-[rgba(0,0,0,0.1)_0px_3px_10px_0px] hidden h-[45px] leading-[33px] text-center w-[45px] z-[999] rounded-[50%] right-5 bottom-5 hover:bg-primary">
                 <i className="absolute text-3xl block leading-[30px] mx-auto top-2/4 inset-x-0"></i>
             </div>
         </div>

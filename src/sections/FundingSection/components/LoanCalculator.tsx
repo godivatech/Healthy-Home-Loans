@@ -1,7 +1,7 @@
 export const LoanCalculator = () => {
     return (
         <div className="box-border caret-transparent shrink-0 max-w-full w-full px-3 md:w-6/12">
-            <div className="bg-rose-100 box-border caret-transparent px-5 py-[30px] md:px-[45px] md:py-[50px]">
+            <div className="bg-primary/5 box-border caret-transparent px-5 py-[30px] md:px-[45px] md:py-[50px]">
                 <div className="box-border caret-transparent text-center mb-[30px] md:mb-[35px]">
                     <span className="text-zinc-600 box-border caret-transparent">
                         Calculate your rate
@@ -109,7 +109,7 @@ export const LoanCalculator = () => {
                     <div className="box-border caret-transparent mt-[25px]">
                         <button
                             type="submit"
-                            className="relative text-white text-[15px] font-medium bg-red-500 caret-transparent leading-[22.5px] opacity-65 pointer-events-none text-center align-middle w-full z-[1] overflow-hidden px-[30px] py-[15px] rounded-[5px] md:text-base md:leading-6"
+                            className="relative text-white text-[15px] font-medium bg-primary caret-transparent leading-[22.5px] opacity-65 pointer-events-none text-center align-middle w-full z-[1] overflow-hidden px-[30px] py-[15px] rounded-[5px] md:text-base md:leading-6"
                         >
                             Apply for this loan{" "}
                             <span className="absolute text-[15px] bg-neutral-900 box-border caret-transparent block h-0 leading-[22.5px] w-0 z-[-1] rounded-[5px] md:text-base md:leading-6"></span>

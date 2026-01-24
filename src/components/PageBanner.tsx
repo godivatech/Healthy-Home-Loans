@@ -18,11 +18,11 @@ export const PageBanner = ({ title, breadcrumb = "Home" }: PageBannerProps) => {
                             <h2 className="text-neutral-900 text-3xl md:text-5xl font-semibold">{title}</h2>
                             <ul className="mt-3 pl-0">
                                 <li className="relative text-zinc-600 text-[17px] font-medium inline-block mr-[30px] before:bg-zinc-600 before:block before:h-[18px] before:w-px before:absolute before:-right-3.5 before:top-[5px] before:rotate-[20deg]">
-                                    <a href="/" className="text-neutral-900 inline-block hover:text-red-500">
+                                    <a href="/" className="text-neutral-900 inline-block hover:text-primary">
                                         {breadcrumb}
                                     </a>
                                 </li>
-                                <li className="relative text-red-500 text-[17px] font-medium inline-block">
+                                <li className="relative text-primary text-[17px] font-medium inline-block">
                                     {title}
                                 </li>
                             </ul>

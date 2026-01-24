@@ -7,7 +7,7 @@ export const Copyright = () => {
                         Copyright © 2026 Healthy Home Loans. Designed and developed by{" "}
                         <a
                             href="https://godivatech.com/"
-                            className="text-white text-[15px] font-medium box-border caret-transparent inline-block leading-[27px] md:text-base md:leading-[28.8px] hover:text-red-500 hover:border-red-500"
+                            className="text-white text-[15px] font-medium box-border caret-transparent inline-block leading-[27px] md:text-base md:leading-[28.8px] hover:text-primary hover:border-primary"
                             target="_blank"
                             rel="noreferrer"
                         >

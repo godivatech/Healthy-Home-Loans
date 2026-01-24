@@ -19,7 +19,7 @@ export const NavbarLinks = () => {
                 <li key={link.name} className="relative box-border caret-transparent min-h-0 min-w-0 mx-0 md:min-h-[auto] md:min-w-[auto] md:mx-2.5 w-full md:w-auto border-b border-gray-50 md:border-none last:border-none">
                     <Link
                         to={link.path}
-                        className={`text-neutral-900 font-medium box-border caret-transparent block capitalize bg-[position:0px_0px] py-4 px-2 md:px-0 font-rubik_0b5097 md:py-[25px] hover:text-primary transition-colors text-[15px] md:text-base ${isActive(link.path) ? "text-primary bg-red-50 md:bg-transparent pl-4 md:pl-0 font-semibold" : ""
+                        className={`text-neutral-900 font-medium box-border caret-transparent block capitalize bg-[position:0px_0px] py-4 px-2 md:px-0 font-rubik_0b5097 md:py-[25px] hover:text-primary transition-colors text-[15px] md:text-base ${isActive(link.path) ? "text-primary bg-primary/5 md:bg-transparent pl-4 md:pl-0 font-semibold" : ""
                             }`}
                     >
                         {link.name}

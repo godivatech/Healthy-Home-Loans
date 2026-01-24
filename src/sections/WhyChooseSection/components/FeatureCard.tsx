@@ -12,7 +12,7 @@ export const FeatureCard = (props: FeatureCardProps) => {
         <div
             className={`relative bg-white box-border caret-transparent text-center z-[1] overflow-hidden p-[30px] rounded-lg shadow-sm hover:shadow-md transition-shadow h-full flex flex-col items-center ${props.variant || ""}`}
         >
-            <div className="relative box-border caret-transparent mb-5 bg-red-50 p-4 rounded-full text-primary">
+            <div className="relative box-border caret-transparent mb-5 bg-primary/10 p-4 rounded-full text-primary">
                 {props.icon}
             </div>
             <h3 className="text-neutral-900 text-[20px] font-semibold box-border caret-transparent leading-[26px] mb-2.5 font-rubik_0b5097">

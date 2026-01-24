@@ -105,10 +105,10 @@ export const ServicesPage = () => {
                         {services.map((service, index) => (
                             <div key={index} className="group relative bg-white border border-gray-100 rounded-lg p-6 pt-[75px] hover:shadow-[0_10px_30px_rgba(0,0,0,0.1)] transition-all duration-300 text-center overflow-hidden flex flex-col h-full">
                                 {/* Curved Background Shape */}
-                                <div className="absolute top-0 -left-[10%] w-[120%] h-[120px] bg-red-50 rounded-b-[100%] transition-colors duration-500 group-hover:bg-red-600"></div>
+                                <div className="absolute top-0 -left-[10%] w-[120%] h-[120px] bg-primary/5 rounded-b-[100%] transition-colors duration-500 group-hover:bg-primary"></div>
 
                                 {/* Icon */}
-                                <div className="relative z-10 w-[90px] h-[90px] mx-auto bg-white rounded-full shadow-md flex items-center justify-center text-[40px] text-red-600 mb-6 transition-transform duration-500 group-hover:-translate-y-2">
+                                <div className="relative z-10 w-[90px] h-[90px] mx-auto bg-white rounded-full shadow-md flex items-center justify-center text-[40px] text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-2">
                                     <service.icon size={40} strokeWidth={1.5} />
                                 </div>
 
@@ -142,7 +142,7 @@ export const ServicesPage = () => {
 
                                         <a
                                             href="/contact"
-                                            className="text-red-500 font-medium text-[15px] inline-block hover:text-red-700 transition-colors uppercase tracking-wide"
+                                            className="text-primary font-medium text-[15px] inline-block hover:text-primary/80 transition-colors uppercase tracking-wide"
                                         >
                                             Learn More
                                         </a>

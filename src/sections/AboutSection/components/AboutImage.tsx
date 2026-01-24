@@ -9,7 +9,7 @@ export const AboutImage = () => {
                 />
                 <div className="absolute bg-[url('https://leza-react.envytheme.com/images/about/about-shape.png')] bg-no-repeat bg-contain bottom-[-50px] box-border caret-transparent h-[200px] text-center w-[200px] bg-center right-0 md:text-start md:right-[60px] md:bottom-0">
                     <div className="box-border caret-transparent text-center mt-[50px]">
-                        <h3 className="text-red-500 text-[70px] font-medium box-border caret-transparent leading-[70px] mb-[5px] font-rubik_0b5097">
+                        <h3 className="text-primary text-[70px] font-medium box-border caret-transparent leading-[70px] mb-[5px] font-rubik_0b5097">
                             15
                         </h3>
                         <span className="text-neutral-900 text-sm font-medium box-border caret-transparent leading-[21px] font-rubik_0b5097">

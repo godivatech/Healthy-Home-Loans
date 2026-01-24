@@ -109,7 +109,7 @@ export const PartnersPage = () => {
                     {/* Intro Text */}
                     <div className="text-center mb-12">
                         <p className="text-zinc-600 text-base md:text-lg max-w-3xl mx-auto">
-                            We have partnered with <span className="font-semibold text-red-600">{banks.length}+ leading banks</span> and <span className="font-semibold text-red-600">{nbfcs.length}+ NBFCs</span> to provide you with the best loan options, competitive interest rates, and seamless processing.
+                            We have partnered with <span className="font-semibold text-primary">{banks.length}+ leading banks</span> and <span className="font-semibold text-primary">{nbfcs.length}+ NBFCs</span> to provide you with the best loan options, competitive interest rates, and seamless processing.
                         </p>
                     </div>
 
@@ -140,9 +140,9 @@ export const PartnersPage = () => {
                                 return (
                                     <div
                                         key={index}
-                                        className="p-6 border border-gray-200 rounded-lg bg-white hover:shadow-lg transition-all duration-300 hover:border-red-500"
+                                        className="p-6 border-2 border-primary rounded-xl bg-white hover:shadow-xl transition-all duration-500 group"
                                     >
-                                        <div className="h-[60px] flex items-center justify-center mb-3">
+                                        <div className="h-[80px] flex items-center justify-center mb-4 transition-transform duration-500 group-hover:scale-105">
                                             {bankLogo ? (
                                                 <img
                                                     src={bankLogo}
@@ -153,7 +153,7 @@ export const PartnersPage = () => {
                                                 <span className="text-sm font-medium text-gray-400 text-center">Logo</span>
                                             )}
                                         </div>
-                                        <h3 className="text-sm md:text-base font-medium text-neutral-900 text-center">
+                                        <h3 className="text-sm md:text-base font-semibold text-neutral-900 text-center transition-colors duration-500 group-hover:text-primary">
                                             {bankName}
                                         </h3>
                                     </div>
@@ -176,16 +176,16 @@ export const PartnersPage = () => {
                             {nbfcs.map((nbfc, index) => (
                                 <div
                                     key={index}
-                                    className="p-4 border border-red-200 rounded-lg bg-white hover:shadow-md transition-all duration-300 group flex flex-col items-center justify-center min-h-[120px]"
+                                    className="p-6 border-2 border-primary rounded-xl bg-white hover:shadow-xl transition-all duration-500 group flex flex-col h-full"
                                 >
-                                    <div className="h-[60px] flex items-center justify-center mb-3 w-full">
+                                    <div className="h-[80px] flex items-center justify-center mb-4 w-full transition-transform duration-500 group-hover:scale-105">
                                         <img
                                             src={nbfc.logo}
                                             alt={nbfc.name}
                                             className="max-h-full max-w-full object-contain"
                                         />
                                     </div>
-                                    <h3 className="text-sm font-medium text-neutral-900 text-center">
+                                    <h3 className="text-sm md:text-base font-semibold text-neutral-900 text-center mt-auto transition-colors duration-500 group-hover:text-primary">
                                         {nbfc.name}
                                     </h3>
                                 </div>
@@ -195,7 +195,7 @@ export const PartnersPage = () => {
 
                     {/* Total Count */}
                     <div className="mt-12 text-center">
-                        <div className="inline-block bg-red-500 text-white px-8 py-4 rounded-lg shadow-md">
+                        <div className="inline-block bg-primary text-white px-8 py-4 rounded-lg shadow-md">
                             <p className="text-3xl font-bold">{banks.length + nbfcs.length}+</p>
                             <p className="text-sm mt-1">Total Partners</p>
                         </div>

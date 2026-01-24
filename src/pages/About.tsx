@@ -2,7 +2,6 @@ import { Navbar } from "@/sections/Navbar";
 import { Footer } from "@/sections/Footer";
 import { Copyright } from "@/sections/Copyright";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { AboutSection } from "@/sections/AboutSection";
 import { WhyChooseSection } from "@/sections/WhyChooseSection";
 import { CallToAction } from "@/sections/CallToAction";
 import { PageBanner } from "@/components/PageBanner";
@@ -41,7 +40,7 @@ export const AboutPage = () => {
                 </div>
             </div>
 
-            <AboutSection />
+
 
             {/* Mission & Vision */}
             <div className="grid grid-cols-1 md:grid-cols-2">
