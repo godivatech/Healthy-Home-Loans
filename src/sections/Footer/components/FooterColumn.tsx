@@ -29,7 +29,7 @@ export const FooterColumn = (props: FooterColumnProps) => {
     if (props.variant === "logo") {
         return (
             <div className="box-border caret-transparent shrink-0 max-w-full w-full px-3 md:w-3/12">
-                <div className="box-border caret-transparent mb-[25px]">
+                <div className="box-border caret-transparent mb-[25px] -mt-8">
                     <div className="box-border caret-transparent">
                         <a
                             href="/"

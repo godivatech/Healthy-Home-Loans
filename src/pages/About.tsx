@@ -16,9 +16,7 @@ export const AboutPage = () => {
 
             <PageBanner title="About Us" />
 
-            <AboutSection />
-
-            {/* MD Profile Section */}
+            {/* MD Profile Section - Moved Above AboutSection */}
             <div className="py-[100px] bg-white">
                 <div className="max-w-[1140px] mx-auto px-3">
                     <div className="flex flex-wrap items-center -mx-3">
@@ -42,6 +40,8 @@ export const AboutPage = () => {
                     </div>
                 </div>
             </div>
+
+            <AboutSection />
 
             {/* Mission & Vision */}
             <div className="grid grid-cols-1 md:grid-cols-2">

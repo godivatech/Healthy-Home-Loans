@@ -31,10 +31,42 @@ export const ServiceTabs = () => {
         },
         {
             icon: "flaticon-car",
+            title: "Car Loan",
+            description: "Drive your dream car with our competitive auto loan options.",
+            details: "Finance up to 90% of the vehicle cost with flexible EMI options and quick processing.",
+            subServices: ["New Car Loans", "Used Car Loans", "Car Refinance", "Two Wheeler Loans"],
+            link: "/services"
+        },
+        {
+            icon: "flaticon-land",
+            title: "Land Purchase",
+            description: "Invest in your future with our land purchase financing solutions.",
+            details: "Secure financing for residential or agricultural land with attractive interest rates.",
+            subServices: ["Residential Plot", "Agricultural Land", "Commercial Land", "Joint Ventures"],
+            link: "/services"
+        },
+        {
+            icon: "flaticon-credit-card",
+            title: "Credit Card",
+            description: "Enjoy flexible spending with our range of credit card options.",
+            details: "Choose from various credit cards with rewards, cashback, and exclusive benefits.",
+            subServices: ["Reward Cards", "Cashback Cards", "Travel Cards", "Fuel Cards"],
+            link: "/services"
+        },
+        {
+            icon: "flaticon-briefcase",
             title: "Business Loan",
             description: "Fuel your business growth with our tailored business finance solutions.",
             details: "Collateral-free loans for MSMEs and startups to expand operations.",
             subServices: ["Working Capital", "Machinery Loan", "Business Expansion", "MSME Loans"],
+            link: "/services"
+        },
+        {
+            icon: "flaticon-savings",
+            title: "Fixed Deposit",
+            description: "Grow your savings with secure and high-return fixed deposit schemes.",
+            details: "Enjoy guaranteed returns with flexible tenures and competitive interest rates.",
+            subServices: ["Regular FD", "Tax Saving FD", "Senior Citizen FD", "Cumulative FD"],
             link: "/services"
         }
     ];
@@ -48,8 +80,8 @@ export const ServiceTabs = () => {
                         key={index}
                         onClick={() => setActiveTab(index)}
                         className={`text-neutral-900 font-medium box-border caret-transparent inline-block capitalize cursor-pointer px-6 py-3 rounded-md transition-all duration-300 ${activeTab === index
-                                ? "bg-red-500 text-white shadow-md"
-                                : "bg-white text-zinc-600 hover:bg-gray-100"
+                            ? "bg-red-500 text-white shadow-md"
+                            : "bg-white text-zinc-600 hover:bg-gray-100"
                             }`}
                     >
                         {service.title}
