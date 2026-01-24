@@ -100,8 +100,8 @@ export const LogoSlider = () => {
 
                 {/* Parallax Marquee 1 (Left to Right) */}
                 <div className="relative w-full overflow-hidden">
-                    <ParallaxText baseVelocity={-2}>
-                        <div className="flex items-center gap-16 mx-8">
+                    <ParallaxText baseVelocity={-3.5}>
+                        <div className="flex items-center gap-8 md:gap-16 mx-4 md:mx-8">
                             {partners.map((partner, index) => {
                                 // Custom scaling
                                 let scaleClass = "";
@@ -110,11 +110,11 @@ export const LogoSlider = () => {
                                 else if (partner.name === "Federal Bank") scaleClass = "scale-[0.9]";
 
                                 return (
-                                    <div key={index} className="flex items-center justify-center min-w-[180px]">
+                                    <div key={index} className="flex items-center justify-center min-w-[120px] md:min-w-[180px]">
                                         <img
                                             alt={partner.name}
                                             src={partner.logo}
-                                            className={`max-w-full max-h-[60px] object-contain ${scaleClass} hover:scale-110 transition-transform duration-300`}
+                                            className={`max-w-full max-h-[40px] md:max-h-[60px] object-contain ${scaleClass} hover:scale-110 transition-transform duration-300`}
                                         />
                                     </div>
                                 );
