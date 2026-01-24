@@ -10,7 +10,7 @@ export const NavbarMenu = ({ isOpen }: NavbarMenuProps) => {
     return (
         <>
             {/* Desktop Menu - Always Visible on MD+ */}
-            <div className="hidden md:flex items-center box-border caret-transparent basis-auto min-h-[auto] min-w-[auto]">
+            <div className="hidden md:flex items-center box-border caret-transparent basis-auto grow min-h-[auto] min-w-[auto]">
                 <NavbarLinks />
                 <NavbarActions />
             </div>

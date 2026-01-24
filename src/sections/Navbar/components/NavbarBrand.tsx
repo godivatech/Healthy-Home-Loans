@@ -4,7 +4,7 @@ export const NavbarBrand = () => {
     return (
         <a
             href="/"
-            className="text-black text-xl box-border caret-transparent block leading-[30px] text-nowrap mr-4"
+            className="text-black text-xl box-border caret-transparent block leading-[30px] text-nowrap mr-4 pl-3 md:pl-0"
         >
             <img
                 alt="Healthy Home Loans"
