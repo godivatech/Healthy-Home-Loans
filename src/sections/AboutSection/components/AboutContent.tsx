@@ -1,7 +1,7 @@
 export const AboutContent = () => {
     return (
         <div className="box-border caret-transparent shrink-0 max-w-full w-full px-3 md:w-6/12">
-            <div className="box-border caret-transparent mt-[50px] md:mt-0">
+            <div className="box-border caret-transparent mt-[80px] md:mt-0">
                 <span className="text-primary box-border caret-transparent">
                     About Healthy Home Loans
                 </span>
