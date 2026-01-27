@@ -10,10 +10,8 @@ export const FooterContent = () => {
                 logoAlt="Healthy Home Loans"
                 description="Your trusted partner for Home, Business, and Personal loans in Madurai. 15+ years of experience helping dreams come true."
                 socialLinks={{
-                    twitter: "#",
-                    instagram: "#",
-                    facebook: "#",
-                    linkedin: "#",
+                    instagram: "https://www.instagram.com/healthy_home_loans/",
+                    facebook: "https://www.facebook.com/p/Healthy-Home-Loans-61581746489107/",
                 }}
             />
             <FooterColumn
