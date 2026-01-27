@@ -4,10 +4,14 @@ import { Copyright } from "@/sections/Copyright";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { CallToAction } from "@/sections/CallToAction";
 import { PageBanner } from "@/components/PageBanner";
-import { Home, User, Building2, Briefcase, Car, Map as MapIcon, CreditCard, Wallet } from "lucide-react";
+import { Home, User, Building2, Briefcase, Car, Map as MapIcon, CreditCard, Wallet, ChevronDown } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const ServicesPage = () => {
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
+
     const services = [
         {
             title: "Housing Loan",
@@ -102,12 +106,13 @@ export const ServicesPage = () => {
 
             <div className="py-[100px] bg-white">
                 <div className="max-w-[1140px] mx-auto px-3">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {/* Desktop Grid - Hidden on Mobile */}
+                    <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service, index) => (
                             <FadeIn key={index} direction="up" delay={index * 0.1} className="h-full">
                                 <div className="group relative bg-white border border-gray-100 rounded-lg p-6 pt-[75px] hover:shadow-[0_10px_30px_rgba(0,0,0,0.1)] transition-all duration-300 text-center overflow-hidden flex flex-col h-full">
                                     {/* Curved Background Shape */}
-                                    <div className="absolute top-0 -left-[10%] w-[120%] h-[120px] bg-primary/5 rounded-b-[100%] transition-colors duration-500 group-hover:bg-primary"></div>
+                                    <div className="absolute top-0 -left-[10%] w-[120%] h-[120px] bg-primary rounded-b-[100%] transition-colors duration-500"></div>
 
                                     {/* Icon */}
                                     <div className="relative z-10 w-[90px] h-[90px] mx-auto bg-white rounded-full shadow-md flex items-center justify-center text-[40px] text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-2">
@@ -150,6 +155,82 @@ export const ServicesPage = () => {
                                             </a>
                                         </div>
                                     </div>
+                                </div>
+                            </FadeIn>
+                        ))}
+                    </div>
+
+                    {/* Mobile Accordion - Hidden on Desktop */}
+                    <div className="md:hidden space-y-3">
+                        {services.map((service, index) => (
+                            <FadeIn key={index} direction="up" delay={index * 0.05} fullWidth>
+                                <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
+                                    {/* Accordion Header */}
+                                    <button
+                                        onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                                        className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
+                                    >
+                                        <div className="flex items-center gap-3 flex-1">
+                                            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                                <service.icon size={24} strokeWidth={1.5} />
+                                            </div>
+                                            <h3 className="text-base font-bold font-rubik_0b5097 text-neutral-900">
+                                                {service.title}
+                                            </h3>
+                                        </div>
+                                        <ChevronDown
+                                            className={`w-5 h-5 text-gray-400 transition-transform duration-300 shrink-0 ${openIndex === index ? 'rotate-180' : ''}`}
+                                        />
+                                    </button>
+
+                                    {/* Accordion Body */}
+                                    <AnimatePresence initial={false}>
+                                        {openIndex === index && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: "auto", opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                                                className="overflow-hidden"
+                                            >
+                                                <div className="p-4 pt-0 border-t border-gray-100">
+                                                    <p className="text-zinc-600 text-sm leading-6 mb-4">
+                                                        {service.description}
+                                                    </p>
+
+                                                    <div className="mb-4">
+                                                        <h4 className="font-medium text-neutral-800 mb-2 text-sm">Key Features:</h4>
+                                                        <ul className="space-y-1">
+                                                            {service.features.map((feature, idx) => (
+                                                                <li key={idx} className="text-sm text-zinc-600 flex items-start">
+                                                                    <span className="text-primary mr-2">•</span>
+                                                                    <span>{feature}</span>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
+
+                                                    <div className="bg-gray-50 rounded-lg p-3 mb-4">
+                                                        <div className="flex justify-between text-sm mb-2">
+                                                            <span className="text-zinc-500">Amount:</span>
+                                                            <span className="font-medium text-neutral-800">{service.amount}</span>
+                                                        </div>
+                                                        <div className="flex justify-between text-sm">
+                                                            <span className="text-zinc-500">Tenure:</span>
+                                                            <span className="font-medium text-neutral-800">{service.tenure}</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <a
+                                                        href="/contact"
+                                                        className="block w-full text-center bg-primary text-white font-medium text-sm py-2.5 rounded-lg hover:bg-primary/90 transition-colors"
+                                                    >
+                                                        Learn More
+                                                    </a>
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
                                 </div>
                             </FadeIn>
                         ))}
