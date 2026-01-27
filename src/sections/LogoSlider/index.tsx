@@ -8,6 +8,7 @@ import idfcLogo from "@/assets/images/bank-partners/IDFC First Bank.png";
 import dcbLogo from "@/assets/images/bank-partners/DCB Bank.svg";
 import dbsLogo from "@/assets/images/bank-partners/DBS Bank.svg";
 import federalLogo from "@/assets/images/bank-partners/Federal Bank.png";
+import { FadeIn } from "@/components/animations/FadeIn";
 
 import { useRef } from "react";
 import {
@@ -90,12 +91,14 @@ export const LogoSlider = () => {
         <div id="partners" className="bg-white border-b-zinc-100 border-l-neutral-800 border-r-neutral-800 border-t-neutral-800 box-border caret-transparent py-[50px] border-b md:py-[100px] overflow-hidden relative">
             <div className="box-border caret-transparent w-full">
                 <div className="text-center mb-10 px-3">
-                    <h2 className="text-neutral-900 text-[28px] font-medium font-rubik_0b5097 md:text-[36px]">
-                        Our Trusted Banking Partners
-                    </h2>
-                    <p className="text-zinc-600 mt-2">
-                        We work with 10+ leading banks and 32+ NBFCs to get you the best deals.
-                    </p>
+                    <FadeIn direction="up">
+                        <h2 className="text-neutral-900 text-[28px] font-medium font-rubik_0b5097 md:text-[36px]">
+                            Our Trusted Banking Partners
+                        </h2>
+                        <p className="text-zinc-600 mt-2">
+                            We work with 10+ leading banks and 32+ NBFCs to get you the best deals.
+                        </p>
+                    </FadeIn>
                 </div>
 
                 {/* Parallax Marquee 1 (Left to Right) */}

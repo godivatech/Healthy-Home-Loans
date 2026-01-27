@@ -16,6 +16,7 @@ export const FundingSection = () => {
                         Experience a transparent and quick loan approval process designed to get you the funds you need without the stress.
                     </p>
                 </div>
+
                 <div className="items-center box-border caret-transparent flex flex-wrap -mx-3">
                     <FundingSteps />
                     <LoanCalculator />

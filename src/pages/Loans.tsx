@@ -1,5 +1,6 @@
 import arrow1 from "@/assets/images/first-arrow.png";
 import arrow2 from "@/assets/images/second-arrow.png";
+import { FadeIn } from "@/components/animations/FadeIn";
 import { Navbar } from "@/sections/Navbar";
 import { Footer } from "@/sections/Footer";
 import { Copyright } from "@/sections/Copyright";
@@ -95,57 +96,63 @@ export const LoansPage = () => {
                     </div>
                     <div className="flex flex-wrap -mx-3">
                         <div className="w-full md:w-[33.3333%] px-3 relative">
-                            <div className="text-center mb-5">
-                                <div className="relative mb-[15px]">
-                                    <span className="relative text-neutral-900 text-xl font-medium shadow-[rgba(102,102,102,0.1)_0px_0px_29px_0px] inline-block h-[100px] leading-[100px] w-[100px] z-[1] rounded-[50px]">
-                                        Apply
-                                    </span>
-                                    <strong className="absolute text-primary/10 text-[70px] font-semibold block leading-[0px] top-[50px] inset-x-0">
-                                        1
-                                    </strong>
+                            <FadeIn direction="up" delay={0.1}>
+                                <div className="text-center mb-5">
+                                    <div className="relative mb-[15px]">
+                                        <span className="relative text-neutral-900 text-xl font-medium shadow-[rgba(102,102,102,0.1)_0px_0px_29px_0px] inline-block h-[100px] leading-[100px] w-[100px] z-[1] rounded-[50px]">
+                                            Apply
+                                        </span>
+                                        <strong className="absolute text-primary/10 text-[70px] font-semibold block leading-[0px] top-[50px] inset-x-0">
+                                            1
+                                        </strong>
+                                    </div>
+                                    <h3 className="text-neutral-900 text-[22px] font-medium leading-[30.8px]">
+                                        Consultation <br /> & Application
+                                    </h3>
                                 </div>
-                                <h3 className="text-neutral-900 text-[22px] font-medium leading-[30.8px]">
-                                    Consultation <br /> & Application
-                                </h3>
-                            </div>
+                            </FadeIn>
                             {/* Arrow 1 */}
-                            <div className="hidden md:block absolute top-[30px] -right-[80px] w-[160px] z-10">
+                            <FadeIn delay={0.3} className="hidden md:block absolute top-[30px] -right-[80px] w-[160px] z-10">
                                 <img src={arrow1} alt="arrow" className="w-full" />
-                            </div>
+                            </FadeIn>
                         </div>
                         <div className="w-full md:w-[33.3333%] px-3 relative">
-                            <div className="text-center mb-5">
-                                <div className="relative mb-[15px]">
-                                    <span className="relative text-neutral-900 text-xl font-medium shadow-[rgba(102,102,102,0.1)_0px_0px_29px_0px] inline-block h-[100px] leading-[100px] w-[100px] z-[1] rounded-[50px]">
-                                        Process
-                                    </span>
-                                    <strong className="absolute text-primary/10 text-[70px] font-semibold block leading-[0px] top-[50px] inset-x-0">
-                                        2
-                                    </strong>
+                            <FadeIn direction="up" delay={0.3}>
+                                <div className="text-center mb-5">
+                                    <div className="relative mb-[15px]">
+                                        <span className="relative text-neutral-900 text-xl font-medium shadow-[rgba(102,102,102,0.1)_0px_0px_29px_0px] inline-block h-[100px] leading-[100px] w-[100px] z-[1] rounded-[50px]">
+                                            Process
+                                        </span>
+                                        <strong className="absolute text-primary/10 text-[70px] font-semibold block leading-[0px] top-[50px] inset-x-0">
+                                            2
+                                        </strong>
+                                    </div>
+                                    <h3 className="text-neutral-900 text-[22px] font-medium leading-[30.8px]">
+                                        Verification <br /> & Approval
+                                    </h3>
                                 </div>
-                                <h3 className="text-neutral-900 text-[22px] font-medium leading-[30.8px]">
-                                    Verification <br /> & Approval
-                                </h3>
-                            </div>
+                            </FadeIn>
                             {/* Arrow 2 */}
-                            <div className="hidden md:block absolute top-[30px] -right-[80px] w-[160px] z-10">
+                            <FadeIn delay={0.5} className="hidden md:block absolute top-[30px] -right-[80px] w-[160px] z-10">
                                 <img src={arrow2} alt="arrow" className="w-full" />
-                            </div>
+                            </FadeIn>
                         </div>
                         <div className="w-full md:w-[33.3333%] px-3">
-                            <div className="text-center mb-5">
-                                <div className="relative mb-[15px]">
-                                    <span className="relative text-neutral-900 text-xl font-medium shadow-[rgba(102,102,102,0.1)_0px_0px_29px_0px] inline-block h-[100px] leading-[100px] w-[100px] z-[1] rounded-[50px]">
-                                        Support
-                                    </span>
-                                    <strong className="absolute text-primary/10 text-[70px] font-semibold block leading-[0px] top-[50px] inset-x-0">
-                                        3
-                                    </strong>
+                            <FadeIn direction="up" delay={0.5}>
+                                <div className="text-center mb-5">
+                                    <div className="relative mb-[15px]">
+                                        <span className="relative text-neutral-900 text-xl font-medium shadow-[rgba(102,102,102,0.1)_0px_0px_29px_0px] inline-block h-[100px] leading-[100px] w-[100px] z-[1] rounded-[50px]">
+                                            Support
+                                        </span>
+                                        <strong className="absolute text-primary/10 text-[70px] font-semibold block leading-[0px] top-[50px] inset-x-0">
+                                            3
+                                        </strong>
+                                    </div>
+                                    <h3 className="text-neutral-900 text-[22px] font-medium leading-[30.8px]">
+                                        Sanction <br /> & Disbursement
+                                    </h3>
                                 </div>
-                                <h3 className="text-neutral-900 text-[22px] font-medium leading-[30.8px]">
-                                    Sanction <br /> & Disbursement
-                                </h3>
-                            </div>
+                            </FadeIn>
                         </div>
                     </div>
                 </div>
@@ -161,56 +168,64 @@ export const LoansPage = () => {
                             </h3>
 
                             {/* Step 1 */}
-                            <div className="relative mt-[30px] pl-[65px] before:bg-primary before:h-[140%] before:w-px before:absolute before:left-5 before:top-0 before:z-[-1]">
-                                <span className="absolute text-primary text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-primary rounded-[50px] left-0 top-0">
-                                    1
-                                </span>
-                                <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
-                                    Free Consultation
-                                </h4>
-                                <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
-                                    We analyze your financial profile and requirements to suggest the best loan options.
-                                </p>
-                            </div>
+                            <FadeIn direction="right" delay={0.1} fullWidth>
+                                <div className="relative mt-[30px] pl-[65px] before:bg-primary before:h-[140%] before:w-px before:absolute before:left-5 before:top-0 before:z-[-1]">
+                                    <span className="absolute text-primary text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-primary rounded-[50px] left-0 top-0">
+                                        1
+                                    </span>
+                                    <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
+                                        Free Consultation
+                                    </h4>
+                                    <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
+                                        We analyze your financial profile and requirements to suggest the best loan options.
+                                    </p>
+                                </div>
+                            </FadeIn>
 
                             {/* Step 2 */}
-                            <div className="relative mt-[30px] pl-[65px] before:bg-primary before:h-[140%] before:w-px before:absolute before:left-5 before:top-0 before:z-[-1]">
-                                <span className="absolute text-primary text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-primary rounded-[50px] left-0 top-0">
-                                    2
-                                </span>
-                                <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
-                                    Document Collection
-                                </h4>
-                                <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
-                                    Our team collects necessary documents from your doorstep and prepares your file.
-                                </p>
-                            </div>
+                            <FadeIn direction="right" delay={0.2} fullWidth>
+                                <div className="relative mt-[30px] pl-[65px] before:bg-primary before:h-[140%] before:w-px before:absolute before:left-5 before:top-0 before:z-[-1]">
+                                    <span className="absolute text-primary text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-primary rounded-[50px] left-0 top-0">
+                                        2
+                                    </span>
+                                    <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
+                                        Document Collection
+                                    </h4>
+                                    <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
+                                        Our team collects necessary documents from your doorstep and prepares your file.
+                                    </p>
+                                </div>
+                            </FadeIn>
 
                             {/* Step 3 */}
-                            <div className="relative mt-[30px] pl-[65px] before:bg-primary before:h-[140%] before:w-px before:absolute before:left-5 before:top-0 before:z-[-1]">
-                                <span className="absolute text-primary text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-primary rounded-[50px] left-0 top-0">
-                                    3
-                                </span>
-                                <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
-                                    Legal & Technical Verification
-                                </h4>
-                                <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
-                                    We handle all verifications with the bank to ensure smooth processing.
-                                </p>
-                            </div>
+                            <FadeIn direction="right" delay={0.3} fullWidth>
+                                <div className="relative mt-[30px] pl-[65px] before:bg-primary before:h-[140%] before:w-px before:absolute before:left-5 before:top-0 before:z-[-1]">
+                                    <span className="absolute text-primary text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-primary rounded-[50px] left-0 top-0">
+                                        3
+                                    </span>
+                                    <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
+                                        Legal & Technical Verification
+                                    </h4>
+                                    <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
+                                        We handle all verifications with the bank to ensure smooth processing.
+                                    </p>
+                                </div>
+                            </FadeIn>
 
                             {/* Step 4 */}
-                            <div className="relative mt-[30px] pl-[65px]">
-                                <span className="absolute text-primary text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-primary rounded-[50px] left-0 top-0">
-                                    4
-                                </span>
-                                <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
-                                    Sanction & Disbursal
-                                </h4>
-                                <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
-                                    Once approved, the loan amount is disbursed directly to your account.
-                                </p>
-                            </div>
+                            <FadeIn direction="right" delay={0.4} fullWidth>
+                                <div className="relative mt-[30px] pl-[65px]">
+                                    <span className="absolute text-primary text-2xl bg-gray-50 block h-10 leading-10 text-center w-10 border border-primary rounded-[50px] left-0 top-0">
+                                        4
+                                    </span>
+                                    <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
+                                        Sanction & Disbursal
+                                    </h4>
+                                    <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
+                                        Once approved, the loan amount is disbursed directly to your account.
+                                    </p>
+                                </div>
+                            </FadeIn>
 
                             <div className="text-center md:text-start mt-[25px]">
                                 <a
@@ -222,13 +237,15 @@ export const LoansPage = () => {
                             </div>
                         </div>
                         <div className="w-full md:w-6/12 px-3">
-                            <div className="text-center md:text-start">
-                                <img
-                                    alt="image"
-                                    src="https://leza-react.envytheme.com/images/loan2.png"
-                                    className="w-[600px] max-w-full"
-                                />
-                            </div>
+                            <FadeIn direction="left" delay={0.3} fullWidth>
+                                <div className="text-center md:text-start">
+                                    <img
+                                        alt="image"
+                                        src="https://leza-react.envytheme.com/images/loan2.png"
+                                        className="w-[600px] max-w-full"
+                                    />
+                                </div>
+                            </FadeIn>
                         </div>
                     </div>
                 </div>
@@ -241,156 +258,160 @@ export const LoansPage = () => {
                 <div className="max-w-[1140px] w-full mx-auto px-3">
                     <div className="flex flex-wrap items-center -mx-3">
                         <div className="w-full md:w-6/12 px-3">
-                            <div className="mb-[30px]">
-                                <h3 className="text-neutral-900 text-3xl md:text-4xl font-medium mb-3">
-                                    Loan Inquiry
-                                </h3>
-                                <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
-                                    Please complete the short form below with your details and one
-                                    of our advisors will be touch shortly
-                                </p>
-                            </div>
-                            <form>
-                                <div className="flex flex-wrap -mx-3">
-                                    <div className="w-full md:w-6/12 px-3">
-                                        <div className="mb-4">
-                                            <label className="text-zinc-600 inline-block mb-2">Your Name*</label>
-                                            <input
-                                                type="text"
-                                                className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-6/12 px-3">
-                                        <div className="mb-4">
-                                            <label className="text-zinc-600 inline-block mb-2">Phone Number*</label>
-                                            <input
-                                                type="text"
-                                                className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-6/12 px-3">
-                                        <div className="mb-4">
-                                            <label className="text-zinc-600 inline-block mb-2">Email Address</label>
-                                            <input
-                                                type="email"
-                                                className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-6/12 px-3">
-                                        <div className="mb-4">
-                                            <label className="text-zinc-600 inline-block mb-2">Postcode*</label>
-                                            <input
-                                                type="text"
-                                                className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-6/12 px-3">
-                                        <div className="mb-4">
-                                            <label className="text-zinc-600 inline-block mb-2">Date of Birth</label>
-                                            <input
-                                                type="date"
-                                                className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-6/12 px-3">
-                                        <div className="mb-4">
-                                            <label className="text-zinc-600 inline-block mb-2">Address</label>
-                                            <input
-                                                type="text"
-                                                className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-6/12 px-3">
-                                        <div className="mb-4">
-                                            <label className="text-zinc-600 inline-block mb-2">City</label>
-                                            <input
-                                                type="text"
-                                                className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
-                                            />
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div className="mt-5">
-                                    <button
-                                        type="submit"
-                                        className="relative text-white text-[15px] md:text-base bg-primary text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
-                                    >
-                                        Submit
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        <div className="w-full md:w-6/12 px-3">
-                            <div className="bg-primary px-5 md:px-[45px] py-[30px] md:py-[50px]">
-                                <div className="text-center mb-[30px] md:mb-[35px]">
-                                    <span className="text-white">Calculate your rate</span>
-                                    <h3 className="text-white text-xl md:text-4xl font-medium mt-2.5">
-                                        How much do you need?
+                            <FadeIn direction="up" delay={0.2} fullWidth>
+                                <div className="mb-[30px]">
+                                    <h3 className="text-neutral-900 text-3xl md:text-4xl font-medium mb-3">
+                                        Loan Inquiry
                                     </h3>
+                                    <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
+                                        Please complete the short form below with your details and one
+                                        of our advisors will be touch shortly
+                                    </p>
                                 </div>
                                 <form>
-                                    <div className="mb-4">
-                                        <label className="text-white inline-block capitalize mb-2">Loan Amount</label>
-                                        <input
-                                            placeholder="₹ 1,00,000"
-                                            type="text"
-                                            className="text-zinc-600 block h-[50px] w-full px-3 py-1.5"
-                                        />
+                                    <div className="flex flex-wrap -mx-3">
+                                        <div className="w-full md:w-6/12 px-3">
+                                            <div className="mb-4">
+                                                <label className="text-zinc-600 inline-block mb-2">Your Name*</label>
+                                                <input
+                                                    type="text"
+                                                    className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="w-full md:w-6/12 px-3">
+                                            <div className="mb-4">
+                                                <label className="text-zinc-600 inline-block mb-2">Phone Number*</label>
+                                                <input
+                                                    type="text"
+                                                    className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="w-full md:w-6/12 px-3">
+                                            <div className="mb-4">
+                                                <label className="text-zinc-600 inline-block mb-2">Email Address</label>
+                                                <input
+                                                    type="email"
+                                                    className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="w-full md:w-6/12 px-3">
+                                            <div className="mb-4">
+                                                <label className="text-zinc-600 inline-block mb-2">Postcode*</label>
+                                                <input
+                                                    type="text"
+                                                    className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="w-full md:w-6/12 px-3">
+                                            <div className="mb-4">
+                                                <label className="text-zinc-600 inline-block mb-2">Date of Birth</label>
+                                                <input
+                                                    type="date"
+                                                    className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="w-full md:w-6/12 px-3">
+                                            <div className="mb-4">
+                                                <label className="text-zinc-600 inline-block mb-2">Address</label>
+                                                <input
+                                                    type="text"
+                                                    className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="w-full md:w-6/12 px-3">
+                                            <div className="mb-4">
+                                                <label className="text-zinc-600 inline-block mb-2">City</label>
+                                                <input
+                                                    type="text"
+                                                    className="text-stone-300 bg-transparent block h-[50px] w-full border border-stone-300 px-3 py-1.5"
+                                                />
+                                            </div>
+                                        </div>
+
                                     </div>
-                                    <div className="mb-4">
-                                        <label className="text-white inline-block capitalize mb-2">Tenure (Months/Years)</label>
-                                        <select className="text-zinc-600 block h-[50px] w-full pl-3 pr-9 py-1.5 appearance-none bg-white bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%201L6%206L11%201%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E')] bg-[length:12px_8px] bg-[right_12px_center] bg-no-repeat">
-                                            <option value="5">1 month</option>
-                                            <option value="1">2 month</option>
-                                            <option value="2">3 month</option>
-                                            <option value="0">4 month</option>
-                                            <option value="3">6 month</option>
-                                            <option value="3">1 Year</option>
-                                            <option value="0">2 Years</option>
-                                            <option value="3">3 Years</option>
-                                        </select>
-                                    </div>
-                                    <div className="mb-4">
-                                        <label className="text-white inline-block capitalize mb-2">Interest Rate (%)</label>
-                                        <input
-                                            placeholder="8.5%"
-                                            type="text"
-                                            className="text-zinc-600 block h-[50px] w-full px-3 py-1.5"
-                                        />
-                                    </div>
-                                    <div className="mb-4">
-                                        <label className="text-white inline-block capitalize mb-2">Loan Term</label>
-                                        <input
-                                            placeholder="6 months"
-                                            type="text"
-                                            className="text-zinc-600 block h-[50px] w-full px-3 py-1.5"
-                                        />
-                                    </div>
-                                    <div className="mb-4">
-                                        <label className="text-white inline-block capitalize mb-2">The total you will pay</label>
-                                        <input
-                                            placeholder="₹ 1,12,000"
-                                            type="text"
-                                            className="text-zinc-600 block h-[50px] w-full px-3 py-1.5"
-                                        />
-                                    </div>
-                                    <div className="mt-[25px]">
+                                    <div className="mt-5">
                                         <button
                                             type="submit"
-                                            className="relative text-white text-[15px] md:text-base font-medium bg-primary w-full text-center z-[1] overflow-hidden px-[30px] py-[15px] rounded-[5px] hover:bg-neutral-900"
+                                            className="relative text-white text-[15px] md:text-base bg-primary text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
                                         >
-                                            Apply for this loan
+                                            Submit
                                         </button>
                                     </div>
                                 </form>
-                            </div>
+                            </FadeIn>
+                        </div>
+                        <div className="w-full md:w-6/12 px-3">
+                            <FadeIn direction="left" delay={0.4} fullWidth>
+                                <div className="bg-primary px-5 md:px-[45px] py-[30px] md:py-[50px]">
+                                    <div className="text-center mb-[30px] md:mb-[35px]">
+                                        <span className="text-white">Calculate your rate</span>
+                                        <h3 className="text-white text-xl md:text-4xl font-medium mt-2.5">
+                                            How much do you need?
+                                        </h3>
+                                    </div>
+                                    <form>
+                                        <div className="mb-4">
+                                            <label className="text-white inline-block capitalize mb-2">Loan Amount</label>
+                                            <input
+                                                placeholder="₹ 1,00,000"
+                                                type="text"
+                                                className="text-zinc-600 block h-[50px] w-full px-3 py-1.5"
+                                            />
+                                        </div>
+                                        <div className="mb-4">
+                                            <label className="text-white inline-block capitalize mb-2">Tenure (Months/Years)</label>
+                                            <select className="text-zinc-600 block h-[50px] w-full pl-3 pr-9 py-1.5 appearance-none bg-white bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%201L6%206L11%201%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E')] bg-[length:12px_8px] bg-[right_12px_center] bg-no-repeat">
+                                                <option value="5">1 month</option>
+                                                <option value="1">2 month</option>
+                                                <option value="2">3 month</option>
+                                                <option value="0">4 month</option>
+                                                <option value="3">6 month</option>
+                                                <option value="3">1 Year</option>
+                                                <option value="0">2 Years</option>
+                                                <option value="3">3 Years</option>
+                                            </select>
+                                        </div>
+                                        <div className="mb-4">
+                                            <label className="text-white inline-block capitalize mb-2">Interest Rate (%)</label>
+                                            <input
+                                                placeholder="8.5%"
+                                                type="text"
+                                                className="text-zinc-600 block h-[50px] w-full px-3 py-1.5"
+                                            />
+                                        </div>
+                                        <div className="mb-4">
+                                            <label className="text-white inline-block capitalize mb-2">Loan Term</label>
+                                            <input
+                                                placeholder="6 months"
+                                                type="text"
+                                                className="text-zinc-600 block h-[50px] w-full px-3 py-1.5"
+                                            />
+                                        </div>
+                                        <div className="mb-4">
+                                            <label className="text-white inline-block capitalize mb-2">The total you will pay</label>
+                                            <input
+                                                placeholder="₹ 1,12,000"
+                                                type="text"
+                                                className="text-zinc-600 block h-[50px] w-full px-3 py-1.5"
+                                            />
+                                        </div>
+                                        <div className="mt-[25px]">
+                                            <button
+                                                type="submit"
+                                                className="relative text-white text-[15px] md:text-base font-medium bg-primary w-full text-center z-[1] overflow-hidden px-[30px] py-[15px] rounded-[5px] hover:bg-neutral-900"
+                                            >
+                                                Apply for this loan
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </FadeIn>
                         </div>
                     </div>
                 </div>

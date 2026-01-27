@@ -4,6 +4,7 @@ import { Copyright } from "@/sections/Copyright";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { PageBanner } from "@/components/PageBanner";
 import hdfcLogo from "@/assets/images/bank-partners/hdfc-bank-logo.svg";
+import { FadeIn } from "@/components/animations/FadeIn";
 import axisLogo from "@/assets/images/bank-partners/axis-bank-logo.png";
 import kotakLogo from "@/assets/images/bank-partners/kotak_mahindra_bank-logo.png";
 import janaLogo from "@/assets/images/bank-partners/Jana Small Finance Bank.png";
@@ -138,25 +139,26 @@ export const PartnersPage = () => {
                                 }
 
                                 return (
-                                    <div
-                                        key={index}
-                                        className="p-6 border-2 border-primary rounded-xl bg-white hover:shadow-xl transition-all duration-500 group"
-                                    >
-                                        <div className="h-[80px] flex items-center justify-center mb-4 transition-transform duration-500 group-hover:scale-105">
-                                            {bankLogo ? (
-                                                <img
-                                                    src={bankLogo}
-                                                    alt={bankName}
-                                                    className={`max-h-full max-w-full object-contain ${scaleClass}`}
-                                                />
-                                            ) : (
-                                                <span className="text-sm font-medium text-gray-400 text-center">Logo</span>
-                                            )}
+                                    <FadeIn key={index} direction="up" delay={(index % 4) * 0.1} className="h-full">
+                                        <div
+                                            className="p-6 border-2 border-primary rounded-xl bg-white hover:shadow-xl transition-all duration-500 group h-full"
+                                        >
+                                            <div className="h-[80px] flex items-center justify-center mb-4 transition-transform duration-500 group-hover:scale-105">
+                                                {bankLogo ? (
+                                                    <img
+                                                        src={bankLogo}
+                                                        alt={bankName}
+                                                        className={`max-h-full max-w-full object-contain ${scaleClass}`}
+                                                    />
+                                                ) : (
+                                                    <span className="text-sm font-medium text-gray-400 text-center">Logo</span>
+                                                )}
+                                            </div>
+                                            <h3 className="text-sm md:text-base font-semibold text-neutral-900 text-center transition-colors duration-500 group-hover:text-primary">
+                                                {bankName}
+                                            </h3>
                                         </div>
-                                        <h3 className="text-sm md:text-base font-semibold text-neutral-900 text-center transition-colors duration-500 group-hover:text-primary">
-                                            {bankName}
-                                        </h3>
-                                    </div>
+                                    </FadeIn>
                                 );
                             })}
                         </div>
@@ -174,21 +176,22 @@ export const PartnersPage = () => {
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
                             {nbfcs.map((nbfc, index) => (
-                                <div
-                                    key={index}
-                                    className="p-6 border-2 border-primary rounded-xl bg-white hover:shadow-xl transition-all duration-500 group flex flex-col h-full"
-                                >
-                                    <div className="h-[80px] flex items-center justify-center mb-4 w-full transition-transform duration-500 group-hover:scale-105">
-                                        <img
-                                            src={nbfc.logo}
-                                            alt={nbfc.name}
-                                            className="max-h-full max-w-full object-contain"
-                                        />
+                                <FadeIn key={index} direction="up" delay={(index % 4) * 0.1} className="h-full">
+                                    <div
+                                        className="p-6 border-2 border-primary rounded-xl bg-white hover:shadow-xl transition-all duration-500 group flex flex-col h-full"
+                                    >
+                                        <div className="h-[80px] flex items-center justify-center mb-4 w-full transition-transform duration-500 group-hover:scale-105">
+                                            <img
+                                                src={nbfc.logo}
+                                                alt={nbfc.name}
+                                                className="max-h-full max-w-full object-contain"
+                                            />
+                                        </div>
+                                        <h3 className="text-sm md:text-base font-semibold text-neutral-900 text-center mt-auto transition-colors duration-500 group-hover:text-primary">
+                                            {nbfc.name}
+                                        </h3>
                                     </div>
-                                    <h3 className="text-sm md:text-base font-semibold text-neutral-900 text-center mt-auto transition-colors duration-500 group-hover:text-primary">
-                                        {nbfc.name}
-                                    </h3>
-                                </div>
+                                </FadeIn>
                             ))}
                         </div>
                     </div>

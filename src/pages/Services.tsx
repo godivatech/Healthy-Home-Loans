@@ -5,6 +5,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { CallToAction } from "@/sections/CallToAction";
 import { PageBanner } from "@/components/PageBanner";
 import { Home, User, Building2, Briefcase, Car, Map as MapIcon, CreditCard, Wallet } from "lucide-react";
+import { FadeIn } from "@/components/animations/FadeIn";
 
 export const ServicesPage = () => {
     const services = [
@@ -103,52 +104,54 @@ export const ServicesPage = () => {
                 <div className="max-w-[1140px] mx-auto px-3">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service, index) => (
-                            <div key={index} className="group relative bg-white border border-gray-100 rounded-lg p-6 pt-[75px] hover:shadow-[0_10px_30px_rgba(0,0,0,0.1)] transition-all duration-300 text-center overflow-hidden flex flex-col h-full">
-                                {/* Curved Background Shape */}
-                                <div className="absolute top-0 -left-[10%] w-[120%] h-[120px] bg-primary/5 rounded-b-[100%] transition-colors duration-500 group-hover:bg-primary"></div>
+                            <FadeIn key={index} direction="up" delay={index * 0.1} className="h-full">
+                                <div className="group relative bg-white border border-gray-100 rounded-lg p-6 pt-[75px] hover:shadow-[0_10px_30px_rgba(0,0,0,0.1)] transition-all duration-300 text-center overflow-hidden flex flex-col h-full">
+                                    {/* Curved Background Shape */}
+                                    <div className="absolute top-0 -left-[10%] w-[120%] h-[120px] bg-primary/5 rounded-b-[100%] transition-colors duration-500 group-hover:bg-primary"></div>
 
-                                {/* Icon */}
-                                <div className="relative z-10 w-[90px] h-[90px] mx-auto bg-white rounded-full shadow-md flex items-center justify-center text-[40px] text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-2">
-                                    <service.icon size={40} strokeWidth={1.5} />
-                                </div>
-
-                                {/* Content */}
-                                <div className="relative z-10 flex-grow flex flex-col">
-                                    <h3 className="text-xl font-bold font-rubik_0b5097 mb-3 text-neutral-900">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-zinc-600 mb-5 text-sm leading-6">
-                                        {service.description}
-                                    </p>
-
-                                    <div className="mb-4 text-left">
-                                        <h4 className="font-medium text-neutral-800 mb-2 text-sm text-center">Key Features:</h4>
-                                        <ul className="list-disc pl-5 text-sm text-zinc-600">
-                                            {service.features.map((feature, idx) => (
-                                                <li key={idx} className="mb-1">{feature}</li>
-                                            ))}
-                                        </ul>
+                                    {/* Icon */}
+                                    <div className="relative z-10 w-[90px] h-[90px] mx-auto bg-white rounded-full shadow-md flex items-center justify-center text-[40px] text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-2">
+                                        <service.icon size={40} strokeWidth={1.5} />
                                     </div>
 
-                                    <div className="mt-auto pt-4 border-t border-gray-100 w-full">
-                                        <div className="flex justify-between text-sm mb-1 px-2">
-                                            <span className="text-zinc-500">Amount:</span>
-                                            <span className="font-medium text-neutral-800">{service.amount}</span>
-                                        </div>
-                                        <div className="flex justify-between text-sm mb-4 px-2">
-                                            <span className="text-zinc-500">Tenure:</span>
-                                            <span className="font-medium text-neutral-800">{service.tenure}</span>
+                                    {/* Content */}
+                                    <div className="relative z-10 flex-grow flex flex-col">
+                                        <h3 className="text-xl font-bold font-rubik_0b5097 mb-3 text-neutral-900">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-zinc-600 mb-5 text-sm leading-6">
+                                            {service.description}
+                                        </p>
+
+                                        <div className="mb-4 text-left">
+                                            <h4 className="font-medium text-neutral-800 mb-2 text-sm text-center">Key Features:</h4>
+                                            <ul className="list-disc pl-5 text-sm text-zinc-600">
+                                                {service.features.map((feature, idx) => (
+                                                    <li key={idx} className="mb-1">{feature}</li>
+                                                ))}
+                                            </ul>
                                         </div>
 
-                                        <a
-                                            href="/contact"
-                                            className="text-primary font-medium text-[15px] inline-block hover:text-primary/80 transition-colors uppercase tracking-wide"
-                                        >
-                                            Learn More
-                                        </a>
+                                        <div className="mt-auto pt-4 border-t border-gray-100 w-full">
+                                            <div className="flex justify-between text-sm mb-1 px-2">
+                                                <span className="text-zinc-500">Amount:</span>
+                                                <span className="font-medium text-neutral-800">{service.amount}</span>
+                                            </div>
+                                            <div className="flex justify-between text-sm mb-4 px-2">
+                                                <span className="text-zinc-500">Tenure:</span>
+                                                <span className="font-medium text-neutral-800">{service.tenure}</span>
+                                            </div>
+
+                                            <a
+                                                href="/contact"
+                                                className="text-primary font-medium text-[15px] inline-block hover:text-primary/80 transition-colors uppercase tracking-wide"
+                                            >
+                                                Learn More
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </FadeIn>
                         ))}
                     </div>
                 </div>

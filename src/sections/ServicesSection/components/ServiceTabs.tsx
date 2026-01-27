@@ -11,6 +11,7 @@ import {
     Briefcase,
     PiggyBank
 } from "lucide-react";
+import { FadeIn } from "@/components/animations/FadeIn";
 
 export const ServiceTabs = () => {
     const [page, setPage] = useState(0);
@@ -74,53 +75,59 @@ export const ServiceTabs = () => {
                 {/* Left Column: Header & Image */}
                 <div className="w-full lg:w-5/12 px-4 mb-12 lg:mb-0">
                     <div className="h-full flex flex-col">
-                        <div className="mb-8">
-                            <span className="text-white/80 font-medium tracking-wide text-sm uppercase mb-2 block">
-                                // Our Expertise
-                            </span>
-                            <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight mb-6 font-rubik_0b5097">
-                                Comprehensive <br /> Loan Solutions
-                            </h2>
-                        </div>
+                        <FadeIn direction="right" delay={0.2} fullWidth>
+                            <div className="mb-8">
+                                <span className="text-white/80 font-medium tracking-wide text-sm uppercase mb-2 block">
+                                    // Our Expertise
+                                </span>
+                                <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight mb-6 font-rubik_0b5097">
+                                    Comprehensive <br /> Loan Solutions
+                                </h2>
+                            </div>
+                        </FadeIn>
 
                         <div className="relative mb-10 group flex-grow max-h-[400px] flex items-center justify-center">
-                            {/* Decorative Background Circles - Blurred */}
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -z-10"></div>
-                            <div className="absolute bottom-10 left-10 w-32 h-32 bg-white/20 rounded-full blur-2xl -z-10"></div>
+                            <FadeIn direction="right" delay={0.4} fullWidth className="w-full h-full">
+                                {/* Decorative Background Circles - Blurred */}
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -z-10"></div>
+                                <div className="absolute bottom-10 left-10 w-32 h-32 bg-white/20 rounded-full blur-2xl -z-10"></div>
 
-                            {/* Sharp Decorative Particles (from reference) */}
-                            <div className="absolute top-4 left-4 w-6 h-6 rounded-full border-2 border-white/20 -z-10"></div>
-                            <div className="absolute bottom-12 left-0 w-4 h-4 rounded-full bg-white/10 -z-10"></div>
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-6 h-6 -z-10 opacity-20">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
-                                    <path d="M12 4v16m-8-8h16" />
-                                </svg>
-                            </div>
-                            <div className="absolute bottom-0 right-1/4 w-8 h-8 -z-10 opacity-30">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                                    <path d="M12 4v16m-8-8h16" />
-                                </svg>
-                            </div>
-                            <div className="absolute bottom-4 right-10 w-10 h-10 rounded-full border-4 border-white/10 -z-10"></div>
+                                {/* Sharp Decorative Particles (from reference) */}
+                                <div className="absolute top-4 left-4 w-6 h-6 rounded-full border-2 border-white/20 -z-10"></div>
+                                <div className="absolute bottom-12 left-0 w-4 h-4 rounded-full bg-white/10 -z-10"></div>
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-6 h-6 -z-10 opacity-20">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                                        <path d="M12 4v16m-8-8h16" />
+                                    </svg>
+                                </div>
+                                <div className="absolute bottom-0 right-1/4 w-8 h-8 -z-10 opacity-30">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                                        <path d="M12 4v16m-8-8h16" />
+                                    </svg>
+                                </div>
+                                <div className="absolute bottom-4 right-10 w-10 h-10 rounded-full border-4 border-white/10 -z-10"></div>
 
-                            {/* Blob Image Container */}
-                            <div className="relative overflow-hidden shadow-2xl w-full h-full transition-transform duration-700 hover:scale-[1.02]" style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}>
-                                <img
-                                    alt="Loan Solutions"
-                                    src="https://leza-react.envytheme.com/images/services-tab.png"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors"></div>
-                            </div>
+                                {/* Blob Image Container */}
+                                <div className="relative overflow-hidden shadow-2xl w-full h-full transition-transform duration-700 hover:scale-[1.02]" style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}>
+                                    <img
+                                        alt="Loan Solutions"
+                                        src="https://leza-react.envytheme.com/images/services-tab.png"
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors"></div>
+                                </div>
+                            </FadeIn>
                         </div>
 
                         <div>
-                            <Link
-                                to="/contact"
-                                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary transition-all duration-200 bg-white rounded-full hover:bg-neutral-900 hover:text-white hover:-translate-y-1 shadow-lg shadow-black/20"
-                            >
-                                Get A Quote
-                            </Link>
+                            <FadeIn direction="up" delay={0.6}>
+                                <Link
+                                    to="/contact"
+                                    className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary transition-all duration-200 bg-white rounded-full hover:bg-neutral-900 hover:text-white hover:-translate-y-1 shadow-lg shadow-black/20"
+                                >
+                                    Get A Quote
+                                </Link>
+                            </FadeIn>
                         </div>
                     </div>
                 </div>
