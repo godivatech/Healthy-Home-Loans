@@ -15,26 +15,37 @@ export const AboutPage = () => {
 
             <PageBanner title="About Us" />
 
-            {/* MD Profile Section - Moved Above AboutSection */}
+            {/* MD Profile Section - Premium Card */}
             <div className="py-[100px] bg-white">
-                <div className="max-w-[1140px] mx-auto px-3">
-                    <div className="flex flex-wrap items-center -mx-3">
-                        <div className="w-full md:w-1/2 px-3 mb-8 md:mb-0">
+                <div className="max-w-[1050px] mx-auto px-6">
+                    <div className="bg-white rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col md:flex-row">
+                        {/* Image Side */}
+                        <div className="w-full md:w-5/12 relative min-h-[400px]">
                             <img
                                 src={photo}
                                 alt="S. Mabubasha Shah Hussain"
-                                className="rounded-lg shadow-lg w-full max-w-[400px] mx-auto"
+                                className="absolute inset-0 w-full h-full object-cover object-top"
                             />
                         </div>
-                        <div className="w-full md:w-1/2 px-3">
-                            <h2 className="text-3xl font-bold font-rubik_0b5097 mb-4 text-neutral-900">Meet Our Managing Director</h2>
-                            <h3 className="text-xl text-primary font-medium mb-4">S. Mabubasha Shah Hussain</h3>
-                            <p className="text-zinc-600 mb-4 leading-relaxed">
-                                With over 15 years of hands-on experience in the financial services industry, Mr. Hussain has successfully facilitated loans worth over ₹100 Crores. His deep understanding of the Tamil Nadu financial market and strong relationships with 40+ banking partners have helped over 1000+ clients achieve their financial dreams.
+
+                        {/* Content Side */}
+                        <div className="w-full md:w-7/12 p-8 md:p-12 flex flex-col justify-center">
+                            <h2 className="text-3xl md:text-[32px] font-bold font-rubik_0b5097 mb-2 text-neutral-900">
+                                Meet Our Managing Director
+                            </h2>
+                            <h3 className="text-xl text-primary font-medium mb-6">
+                                S. Mabubasha Shah Hussain
+                            </h3>
+
+                            <p className="text-zinc-600 mb-6 leading-[1.8] text-[15px] md:text-base">
+                                With over 15 years of hands-on experience in the financial services industry, Mr. Hussain has successfully facilitated loans worth over <span className="font-semibold text-neutral-800">₹100 Crores</span>. His deep understanding of the Tamil Nadu financial market and strong relationships with 40+ banking partners have helped over <span className="font-semibold text-neutral-800">1000+ clients</span> achieve their financial dreams.
                             </p>
-                            <p className="text-zinc-600 leading-relaxed">
-                                "My mission is to provide holistically-designed financial solutions that optimize each family's current financial health and long-term wealth, making loans easy and living peaceful."
-                            </p>
+
+                            <div className="relative">
+                                <p className="text-zinc-600 leading-[1.8] italic text-[15px] md:text-base">
+                                    "My mission is to provide holistically-designed financial solutions that optimize each family's current financial health and long-term wealth, making loans easy and living peaceful."
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
