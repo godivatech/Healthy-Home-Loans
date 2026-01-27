@@ -16,7 +16,7 @@ import { LoansPage } from "@/pages/Loans";
 
 const HomePage = () => {
     return (
-        <div className="text-neutral-800 text-base not-italic normal-nums font-normal accent-auto bg-white box-border caret-transparent block tracking-[normal] leading-6 list-outside list-disc pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-roboto_68d44c">
+        <div className="text-neutral-800 text-base not-italic normal-nums font-normal accent-auto bg-white box-border caret-transparent block tracking-[normal] leading-6 list-outside list-disc pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-roboto_68d44c overflow-x-hidden">
             <Navbar />
             <Hero />
             <LogoSlider />

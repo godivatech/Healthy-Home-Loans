@@ -11,7 +11,7 @@ import { FadeIn } from "@/components/animations/FadeIn";
 
 export const AboutPage = () => {
     return (
-        <div className="text-neutral-800 font-roboto_68d44c">
+        <div className="text-neutral-800 font-roboto_68d44c overflow-x-hidden">
             <Navbar />
 
             <PageBanner title="About Us" />

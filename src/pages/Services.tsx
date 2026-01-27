@@ -95,7 +95,7 @@ export const ServicesPage = () => {
     ];
 
     return (
-        <div className="text-neutral-800 font-roboto_68d44c">
+        <div className="text-neutral-800 font-roboto_68d44c overflow-x-hidden">
             <Navbar />
 
             <PageBanner title="Our Services" breadcrumb="Home" />
