@@ -126,8 +126,8 @@ export const ServiceTabs = () => {
                 </div>
 
                 {/* Right Column: Service Grid with Navigation */}
-                <div className="w-full lg:w-7/12 px-4 relative flex items-center justify-center">
-                    <div className="flex-grow min-h-[480px] flex items-center">
+                <div className="w-full lg:w-7/12 px-4 relative flex flex-col md:flex-row items-center justify-center">
+                    <div className="flex-grow min-h-[480px] flex items-center w-full">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={page}
@@ -167,7 +167,7 @@ export const ServiceTabs = () => {
                     </div>
 
                     {/* Navigation Arrow */}
-                    <div className="ml-8 flex flex-col gap-6 items-center shrink-0">
+                    <div className="mt-8 md:mt-0 md:ml-8 flex flex-col gap-6 items-center shrink-0">
                         <button
                             onClick={() => setPage((prev) => (prev === 0 ? 1 : 0))}
                             className="w-14 h-14 rounded-full border-2 border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300 group shadow-lg"

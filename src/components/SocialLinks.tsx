@@ -1,6 +1,6 @@
 export const SocialLinks = () => {
     return (
-        <div className="absolute box-border caret-transparent hidden z-[1] left-[45px] bottom-[50px] md:block">
+        <div className="absolute box-border caret-transparent z-[1] left-[45px] bottom-[50px]">
             <ul className="box-border caret-transparent pl-0">
                 <li className="text-neutral-900 box-border caret-transparent inline-block list-none mr-5">
                     <span className="relative box-border caret-transparent mr-[30px] before:accent-auto before:bg-neutral-900 before:box-border before:caret-transparent before:text-neutral-900 before:block before:text-base before:not-italic before:normal-nums before:font-normal before:h-px before:tracking-[normal] before:leading-6 before:list-outside before:list-none before:pointer-events-auto before:absolute before:right-[-38px] before:text-start before:indent-[0px] before:normal-case before:visible before:w-[30px] before:border-separate before:top-2.5 before:font-roboto_68d44c">
