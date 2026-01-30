@@ -40,7 +40,7 @@ export const FooterContent = () => {
                 title="Contact Us"
                 address="423/6, JK Complex, Veeramudian Barathi Nagar, Madurai - 625 003"
                 emails={[
-                    { text: "healthyhomoloanss@gmail.com", url: "mailto:healthyhomoloanss@gmail.com" },
+                    { text: "healthyhomeloanss@gmail.com", url: "mailto:healthyhomeloanss@gmail.com" },
                 ]}
                 phones={[
                     { text: "+91 96777 19848", url: "tel:+919677719848" },

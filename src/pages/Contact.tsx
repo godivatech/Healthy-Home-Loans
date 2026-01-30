@@ -44,7 +44,7 @@ export const ContactPage = () => {
                                     <div className="mb-6">
                                         <h4 className="font-bold text-lg mb-2 text-primary">Email</h4>
                                         <p className="text-zinc-600">
-                                            <a href="mailto:healthyhomoloanss@gmail.com" className="hover:text-primary transition-colors">healthyhomoloanss@gmail.com</a>
+                                            <a href="mailto:healthyhomeloanss@gmail.com" className="hover:text-primary transition-colors">healthyhomeloanss@gmail.com</a>
                                         </p>
                                     </div>
 
