@@ -25,9 +25,9 @@ export const ContactPage = () => {
                                         <h4 className="font-bold text-lg mb-2 text-primary">Office Address</h4>
                                         <p className="text-zinc-600 leading-relaxed">
                                             Healthy Home Loans<br />
-                                            423/6, JK Complex<br />
-                                            Veeramudian Barathi Nagar<br />
-                                            Madurai - 625 003, Tamil Nadu
+                                            423/6, JK Complex, Veeramudian Barathi Nagar,<br />
+                                            Alagappan Nagar, Near Railway Gate,<br />
+                                            Muthupatti, Madurai – 625003, Tamil Nadu, India
                                         </p>
                                     </div>
 
@@ -50,7 +50,7 @@ export const ContactPage = () => {
 
                                     <div>
                                         <h4 className="font-bold text-lg mb-2 text-primary">Office Hours</h4>
-                                        <p className="text-zinc-600">Mon - Sat: 9:30 AM - 7:00 PM</p>
+                                        <p className="text-zinc-600">Mon - Sat: 9:30 AM - 6:00 PM</p>
                                         <p className="text-zinc-600">Sunday: By Appointment</p>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@ export const ContactPage = () => {
                     {/* Map Section */}
                     <FadeIn direction="up" delay={0.6} className="mt-12" fullWidth>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.985657753994!2d78.1188!3d9.9391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNTYnMjAuOCJOIDc4wrAwNycwNy43IkU!5e0!3m2!1sen!2sin!4v1625555555555!5m2!1sen!2sin"
+                            src="https://maps.google.com/maps?q=9.89256355890216%2C%2078.0950850088725&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             width="100%"
                             height="450"
                             style={{ border: 0 }}

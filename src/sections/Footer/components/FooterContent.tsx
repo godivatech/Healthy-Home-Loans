@@ -38,7 +38,7 @@ export const FooterContent = () => {
             <FooterColumn
                 variant="contact"
                 title="Contact Us"
-                address="423/6, JK Complex, Veeramudian Barathi Nagar, Madurai - 625 003"
+                address="423/6, JK Complex, Veeramudian Barathi Nagar, Alagappan Nagar, Near Railway Gate, Muthupatti, Madurai – 625003, Tamil Nadu, India"
                 emails={[
                     { text: "healthyhomeloanss@gmail.com", url: "mailto:healthyhomeloanss@gmail.com" },
                 ]}

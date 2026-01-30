@@ -47,7 +47,7 @@ export const ServicesPage = () => {
                 "Working capital needs",
                 "Medical expenses"
             ],
-            amount: "₹5 Lakhs - ₹10 Crores",
+            amount: "₹5 Lakhs - ₹25 Crores",
             tenure: "Up to 15 years",
             icon: Building2
         },
@@ -76,7 +76,7 @@ export const ServicesPage = () => {
             title: "Land Purchase Loan",
             description: "Financing for purchasing residential or commercial land.",
             features: ["Residential plots", "Commercial land", "Clear title verification"],
-            amount: "₹5 Lakhs - ₹5 Crores",
+            amount: "₹5 Lakhs - ₹10 Crores",
             tenure: "Up to 15 years",
             icon: MapIcon
         },
