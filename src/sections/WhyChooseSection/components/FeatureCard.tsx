@@ -10,15 +10,18 @@ export type FeatureCardProps = {
 export const FeatureCard = (props: FeatureCardProps) => {
     return (
         <div
-            className={`relative bg-white box-border caret-transparent text-center z-[1] overflow-hidden p-[30px] rounded-lg shadow-sm hover:shadow-md transition-shadow h-full flex flex-col items-center ${props.variant || ""}`}
+            className={`relative bg-white box-border caret-transparent z-[1] overflow-hidden p-8 rounded-xl border border-primary/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col items-start text-left ${props.variant || ""}`}
         >
-            <div className="relative box-border caret-transparent mb-5 bg-primary/10 p-4 rounded-full text-primary">
+            {/* Decorative Corner Blob */}
+            <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-primary/10 rounded-full pointer-events-none transition-transform duration-500 group-hover:scale-110"></div>
+
+            <div className="relative box-border caret-transparent mb-6 bg-red-50 p-4 rounded-2xl text-primary inline-flex items-center justify-center border border-primary/10">
                 {props.icon}
             </div>
-            <h3 className="text-neutral-900 text-[20px] font-semibold box-border caret-transparent leading-[26px] mb-2.5 font-rubik_0b5097">
+            <h3 className="text-neutral-900 text-xl md:text-2xl font-bold box-border caret-transparent leading-tight mb-3 font-rubik_0b5097">
                 {props.title}
             </h3>
-            <p className="text-zinc-600 text-[15px] box-border caret-transparent leading-[24px]">
+            <p className="text-zinc-600 text-[15px] md:text-base box-border caret-transparent leading-relaxed z-10 relative flex-grow">
                 {props.description}
             </p>
         </div>

@@ -7,7 +7,7 @@ export const WhyChooseFeatures = () => {
         <div className="box-border caret-transparent shrink-0 max-w-full w-full px-3 md:w-6/12">
             <div className="box-border caret-transparent flex flex-wrap -mx-3">
                 <div className="box-border caret-transparent shrink-0 max-w-full w-full px-3 md:w-6/12 pt-3">
-                    <FadeIn direction="left" delay={0.1} fullWidth>
+                    <FadeIn direction="left" delay={0.1} fullWidth className="h-full">
                         <FeatureCard
                             icon={<Clock size={40} />}
                             title="7 Days Sanction"
@@ -16,7 +16,7 @@ export const WhyChooseFeatures = () => {
                     </FadeIn>
                 </div>
                 <div className="box-border caret-transparent shrink-0 max-w-full w-full px-3 md:w-6/12 pt-3">
-                    <FadeIn direction="left" delay={0.2} fullWidth>
+                    <FadeIn direction="left" delay={0.2} fullWidth className="h-full">
                         <FeatureCard
                             icon={<FileText size={40} />}
                             title="1 Hour Reports"
@@ -25,7 +25,7 @@ export const WhyChooseFeatures = () => {
                     </FadeIn>
                 </div>
                 <div className="box-border caret-transparent shrink-0 max-w-full w-full px-3 md:w-6/12 pt-6">
-                    <FadeIn direction="left" delay={0.3} fullWidth>
+                    <FadeIn direction="left" delay={0.3} fullWidth className="h-full">
                         <FeatureCard
                             icon={<Users size={40} />}
                             title="160+ Partners"
@@ -34,7 +34,7 @@ export const WhyChooseFeatures = () => {
                     </FadeIn>
                 </div>
                 <div className="box-border caret-transparent shrink-0 max-w-full w-full px-3 md:w-6/12 pt-6">
-                    <FadeIn direction="left" delay={0.4} fullWidth>
+                    <FadeIn direction="left" delay={0.4} fullWidth className="h-full">
                         <FeatureCard
                             icon={<Award size={40} />}
                             title="15+ Years"
