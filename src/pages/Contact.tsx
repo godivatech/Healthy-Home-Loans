@@ -109,7 +109,7 @@ export const ContactPage = () => {
                     {/* Map Section */}
                     <FadeIn direction="up" delay={0.6} className="mt-12" fullWidth>
                         <iframe
-                            src="https://maps.google.com/maps?q=9.899985780984604%2C%2078.09388456691937&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            src="https://maps.google.com/maps?q=9.899893787099797%2C%2078.09390045177312&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             width="100%"
                             height="450"
                             style={{ border: 0 }}
