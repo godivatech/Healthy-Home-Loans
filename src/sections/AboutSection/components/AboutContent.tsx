@@ -1,4 +1,5 @@
 import { FadeIn } from "@/components/animations/FadeIn";
+import { ShieldCheck, Zap, Users } from "lucide-react";
 
 export const AboutContent = () => {
     return (
@@ -18,16 +19,16 @@ export const AboutContent = () => {
                         Our Core Values
                     </strong>
                     <ul className="box-border caret-transparent mt-5 mb-[25px] pl-0">
-                        <li className="relative text-zinc-600 box-border caret-transparent list-none mb-2.5 pl-[30px]">
-                            <i className="absolute text-primary text-xl italic box-border caret-transparent block leading-[normal] left-0 top-0 before:accent-auto before:box-border before:caret-transparent before:text-primary before:text-xl before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[normal] before:list-outside before:list-none before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-flaticon"></i>
+                        <li className="relative text-zinc-600 box-border caret-transparent list-none mb-3 pl-[35px] flex items-center">
+                            <ShieldCheck className="absolute left-0 text-primary w-6 h-6" strokeWidth={2} />
                             Trust & Transparency
                         </li>
-                        <li className="relative text-zinc-600 box-border caret-transparent list-none mb-2.5 pl-[30px]">
-                            <i className="absolute text-primary text-xl italic box-border caret-transparent block leading-[normal] left-0 top-0 before:accent-auto before:box-border before:caret-transparent before:text-primary before:text-xl before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[normal] before:list-outside before:list-none before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-flaticon"></i>
+                        <li className="relative text-zinc-600 box-border caret-transparent list-none mb-3 pl-[35px] flex items-center">
+                            <Zap className="absolute left-0 text-primary w-6 h-6" strokeWidth={2} />
                             Speed & Efficiency
                         </li>
-                        <li className="relative text-zinc-600 box-border caret-transparent list-none pl-[30px]">
-                            <i className="absolute text-primary text-xl italic box-border caret-transparent block leading-[normal] left-0 top-0 before:accent-auto before:box-border before:caret-transparent before:text-primary before:text-xl before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[normal] before:list-outside before:list-none before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-flaticon"></i>
+                        <li className="relative text-zinc-600 box-border caret-transparent list-none pl-[35px] flex items-center">
+                            <Users className="absolute left-0 text-primary w-6 h-6" strokeWidth={2} />
                             Customer-First Approach
                         </li>
                     </ul>
