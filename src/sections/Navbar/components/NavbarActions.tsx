@@ -16,10 +16,10 @@ export const NavbarActions = () => {
                         </span>
                         <p className="text-zinc-600 text-[13px] font-medium box-border caret-transparent leading-[23.4px] font-rubik_0b5097 md:text-base md:leading-[28.8px]">
                             <a
-                                href="tel:+919787977711"
+                                href="tel:+919677719848"
                                 className="text-neutral-900 text-[13px] box-border caret-transparent leading-[23.4px] md:text-base md:leading-[28.8px]"
                             >
-                                +91 97879 77711
+                                +91 96777 19848
                             </a>
                         </p>
                     </div>

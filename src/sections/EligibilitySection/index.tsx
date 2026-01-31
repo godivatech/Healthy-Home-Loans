@@ -35,10 +35,10 @@ export const EligibilitySection = () => {
                                         Identity & Address Proof (Aadhar, PAN)
                                     </li>
                                     <li className="relative text-zinc-600 font-medium list-none capitalize mb-3 pl-[18px] before:bg-primary before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
-                                        Income Proof (Salary Slips / ITR)
+                                        Income Proof (Salary Slips / ITR / GST)
                                     </li>
                                     <li className="relative text-zinc-600 font-medium list-none capitalize mb-3 pl-[18px] before:bg-primary before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
-                                        Bank Statements (Last 6 months)
+                                        Bank Statements (Past 6 Months to 1 Year)
                                     </li>
                                     <li className="relative text-zinc-600 font-medium list-none capitalize pl-[18px] before:bg-primary before:block before:h-2 before:w-2 before:rounded-[30px] before:absolute before:left-0 before:top-[7px]">
                                         Property Documents

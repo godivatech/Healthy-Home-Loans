@@ -10,8 +10,8 @@ import { FadeIn } from "@/components/animations/FadeIn";
 export const CallToAction = ({
     title = "Easy Loans. Peaceful Living.",
     subtitle = "Call to discuss your loan requirements",
-    phone = "+919787977711",
-    phoneDisplay = "+91 97879 77711"
+    phone = "+919677719848",
+    phoneDisplay = "+91 96777 19848"
 }: CallToActionProps) => {
     return (
         <div className="box-border caret-transparent pb-10">
