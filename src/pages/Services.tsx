@@ -4,7 +4,7 @@ import { Copyright } from "@/sections/Copyright";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { CallToAction } from "@/sections/CallToAction";
 import { PageBanner } from "@/components/PageBanner";
-import { Home, User, Building2, Briefcase, Car, Map as MapIcon, CreditCard, Wallet, ChevronDown } from "lucide-react";
+import { Home, User, Building2, Briefcase, Car, Map as MapIcon, CreditCard, Wallet, ChevronDown, Shield } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -95,6 +95,14 @@ export const ServicesPage = () => {
             amount: "Min: ₹10,000",
             tenure: "7 days - 10 years",
             icon: Wallet
+        },
+        {
+            title: "Insurance Services",
+            description: "Comprehensive protection plans for you, your family, and assets.",
+            features: ["Life Insurance", "Health Insurance", "General Insurance", "Property Insurance"],
+            amount: "Customized Plans",
+            tenure: "1 Year - Life Time",
+            icon: Shield
         }
     ];
 
