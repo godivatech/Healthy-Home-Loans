@@ -41,6 +41,7 @@ import { ServicesPage } from "@/pages/Services";
 
 import { ContactPage } from "@/pages/Contact";
 import { PartnersPage } from "@/pages/Partners";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 export const App = () => {
     return (
@@ -53,6 +54,7 @@ export const App = () => {
                 <Route path="/partners" element={<PartnersPage />} />
                 <Route path="/loans" element={<LoansPage />} />
             </Routes>
+            <WhatsAppFloat />
         </Router>
     );
 };
