@@ -41,7 +41,7 @@ export const ValuesList = () => {
                         Industry Expertise
                     </h4>
                     <p className="text-zinc-600 text-[15px] box-border caret-transparent leading-[27px] md:text-base md:leading-[28.8px]">
-                        15 years of deep knowledge in financial services. Strong relationships with 40+ lending partners for best rates.
+                        15 years of deep knowledge in financial services. Strong relationships with 160+ lending partners for best rates.
                     </p>
                 </div>
                 <div className="relative box-border caret-transparent pl-[70px]">

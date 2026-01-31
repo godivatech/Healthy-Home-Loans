@@ -28,8 +28,8 @@ export const WhyChooseFeatures = () => {
                     <FadeIn direction="left" delay={0.3} fullWidth>
                         <FeatureCard
                             icon={<Users size={40} />}
-                            title="40+ Partners"
-                            description="Access a vast network of 40+ banks and NBFCs for the best interest rates."
+                            title="160+ Partners"
+                            description="Access a vast network of 160+ banks and NBFCs for the best interest rates."
                         />
                     </FadeIn>
                 </div>

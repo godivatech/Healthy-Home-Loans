@@ -39,7 +39,7 @@ export const AboutPage = () => {
                             </h3>
 
                             <p className="text-zinc-600 mb-6 leading-[1.8] text-[15px] md:text-base">
-                                With over 15 years of hands-on experience in the financial services industry, Mr. Hussain has successfully facilitated loans worth over <span className="font-semibold text-neutral-800">₹100 Crores</span>. His deep understanding of the Tamil Nadu financial market and strong relationships with 40+ banking partners have helped over <span className="font-semibold text-neutral-800">1000+ clients</span> achieve their financial dreams.
+                                With over 15 years of hands-on experience in the financial services industry, Mr. Hussain has successfully facilitated loans worth over <span className="font-semibold text-neutral-800">₹100 Crores</span>. His deep understanding of the Tamil Nadu financial market and strong relationships with 160+ banking partners have helped over <span className="font-semibold text-neutral-800">1000+ clients</span> achieve their financial dreams.
                             </p>
 
                             <div className="relative">

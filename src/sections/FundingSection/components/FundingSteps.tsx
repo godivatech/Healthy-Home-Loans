@@ -27,7 +27,7 @@ export const FundingSteps = () => {
                             1-Hour Eligibility Report
                         </h4>
                         <p className="text-zinc-600 text-[15px] box-border caret-transparent leading-[27px] md:text-base md:leading-[28.8px]">
-                            Get a comprehensive report matching you with the best lender options from our network of 40+ partners within just 1 hour.
+                            Get a comprehensive report matching you with the best lender options from our network of 160+ partners within just 1 hour.
                         </p>
                     </div>
                     <div className="relative box-border caret-transparent mt-[30px] pl-[65px] before:accent-auto before:bg-primary before:box-border before:caret-transparent before:text-neutral-800 before:block before:text-base before:not-italic before:normal-nums before:font-normal before:h-[140%] before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:pointer-events-auto before:absolute before:text-start before:indent-[0px] before:normal-case before:visible before:w-px before:z-[-1] before:border-separate before:left-5 before:top-0 before:font-roboto_68d44c">

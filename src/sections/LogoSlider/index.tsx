@@ -96,7 +96,7 @@ export const LogoSlider = () => {
                             Our Trusted Banking Partners
                         </h2>
                         <p className="text-zinc-600 mt-2">
-                            We work with 10+ leading banks and 32+ NBFCs to get you the best deals.
+                            We work with 10+ leading banks and 150+ NBFCs to get you the best deals.
                         </p>
                     </FadeIn>
                 </div>

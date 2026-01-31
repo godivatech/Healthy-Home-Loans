@@ -110,7 +110,7 @@ export const PartnersPage = () => {
                     {/* Intro Text */}
                     <div className="text-center mb-12">
                         <p className="text-zinc-600 text-base md:text-lg max-w-3xl mx-auto">
-                            We have partnered with <span className="font-semibold text-primary">{banks.length}+ leading banks</span> and <span className="font-semibold text-primary">{nbfcs.length}+ NBFCs</span> to provide you with the best loan options, competitive interest rates, and seamless processing.
+                            We have partnered with <span className="font-semibold text-primary">{banks.length}+ leading banks</span> and <span className="font-semibold text-primary">150+ NBFCs</span> to provide you with the best loan options, competitive interest rates, and seamless processing.
                         </p>
                     </div>
 
@@ -171,7 +171,7 @@ export const PartnersPage = () => {
                                 NBFC Partners
                             </h2>
                             <p className="text-zinc-500 text-sm">
-                                {nbfcs.length} Non-Banking Financial Companies & Housing Finance Companies
+                                150+ Non-Banking Financial Companies & Housing Finance Companies
                             </p>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
@@ -199,7 +199,7 @@ export const PartnersPage = () => {
                     {/* Total Count */}
                     <div className="mt-12 text-center">
                         <div className="inline-block bg-primary text-white px-8 py-4 rounded-lg shadow-md">
-                            <p className="text-3xl font-bold">{banks.length + nbfcs.length}+</p>
+                            <p className="text-3xl font-bold">160+</p>
                             <p className="text-sm mt-1">Total Partners</p>
                         </div>
                     </div>

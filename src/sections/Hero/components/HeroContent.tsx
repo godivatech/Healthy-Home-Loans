@@ -11,7 +11,7 @@ export const HeroContent = () => {
                 <span className="text-primary">Peaceful Living.</span>
             </h1>
             <p className="text-zinc-600 text-lg box-border caret-transparent leading-[30px] max-w-[650px] mb-8">
-                With 15+ years of expertise and 40+ banking partners, we ensure the fastest loan sanctions.
+                With 15+ years of expertise and 160+ banking partners, we ensure the fastest loan sanctions.
                 Experience 1-hour report generation and 7-day sanctions for your dream home or business.
             </p>
             <div className="box-border caret-transparent flex gap-4">
