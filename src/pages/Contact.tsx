@@ -42,6 +42,16 @@ export const ContactPage = () => {
                                     </div>
 
                                     <div className="mb-6">
+                                        <h4 className="font-bold text-lg mb-2 text-primary">Office Number</h4>
+                                        <p className="text-zinc-600 mb-1">
+                                            <a href="tel:+919360319848" className="hover:text-primary transition-colors">+91 93603 19848</a>
+                                        </p>
+                                        <p className="text-zinc-600">
+                                            <a href="tel:+919087407771" className="hover:text-primary transition-colors">+91 90874 07771</a>
+                                        </p>
+                                    </div>
+
+                                    <div className="mb-6">
                                         <h4 className="font-bold text-lg mb-2 text-primary">Email</h4>
                                         <p className="text-zinc-600">
                                             <a href="mailto:healthyhomeloanss@gmail.com" className="hover:text-primary transition-colors">healthyhomeloanss@gmail.com</a>

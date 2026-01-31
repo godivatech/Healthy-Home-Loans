@@ -45,6 +45,8 @@ export const FooterContent = () => {
                 phones={[
                     { text: "+91 96777 19848", url: "tel:+919677719848" },
                     { text: "+91 78458 37740", url: "tel:+917845837740" },
+                    { text: "+91 93603 19848 (Office)", url: "tel:+919360319848" },
+                    { text: "+91 90874 07771 (Office)", url: "tel:+919087407771" },
                 ]}
             />
         </div>
