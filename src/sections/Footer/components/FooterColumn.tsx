@@ -15,6 +15,14 @@ export type FooterColumnProps = {
         url: string;
     }>;
     address?: string;
+    addresses?: Array<{
+        label?: string;
+        content: string;
+        phones?: Array<{
+            text: string;
+            url: string;
+        }>;
+    }>;
     emails?: Array<{
         text: string;
         url: string;
@@ -23,12 +31,15 @@ export type FooterColumnProps = {
         text: string;
         url: string;
     }>;
+    columnClass?: string;
 };
 
 export const FooterColumn = (props: FooterColumnProps) => {
+    const widthClass = props.columnClass || "md:w-3/12";
+
     if (props.variant === "logo") {
         return (
-            <div className="box-border caret-transparent shrink-0 max-w-full w-full px-3 md:w-3/12">
+            <div className={`box-border caret-transparent shrink-0 max-w-full w-full px-3 ${widthClass}`}>
                 <div className="box-border caret-transparent mb-[25px] -mt-8">
                     <div className="box-border caret-transparent">
                         <a
@@ -91,7 +102,7 @@ export const FooterColumn = (props: FooterColumnProps) => {
 
     if (props.variant === "links") {
         return (
-            <div className="box-border caret-transparent shrink-0 max-w-full w-full px-3 md:w-3/12">
+            <div className={`box-border caret-transparent shrink-0 max-w-full w-full px-3 ${widthClass}`}>
                 <div className="box-border caret-transparent mb-[25px]">
                     <h3 className="text-white text-[22px] font-medium border-b-neutral-700 box-border caret-transparent leading-[26.4px] mb-[22px] pb-5 border-t-white border-x-white border-b font-rubik_0b5097 md:text-[25px] md:leading-[30px]">
                         {props.title}
@@ -115,12 +126,32 @@ export const FooterColumn = (props: FooterColumnProps) => {
 
     if (props.variant === "contact") {
         return (
-            <div className="box-border caret-transparent shrink-0 max-w-full w-full px-3 md:w-3/12">
+            <div className={`box-border caret-transparent shrink-0 max-w-full w-full px-3 ${widthClass}`}>
                 <div className="box-border caret-transparent mb-[25px]">
                     <h3 className="text-white text-[22px] font-medium border-b-neutral-700 box-border caret-transparent leading-[26.4px] mb-[22px] pb-5 border-t-white border-x-white border-b font-rubik_0b5097 md:text-[25px] md:leading-[30px]">
                         {props.title}
                     </h3>
-                    {props.address && (
+                    {props.addresses && props.addresses.length > 0 && (
+                        <div className="relative box-border caret-transparent mb-5 pl-10">
+                            <svg className="absolute left-0 top-[5px] w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                            </svg>
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-4">
+                                {props.addresses.map((addr, index) => (
+                                    <div key={index} className="text-white box-border caret-transparent">
+                                        {addr.label && <div className="font-bold text-primary mb-1 text-sm uppercase tracking-wider">{addr.label}</div>}
+                                        <div className="text-sm leading-relaxed text-zinc-300 mb-2">{addr.content}</div>
+                                        {addr.phones && addr.phones.map((phone, pIndex) => (
+                                            <a key={pIndex} href={phone.url} className="block text-sm text-zinc-400 hover:text-primary transition-colors">
+                                                {phone.text}
+                                            </a>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                    {props.address && !props.addresses && (
                         <div className="relative box-border caret-transparent mb-5 pl-10">
                             <svg className="absolute left-0 top-[5px] w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                                 <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />

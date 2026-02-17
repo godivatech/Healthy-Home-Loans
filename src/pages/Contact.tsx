@@ -18,50 +18,64 @@ export const ContactPage = () => {
                         {/* Contact Info */}
                         <div className="w-full lg:w-1/3 px-3 mb-8 lg:mb-0">
                             <FadeIn direction="right" delay={0.2} fullWidth className="h-full">
-                                <div className="bg-gray-50 p-8 rounded-lg h-full">
-                                    <h3 className="text-2xl font-bold font-rubik_0b5097 mb-6 text-neutral-900">Get in Touch</h3>
+                                <div className="bg-gray-50 p-6 md:p-8 rounded-lg h-full">
+                                    <h3 className="text-xl md:text-2xl font-bold font-rubik_0b5097 mb-6 text-neutral-900">Our Locations</h3>
 
-                                    <div className="mb-6">
-                                        <h4 className="font-bold text-lg mb-2 text-primary">Office Address</h4>
-                                        <p className="text-zinc-600 leading-relaxed">
-                                            Healthy Home Loans<br />
-                                            423/6, JK Complex, Veeramudian Barathi Nagar,<br />
-                                            Alagappan Nagar, Near Railway Gate,<br />
-                                            Muthupatti, Madurai – 625003, Tamil Nadu, India
-                                        </p>
+                                    <div className="space-y-6">
+                                        {/* Head Office */}
+                                        <div className="bg-white p-4 rounded border border-gray-100 shadow-sm relative pl-4 border-l-4 border-l-primary">
+                                            <h4 className="font-bold text-lg mb-2 text-primary">Head Office</h4>
+                                            <p className="text-zinc-600 text-sm leading-relaxed mb-3">
+                                                423/6, JK Complex,<br />
+                                                Veeramudian Barathi Nagar,<br />
+                                                Alagappan Nagar, Near Railway Gate,<br />
+                                                Muthupatti, Madurai – 625003
+                                            </p>
+                                            <div className="space-y-1 pt-2 border-t border-gray-50">
+                                                <p className="text-zinc-600 text-sm">
+                                                    <span className="font-medium text-neutral-900 block text-xs uppercase tracking-wider mb-1">Mobile</span>
+                                                    <a href="tel:+919677719848" className="hover:text-primary transition-colors block font-medium">+91 96777 19848</a>
+                                                    <a href="tel:+917845837740" className="hover:text-primary transition-colors block font-medium">+91 78458 37740</a>
+                                                </p>
+                                                <p className="text-zinc-600 text-sm mt-2">
+                                                    <span className="font-medium text-neutral-900 block text-xs uppercase tracking-wider mb-1">Office</span>
+                                                    <a href="tel:+919360319848" className="hover:text-primary transition-colors block font-medium">+91 93603 19848</a>
+                                                    <a href="tel:+919087407771" className="hover:text-primary transition-colors block font-medium">+91 90874 07771</a>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        {/* Branch Office */}
+                                        <div className="bg-white p-4 rounded border border-gray-100 shadow-sm relative pl-4 border-l-4 border-l-neutral-700">
+                                            <h4 className="font-bold text-lg mb-2 text-neutral-800">Tenkasi Branch</h4>
+                                            <p className="text-zinc-600 text-sm leading-relaxed mb-3">
+                                                36/ Byraha Complex,<br />
+                                                Thavalapuram 2nd Street,<br />
+                                                Tenkasi – 627811
+                                            </p>
+                                            <div className="space-y-1 pt-2 border-t border-gray-50">
+                                                <p className="text-zinc-600 text-sm">
+                                                    <span className="font-medium text-neutral-900 block text-xs uppercase tracking-wider mb-1">Contact</span>
+                                                    <a href="tel:+916301581831" className="hover:text-primary transition-colors block font-medium">+91 63015 81831</a>
+                                                    <a href="tel:+919677719848" className="hover:text-primary transition-colors block font-medium">+91 96777 19848</a>
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div className="mb-6">
-                                        <h4 className="font-bold text-lg mb-2 text-primary">Phone</h4>
-                                        <p className="text-zinc-600 mb-1">
-                                            <a href="tel:+919677719848" className="hover:text-primary transition-colors">+91 96777 19848</a>
-                                        </p>
-                                        <p className="text-zinc-600">
-                                            <a href="tel:+917845837740" className="hover:text-primary transition-colors">+91 78458 37740</a>
-                                        </p>
-                                    </div>
+                                    <div className="mt-8 pt-6 border-t border-gray-200">
+                                        <div className="mb-4">
+                                            <h4 className="font-bold text-base mb-1 text-primary">Email Support</h4>
+                                            <p className="text-zinc-600">
+                                                <a href="mailto:healthyhomeloanss@gmail.com" className="hover:text-primary transition-colors underline decoration-dotted underline-offset-4">healthyhomeloanss@gmail.com</a>
+                                            </p>
+                                        </div>
 
-                                    <div className="mb-6">
-                                        <h4 className="font-bold text-lg mb-2 text-primary">Office Number</h4>
-                                        <p className="text-zinc-600 mb-1">
-                                            <a href="tel:+919360319848" className="hover:text-primary transition-colors">+91 93603 19848</a>
-                                        </p>
-                                        <p className="text-zinc-600">
-                                            <a href="tel:+919087407771" className="hover:text-primary transition-colors">+91 90874 07771</a>
-                                        </p>
-                                    </div>
-
-                                    <div className="mb-6">
-                                        <h4 className="font-bold text-lg mb-2 text-primary">Email</h4>
-                                        <p className="text-zinc-600">
-                                            <a href="mailto:healthyhomeloanss@gmail.com" className="hover:text-primary transition-colors">healthyhomeloanss@gmail.com</a>
-                                        </p>
-                                    </div>
-
-                                    <div>
-                                        <h4 className="font-bold text-lg mb-2 text-primary">Office Hours</h4>
-                                        <p className="text-zinc-600">Mon - Sat: 9:30 AM - 6:00 PM</p>
-                                        <p className="text-zinc-600">Sunday: By Appointment</p>
+                                        <div>
+                                            <h4 className="font-bold text-base mb-1 text-primary">Office Hours</h4>
+                                            <p className="text-zinc-600 text-sm">Mon - Sat: 9:30 AM - 6:00 PM</p>
+                                            <p className="text-zinc-600 text-sm">Sunday: By Appointment</p>
+                                        </div>
                                     </div>
                                 </div>
                             </FadeIn>
