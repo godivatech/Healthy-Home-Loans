@@ -254,7 +254,7 @@ export const LoansPage = () => {
 
             <EligibilitySection />
 
-            {/* Inquiry Section */}
+            {/* Enquiry Section */}
             <div className="py-[50px] md:py-[100px]">
                 <div className="max-w-[1140px] w-full mx-auto px-3">
                     <div className="flex flex-wrap items-center -mx-3">
@@ -262,7 +262,7 @@ export const LoansPage = () => {
                             <FadeIn direction="up" delay={0.2} fullWidth>
                                 <div className="mb-[30px]">
                                     <h3 className="text-neutral-900 text-3xl md:text-4xl font-medium mb-3">
-                                        Loan Inquiry
+                                        Loan Enquiry
                                     </h3>
                                     <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
                                         Please complete the short form below with your details and one
