@@ -83,8 +83,8 @@ export const ContactPage = () => {
 
                         {/* Contact Form */}
                         <div className="w-full lg:w-2/3 px-3">
-                            <FadeIn direction="left" delay={0.4} fullWidth className="h-full">
-                                <div className="bg-white p-8 rounded-lg border shadow-sm h-full">
+                            <FadeIn direction="left" delay={0.4} fullWidth>
+                                <div className="bg-white p-8 rounded-lg border shadow-sm">
                                     <h3 className="text-2xl font-bold font-rubik_0b5097 mb-6 text-neutral-900">Send Us a Message</h3>
                                     <form>
                                         <div className="flex flex-wrap -mx-3 mb-4">
