@@ -78,8 +78,20 @@ import tataLogo from "@/assets/images/NPFC/Tata capital finance.svg";
 import tigerLogo from "@/assets/images/NPFC/Tiger capital finance.png";
 import truhomeLogo from "@/assets/images/NPFC/Truhome finance.webp";
 import incredLogo from "@/assets/images/NPFC/incred housing finance.svg";
+import ugroLogo from "@/assets/images/NPFC/Ugro Capital.webp";
+import shriramLogo from "@/assets/images/NPFC/Shriram Finance.svg";
+import nivasLogo from "@/assets/images/NPFC/Nivas Housing Finance.png";
+import lntLogo from "@/assets/images/NPFC/L&T Finance.webp";
+import grihumLogo from "@/assets/images/NPFC/Grihum Finance.svg";
+import nidoLogo from "@/assets/images/NPFC/Nido Finance.png";
+import repcoLogo from "@/assets/images/NPFC/Repco Finance.svg";
+import veritasLogo from "@/assets/images/NPFC/Veritas Finance.png";
+import sammanLogo from "@/assets/images/NPFC/Samman Capital.svg";
+import heroLogo from "@/assets/images/NPFC/Hero Housing Finance.webp";
+import ambitLogo from "@/assets/images/NPFC/Ambit Housing Finance.avif";
 
 export const PartnersPage = () => {
+    // ... existing bank arrays ...
     const publicSectorBanks = [
         { name: "State Bank of India (SBI)", logo: sbiLogo },
         { name: "Punjab National Bank (PNB)", logo: pnbLogo },
@@ -146,7 +158,6 @@ export const PartnersPage = () => {
         { name: "Motilal Oswal Finance", logo: mothilalLogo },
         { name: "Sasvitha Home Finance", logo: sasvithaLogo },
         { name: "Aham Housing Finance", logo: ahamLogo },
-        { name: "Home First Housing Finance", logo: homeFirstLogo },
         { name: "Godrej Capital", logo: godrejLogo },
         { name: "Five Star Finance", logo: fiveStarLogo },
         { name: "Incred Housing Finance", logo: incredLogo },
@@ -156,7 +167,18 @@ export const PartnersPage = () => {
         { name: "PNB Housing Finance", logo: pnbHousingLogo },
         { name: "IIFL Home Finance", logo: iiflLogo },
         { name: "Bajaj Finance", logo: bajajLogo },
-        { name: "ICICI Home Finance", logo: iciciHomeLogo }
+        { name: "ICICI Home Finance", logo: iciciHomeLogo },
+        { name: "Ugro Capital", logo: ugroLogo },
+        { name: "Shriram Finance", logo: shriramLogo },
+        { name: "Nivas Housing Finance", logo: nivasLogo },
+        { name: "L&T Finance", logo: lntLogo },
+        { name: "Grihum Finance", logo: grihumLogo },
+        { name: "Nido Finance", logo: nidoLogo },
+        { name: "Repco Finance", logo: repcoLogo },
+        { name: "Veritas Finance", logo: veritasLogo },
+        { name: "Samman Capital", logo: sammanLogo },
+        { name: "Hero Housing Finance", logo: heroLogo },
+        { name: "Ambit Housing Finance", logo: ambitLogo }
     ];
 
     const totalBanks = publicSectorBanks.length + privateSectorBanks.length + smallFinanceBanks.length;
@@ -266,13 +288,7 @@ export const PartnersPage = () => {
                         </div>
                     </div>
 
-                    {/* Total Count */}
-                    <div className="mt-16 text-center">
-                        <div className="inline-block bg-primary text-white px-10 py-5 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-transform">
-                            <p className="text-4xl font-bold mb-1">{totalBanks + nbfcs.length}+</p>
-                            <p className="text-sm opacity-90 font-medium tracking-wide uppercase">Total Partners</p>
-                        </div>
-                    </div>
+
 
                 </div>
             </div>
