@@ -1,13 +1,18 @@
 import hdfcLogo from "@/assets/images/bank-partners/hdfc-bank-logo.svg";
-import yesLogo from "@/assets/images/bank-partners/Yes Bank.png";
+import sbiLogo from "@/assets/images/bank-partners/SBI.png";
+import iciciLogo from "@/assets/images/bank-partners/ICICI Bank.svg";
 import axisLogo from "@/assets/images/bank-partners/axis-bank-logo.png";
+import pnbLogo from "@/assets/images/bank-partners/Punjab National Bank.jpg";
 import kotakLogo from "@/assets/images/bank-partners/kotak_mahindra_bank-logo.png";
+import bobLogo from "@/assets/images/bank-partners/Bank of Baroda.png";
+import canaraLogo from "@/assets/images/bank-partners/Canara Bank.png";
+import indusIndLogo from "@/assets/images/bank-partners/IndusInd Bank.png";
+import unionLogo from "@/assets/images/bank-partners/Union Bank of India.png";
+import yesLogo from "@/assets/images/bank-partners/Yes Bank.png";
+import idfcLogo from "@/assets/images/bank-partners/IDFC First Bank.png";
+import federalLogo from "@/assets/images/bank-partners/Federal Bank.png";
 import janaLogo from "@/assets/images/bank-partners/Jana Small Finance Bank.png";
 import equitasLogo from "@/assets/images/bank-partners/Equitas Small Finance Bank.png";
-import idfcLogo from "@/assets/images/bank-partners/IDFC First Bank.png";
-import dcbLogo from "@/assets/images/bank-partners/DCB Bank.svg";
-import dbsLogo from "@/assets/images/bank-partners/DBS Bank.svg";
-import federalLogo from "@/assets/images/bank-partners/Federal Bank.png";
 import { FadeIn } from "@/components/animations/FadeIn";
 
 import { useRef } from "react";
@@ -76,15 +81,20 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxTextProps) {
 export const LogoSlider = () => {
     const partners = [
         { name: "HDFC Bank", logo: hdfcLogo },
-        { name: "Yes Bank", logo: yesLogo },
+        { name: "SBI", logo: sbiLogo },
+        { name: "ICICI Bank", logo: iciciLogo },
         { name: "Axis Bank", logo: axisLogo },
+        { name: "Punjab National Bank", logo: pnbLogo },
         { name: "Kotak Mahindra Bank", logo: kotakLogo },
-        { name: "Jana Small Finance Bank", logo: janaLogo },
-        { name: "Equitas Small Finance Bank", logo: equitasLogo },
+        { name: "Bank of Baroda", logo: bobLogo },
+        { name: "Canara Bank", logo: canaraLogo },
+        { name: "IndusInd Bank", logo: indusIndLogo },
+        { name: "Union Bank of India", logo: unionLogo },
+        { name: "Yes Bank", logo: yesLogo },
         { name: "IDFC First Bank", logo: idfcLogo },
-        { name: "DCB Bank", logo: dcbLogo },
-        { name: "DBS Bank", logo: dbsLogo },
-        { name: "Federal Bank", logo: federalLogo }
+        { name: "Federal Bank", logo: federalLogo },
+        { name: "Jana Small Finance Bank", logo: janaLogo },
+        { name: "Equitas Small Finance Bank", logo: equitasLogo }
     ];
 
     return (
@@ -96,7 +106,7 @@ export const LogoSlider = () => {
                             Our Trusted Banking Partners
                         </h2>
                         <p className="text-zinc-600 mt-2">
-                            We work with 10+ leading banks and 150+ NBFCs to get you the best deals.
+                            We work with 35+ leading banks and 150+ NBFCs to get you the best deals.
                         </p>
                     </FadeIn>
                 </div>
