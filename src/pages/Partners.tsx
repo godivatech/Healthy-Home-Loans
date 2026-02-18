@@ -43,7 +43,7 @@ import equitasLogo from "@/assets/images/bank-partners/Equitas Small Finance Ban
 import ujjivanLogo from "@/assets/images/bank-partners/Ujjivan Small Finance Bank.webp";
 import janaLogo from "@/assets/images/bank-partners/Jana Small Finance Bank.png";
 import esafLogo from "@/assets/images/bank-partners/ESAF Small Finance Bank.png";
-import utkarshLogo from "@/assets/images/bank-partners/Utkarsh Small Finance Bank.svg";
+import utkarshLogo from "@/assets/images/bank-partners/Utkarsh Small Finance Bank.png";
 import suryodayLogo from "@/assets/images/bank-partners/Suryoday Small Finance Bank.webp";
 
 // --- NBFC Logos ---
@@ -195,9 +195,19 @@ export const PartnersPage = () => {
                 {banks.map((bank, index) => {
                     // Custom scaling for specific logos
                     let scaleClass = "";
+                    let hoverScale = "group-hover:scale-110";
+
                     if (bank.name.includes("Axis")) scaleClass = "scale-[1.2]";
                     else if (bank.name.includes("Kotak")) scaleClass = "scale-[1.5]";
                     else if (bank.name.includes("City Union")) scaleClass = "scale-[1.1]";
+                    else if (bank.name.includes("Karur")) {
+                        scaleClass = "scale-[1.4]";
+                        hoverScale = "group-hover:scale-[1.6]";
+                    }
+                    else if (bank.name.includes("Utkarsh")) {
+                        scaleClass = "scale-[1.6]";
+                        hoverScale = "group-hover:scale-[1.8]";
+                    }
 
                     return (
                         <FadeIn key={index} direction="up" delay={(index % 4) * 0.05} className="h-full">
@@ -206,7 +216,7 @@ export const PartnersPage = () => {
                                     <img
                                         src={bank.logo}
                                         alt={bank.name}
-                                        className={`max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110 ${scaleClass}`}
+                                        className={`max-h-full max-w-full object-contain transition-transform duration-500 ${hoverScale} ${scaleClass}`}
                                     />
                                 </div>
                                 <h4 className="text-sm font-medium text-neutral-700 text-center group-hover:text-primary transition-colors">
