@@ -42,19 +42,23 @@ import { ServicesPage } from "@/pages/Services";
 import { ContactPage } from "@/pages/Contact";
 import { PartnersPage } from "@/pages/Partners";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { UnderConstructionPage } from "@/pages/UnderConstruction";
 
 export const App = () => {
     return (
         <Router>
             <Routes>
+                {/* 
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/partners" element={<PartnersPage />} />
-                <Route path="/loans" element={<LoansPage />} />
+                <Route path="/loans" element={<LoansPage />} /> 
+                */}
+                <Route path="*" element={<UnderConstructionPage />} />
             </Routes>
-            <WhatsAppFloat />
+            {/* <WhatsAppFloat /> */}
         </Router>
     );
 };
