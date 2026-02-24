@@ -7,7 +7,7 @@ export const HeroContent = () => {
                 Welcome to Healthy Home Loans
             </span>
             <h1 className="text-neutral-900 text-[33px] font-bold box-border caret-transparent leading-[1.2] mt-2.5 mb-6 font-rubik_0b5097 md:text-[60px] md:leading-[1.1]">
-                Easy Loans. <br />
+                Easy Loans - <br />
                 <span className="text-primary">Peaceful Living.</span>
             </h1>
             <p className="text-zinc-600 text-lg box-border caret-transparent leading-[30px] max-w-[650px] mb-8">

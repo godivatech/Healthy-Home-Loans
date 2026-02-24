@@ -8,7 +8,7 @@ interface CallToActionProps {
 import { FadeIn } from "@/components/animations/FadeIn";
 
 export const CallToAction = ({
-    title = "Easy Loans. Peaceful Living.",
+    title = "Easy Loans - Peaceful Living.",
     subtitle = "Call to discuss your loan requirements",
     phone = "+919677719848",
     phoneDisplay = "+91 96777 19848"
