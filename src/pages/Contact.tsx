@@ -4,10 +4,40 @@ import { Copyright } from "@/sections/Copyright";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { PageBanner } from "@/components/PageBanner";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/SEO/StructuredData";
 
 export const ContactPage = () => {
+    const localBusinessSchema = {
+        name: "Healthy Home Loans",
+        image: "https://healthyhomeloans.in/assets/og-image-default.jpg",
+        "@id": "https://healthyhomeloans.in",
+        url: "https://healthyhomeloans.in/contact",
+        telephone: "+919677719848",
+        address: {
+            "@type": "PostalAddress",
+            streetAddress: "423/6, JK Complex, Veeramudian Barathi Nagar, Alagappan Nagar",
+            addressLocality: "Madurai",
+            postalCode: "625003",
+            addressCountry: "IN",
+            addressRegion: "Tamil Nadu",
+        },
+        openingHoursSpecification: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            opens: "09:30",
+            closes: "18:00",
+        },
+    };
+
     return (
         <div className="text-neutral-800 font-roboto_68d44c overflow-x-hidden">
+            <SEO
+                title="Contact Us"
+                description="Get in touch with Healthy Home Loans in Madurai and Tenkasi. We're here to assist you with home loans, mortgage advice, and financial planning."
+                canonicalUrl="/contact"
+            />
+            <StructuredData type="LocalBusiness" data={localBusinessSchema} />
             <Navbar />
 
             <PageBanner title="Contact Us" />

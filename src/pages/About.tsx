@@ -8,10 +8,18 @@ import { PageBanner } from "@/components/PageBanner";
 
 import photo from "@/assets/images/photo.png";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/SEO/StructuredData";
 
 export const AboutPage = () => {
     return (
         <div className="text-neutral-800 font-roboto_68d44c overflow-x-hidden">
+            <SEO
+                title="About Us"
+                description="Learn about Healthy Home Loans and our Managing Director, S. Mabubasha Shah Hussain. We have helped over 1000+ clients achieve their financial dreams in Tamil Nadu."
+                canonicalUrl="/about"
+            />
+            <StructuredData type="WebPage" data={{ name: "About Healthy Home Loans", url: "https://healthyhomeloans.in/about" }} />
             <Navbar />
 
             <PageBanner title="About Us" />

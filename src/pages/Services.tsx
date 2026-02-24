@@ -8,6 +8,8 @@ import { Home, User, Building2, Briefcase, Car, Map as MapIcon, CreditCard, Wall
 import { FadeIn } from "@/components/animations/FadeIn";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/SEO/StructuredData";
 
 export const ServicesPage = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -108,6 +110,12 @@ export const ServicesPage = () => {
 
     return (
         <div className="text-neutral-800 font-roboto_68d44c overflow-x-hidden">
+            <SEO
+                title="Our Services"
+                description="Explore Healthy Home Loans services including Home Loans, Personal Loans, Mortgage Loans, Business Loans, and more. Serving Madurai, Tenkasi, and all of Tamil Nadu."
+                canonicalUrl="/services"
+            />
+            <StructuredData type="WebPage" data={{ name: "Healthy Home Loans Services", url: "https://healthyhomeloans.in/services" }} />
             <Navbar />
 
             <PageBanner title="Our Services" breadcrumb="Home" />

@@ -4,6 +4,8 @@ import { Copyright } from "@/sections/Copyright";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { PageBanner } from "@/components/PageBanner";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/SEO/StructuredData";
 
 // --- Public Sector Banks ---
 import sbiLogo from "@/assets/images/bank-partners/SBI.png";
@@ -232,6 +234,12 @@ export const PartnersPage = () => {
 
     return (
         <div className="text-neutral-800 font-roboto_68d44c overflow-x-hidden bg-gray-50/50">
+            <SEO
+                title="Banking Partners"
+                description="View our extensive network of 160+ Public, Private, Small Finance Banks, and NBFC partners. We guarantee the best home loan options in Tamil Nadu."
+                canonicalUrl="/partners"
+            />
+            <StructuredData type="WebPage" data={{ name: "Healthy Home Loans Bank Partners", url: "https://healthyhomeloans.in/partners" }} />
             <Navbar />
 
             <PageBanner title="Our Partners" />

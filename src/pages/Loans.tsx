@@ -8,10 +8,19 @@ import { PageBanner } from "@/components/PageBanner";
 import { CallToAction } from "@/sections/CallToAction";
 import { EligibilitySection } from "@/sections/EligibilitySection";
 import { LoanCalculator } from "@/sections/FundingSection/components/LoanCalculator";
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/SEO/StructuredData";
+import logo from "@/assets/images/logo.png"; // Fix missing logo import
 
 export const LoansPage = () => {
     return (
         <div className="min-h-screen bg-white overflow-x-hidden">
+            <SEO
+                title="Loans & Eligibility"
+                description="Check your home loan eligibility, interest rates, and required documents. We simplify the mortgage process for salaried and self-employed individuals."
+                canonicalUrl="/loans"
+            />
+            <StructuredData type="WebPage" data={{ name: "Loans and Eligibility - Healthy Home Loans", url: "https://healthyhomeloans.in/loans" }} />
             <Navbar />
 
             <PageBanner title="Loans" />

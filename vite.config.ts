@@ -13,6 +13,9 @@ export default defineConfig({
             plugins: [tailwind()],
         },
     },
+    build: {
+        target: "es2015",
+    },
     resolve: {
         alias: {
             "@": "/src",

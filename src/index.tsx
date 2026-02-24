@@ -1,9 +1,25 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { hydrateRoot, createRoot } from "react-dom/client";
+import { HelmetProvider } from "react-helmet-async";
 import { App } from "./App";
 
-ReactDOM.createRoot(document.getElementById("app")!).render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-);
+const container = document.getElementById("app");
+
+if (container?.hasChildNodes()) {
+    hydrateRoot(
+        container,
+        <React.StrictMode>
+            <HelmetProvider>
+                <App />
+            </HelmetProvider>
+        </React.StrictMode>
+    );
+} else {
+    createRoot(container!).render(
+        <React.StrictMode>
+            <HelmetProvider>
+                <App />
+            </HelmetProvider>
+        </React.StrictMode>
+    );
+}

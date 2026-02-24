@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow specific non-indexable routes if they exist
+Disallow: /api/
+Disallow: /*?*
+
+Sitemap: https://healthyhomeloans.in/sitemap.xml
