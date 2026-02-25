@@ -40,7 +40,7 @@ export const ContactPage = () => {
             <StructuredData type="LocalBusiness" data={localBusinessSchema} />
             <Navbar />
 
-            <PageBanner title="Contact Us" />
+            <PageBanner title="Contact Us" headingLevel="h1" />
 
             <div className="py-[100px] bg-white">
                 <div className="max-w-[1140px] mx-auto px-3">

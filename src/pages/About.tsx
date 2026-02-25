@@ -22,7 +22,7 @@ export const AboutPage = () => {
             <StructuredData type="WebPage" data={{ name: "About Healthy Home Loans", url: "https://healthyhomeloans.in/about" }} />
             <Navbar />
 
-            <PageBanner title="About Us" />
+            <PageBanner title="About Us" headingLevel="h1" />
 
             {/* MD Profile Section - Premium Card */}
             <div className="py-[100px] bg-white">
@@ -72,7 +72,7 @@ export const AboutPage = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
-                        <h3 className="text-3xl font-bold font-rubik_0b5097 mb-6 text-white">Our Mission</h3>
+                        <h2 className="text-3xl font-bold font-rubik_0b5097 mb-6 text-white">Our Mission</h2>
                         <p className="text-zinc-300 text-lg leading-relaxed">
                             To provide holistically-designed financial solutions that optimize each family's current financial health and long-term wealth, making loans easy and living peaceful.
                         </p>
@@ -88,7 +88,7 @@ export const AboutPage = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                             </svg>
                         </div>
-                        <h3 className="text-3xl font-bold font-rubik_0b5097 mb-6 text-white">Our Vision</h3>
+                        <h2 className="text-3xl font-bold font-rubik_0b5097 mb-6 text-white">Our Vision</h2>
                         <p className="text-white text-lg leading-relaxed">
                             To be South India's most trusted and customer-centric loan consultancy, empowering dreams through accessible and transparent financial services.
                         </p>

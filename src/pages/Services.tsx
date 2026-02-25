@@ -118,7 +118,7 @@ export const ServicesPage = () => {
             <StructuredData type="WebPage" data={{ name: "Healthy Home Loans Services", url: "https://healthyhomeloans.in/services" }} />
             <Navbar />
 
-            <PageBanner title="Our Services" breadcrumb="Home" />
+            <PageBanner title="Our Services" breadcrumb="Home" headingLevel="h1" />
 
             <div className="py-[100px] bg-white">
                 <div className="max-w-[1140px] mx-auto px-3">

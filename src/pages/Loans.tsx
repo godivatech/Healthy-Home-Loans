@@ -23,7 +23,7 @@ export const LoansPage = () => {
             <StructuredData type="WebPage" data={{ name: "Loans and Eligibility - Healthy Home Loans", url: "https://healthyhomeloans.in/loans" }} />
             <Navbar />
 
-            <PageBanner title="Loans" />
+            <PageBanner title="Loans" headingLevel="h1" />
             {/* Loan Intro Section - HIDDEN */}
             {/* <div className="py-[50px] md:py-[100px]">
                 <div className="max-w-[1140px] w-full mx-auto px-3">
@@ -48,9 +48,9 @@ export const LoansPage = () => {
                             </div>
                         </div>
                         <div className="w-full md:w-6/12 px-3 mt-[30px] md:mt-0">
-                            <h3 className="text-neutral-900 text-3xl md:text-4xl font-medium mb-3">
+                            <h2 className="text-neutral-900 text-3xl md:text-4xl font-medium mb-3">
                                 Why choose Healthy Home Loans?
-                            </h3>
+                            </h2>
                             <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
                                 Your journey to home ownership should be smooth and transparent. At Healthy Home Loans, we simplify finance with personalized solutions, quick approvals, and dedicated support every step of the way.
                             </p>
@@ -100,9 +100,9 @@ export const LoansPage = () => {
                 <div className="max-w-[1140px] w-full mx-auto px-3 relative">
                     <div className="max-w-[570px] text-center mb-[45px] mx-auto">
                         <span className="text-primary">What’s the process?</span>
-                        <h2 className="text-neutral-900 text-[28px] md:text-[40px] font-medium leading-[39.2px] md:leading-[56px] mt-2.5">
+                        <h3 className="text-neutral-900 text-[28px] md:text-[40px] font-medium leading-[39.2px] md:leading-[56px] mt-2.5">
                             The Loans have helped us move our business forward
-                        </h2>
+                        </h3>
                     </div>
                     <div className="flex flex-wrap -mx-3">
                         <div className="w-full md:w-[33.3333%] px-3 relative">
@@ -173,9 +173,9 @@ export const LoansPage = () => {
                 <div className="max-w-[1140px] w-full mx-auto px-3">
                     <div className="flex flex-wrap items-center -mx-3">
                         <div className="w-full md:w-6/12 px-3">
-                            <h3 className="text-neutral-900 text-[25px] md:text-4xl font-medium leading-[35px] md:leading-[50.4px]">
+                            <h2 className="text-neutral-900 text-[25px] md:text-4xl font-medium leading-[35px] md:leading-[50.4px]">
                                 Our 4-Step Loan Process
-                            </h3>
+                            </h2>
 
                             {/* Step 1 */}
                             <FadeIn direction="right" delay={0.1} fullWidth>
@@ -250,7 +250,7 @@ export const LoansPage = () => {
                             <FadeIn direction="left" delay={0.3} fullWidth>
                                 <div className="text-center md:text-start">
                                     <img
-                                        alt="image"
+                                        alt="Home loan consultation process illustration"
                                         src="https://leza-react.envytheme.com/images/loan2.png"
                                         className="w-[600px] max-w-full"
                                     />
@@ -270,9 +270,9 @@ export const LoansPage = () => {
                         <div className="w-full md:w-6/12 px-3">
                             <FadeIn direction="up" delay={0.2} fullWidth>
                                 <div className="mb-[30px]">
-                                    <h3 className="text-neutral-900 text-3xl md:text-4xl font-medium mb-3">
+                                    <h2 className="text-neutral-900 text-3xl md:text-4xl font-medium mb-3">
                                         Loan Enquiry
-                                    </h3>
+                                    </h2>
                                     <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
                                         Please complete the short form below with your details and one
                                         of our advisors will be touch shortly

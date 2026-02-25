@@ -242,7 +242,7 @@ export const PartnersPage = () => {
             <StructuredData type="WebPage" data={{ name: "Healthy Home Loans Bank Partners", url: "https://healthyhomeloans.in/partners" }} />
             <Navbar />
 
-            <PageBanner title="Our Partners" />
+            <PageBanner title="Our Partners" headingLevel="h1" />
 
             {/* Partners Content */}
             <div className="py-[50px] md:py-[100px]">
