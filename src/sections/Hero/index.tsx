@@ -1,4 +1,4 @@
-import bannerImage from "@/assets/images/banner 1.jpeg";
+import bannerImage from "@/assets/images/banner 3.jpeg";
 import bannerImageMobile from "@/assets/images/Banner 1 mobile.jpeg";
 
 export const Hero = () => {

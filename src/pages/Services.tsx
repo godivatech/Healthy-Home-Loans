@@ -10,6 +10,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SEO } from "@/components/SEO";
 import { StructuredData } from "@/components/SEO/StructuredData";
+import { getWhatsAppUrl, getLoanInquiryMessage, DEFAULT_WHATSAPP_NUMBER } from "@/utils/whatsapp";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export const ServicesPage = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -164,11 +166,17 @@ export const ServicesPage = () => {
                                             </div>
 
                                             <a
-                                                href="/contact"
-                                                className="text-primary font-medium text-[15px] inline-block hover:text-primary/80 transition-colors uppercase tracking-wide"
+                                                href={getWhatsAppUrl(DEFAULT_WHATSAPP_NUMBER, getLoanInquiryMessage(service.title))}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="w-full flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] active:scale-[0.98] text-white font-semibold text-sm py-3 rounded-xl transition-all duration-300 shadow-sm hover:shadow-[0_4px_20px_rgba(37,211,102,0.35)] group/wa"
                                             >
-                                                Learn More
+                                                <WhatsAppIcon size={18} className="shrink-0 group-hover/wa:scale-110 transition-transform duration-200" />
+                                                <span>Enquire on WhatsApp</span>
                                             </a>
+                                            <p className="text-center text-[11px] text-zinc-400 mt-2">
+                                                Typically replies within minutes
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -238,11 +246,17 @@ export const ServicesPage = () => {
                                                     </div>
 
                                                     <a
-                                                        href="/contact"
-                                                        className="block w-full text-center bg-primary text-white font-medium text-sm py-2.5 rounded-lg hover:bg-primary/90 transition-colors"
+                                                        href={getWhatsAppUrl(DEFAULT_WHATSAPP_NUMBER, getLoanInquiryMessage(service.title))}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="w-full flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] active:scale-[0.98] text-white font-semibold text-sm py-3 rounded-xl transition-all duration-300 shadow-sm hover:shadow-[0_4px_20px_rgba(37,211,102,0.35)] group/wa"
                                                     >
-                                                        Learn More
+                                                        <WhatsAppIcon size={18} className="shrink-0 group-hover/wa:scale-110 transition-transform duration-200" />
+                                                        <span>Enquire on WhatsApp</span>
                                                     </a>
+                                                    <p className="text-center text-[11px] text-zinc-400 mt-2">
+                                                        Typically replies within minutes
+                                                    </p>
                                                 </div>
                                             </motion.div>
                                         )}

@@ -12,6 +12,8 @@ import {
     PiggyBank
 } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { getWhatsAppUrl, getLoanInquiryMessage, DEFAULT_WHATSAPP_NUMBER } from "@/utils/whatsapp";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export const ServiceTabs = () => {
     const [page, setPage] = useState(0);
@@ -161,10 +163,17 @@ export const ServiceTabs = () => {
                                                 <p className="text-white/80 text-base leading-relaxed mb-4">
                                                     {service.description}
                                                 </p>
-                                                <Link to={service.link} className="inline-flex items-center text-white font-semibold text-lg hover:underline decoration-white underline-offset-8 transition-all">
-                                                    Learn More
-                                                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" /></svg>
-                                                </Link>
+                                                <div className="flex items-center gap-4">
+                                                    <a
+                                                        href={getWhatsAppUrl(DEFAULT_WHATSAPP_NUMBER, getLoanInquiryMessage(service.title))}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="inline-flex items-center gap-2 bg-white/10 hover:bg-[#25D366] border border-white/20 hover:border-[#25D366] text-white text-sm font-semibold px-4 py-2.5 rounded-full transition-all duration-300 group/wa"
+                                                    >
+                                                        <WhatsAppIcon size={16} className="shrink-0 group-hover/wa:scale-110 transition-transform duration-200" />
+                                                        <span>Enquire on WhatsApp</span>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
