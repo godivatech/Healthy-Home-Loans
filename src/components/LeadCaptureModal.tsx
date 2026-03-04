@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Check, Loader2 } from "lucide-react";
+import { X, Check, Loader2, AlertCircle } from "lucide-react";
+import { submitLeadCapture } from "@/lib/firebase";
 
 interface LeadCaptureModalProps {
     isOpen: boolean;
@@ -15,6 +16,7 @@ interface LeadCaptureModalProps {
 export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureModalProps) => {
     const [step, setStep] = useState<'form' | 'success'>('form');
     const [isLoading, setIsLoading] = useState(false);
+    const [submitError, setSubmitError] = useState<string | null>(null);
 
     // Form State
     const [formData, setFormData] = useState({
@@ -42,19 +44,28 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
         if (!validate()) return;
 
         setIsLoading(true);
+        setSubmitError(null);
 
-        // Simulate API Call
-        setTimeout(() => {
-            console.log("Lead Submitted:", { ...formData, loanDetails });
-            setIsLoading(false);
+        const result = await submitLeadCapture({
+            ...formData,
+            loanDetails: loanDetails || null
+        });
+
+        setIsLoading(false);
+
+        if (result.success) {
             setStep('success');
-        }, 1500);
+        } else {
+            console.error(result.error);
+            setSubmitError("Failed to submit. Please try again or call us directly.");
+        }
     };
 
     const handleClose = () => {
         setStep('form');
         setFormData({ name: "", city: "", mobile: "" });
         setErrors({});
+        setSubmitError(null);
         onClose();
     };
 
@@ -108,6 +119,13 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
                                                     <span className="font-bold text-gray-900">₹ {loanDetails.emi}</span>
                                                 </div>
                                             </div>
+                                        </div>
+                                    )}
+
+                                    {submitError && (
+                                        <div className="mb-6 p-3 bg-red-50 text-red-700 text-sm border border-red-200 rounded-lg flex items-start gap-2">
+                                            <AlertCircle size={18} className="shrink-0 mt-0.5" />
+                                            <span>{submitError}</span>
                                         </div>
                                     )}
 

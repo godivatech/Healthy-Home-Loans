@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Navbar } from "@/sections/Navbar";
 import { Hero } from "@/sections/Hero";
 import { LogoSlider } from "@/sections/LogoSlider";
@@ -79,6 +79,8 @@ import { ServicesPage } from "@/pages/Services";
 import { ContactPage } from "@/pages/Contact";
 import { PartnersPage } from "@/pages/Partners";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+// import { AdminLayout } from "@/pages/admin/AdminLayout";
+import { NotFoundPage } from "@/pages/NotFound";
 
 export const App = () => {
     return (
@@ -90,6 +92,10 @@ export const App = () => {
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/partners" element={<PartnersPage />} />
                 <Route path="/loans" element={<LoansPage />} />
+                {/* <Route path="/admin/*" element={<AdminLayout />} /> */}
+                <Route path="/admin/*" element={<Navigate to="/404" replace />} />
+                <Route path="/404" element={<NotFoundPage />} />
+                <Route path="*" element={<Navigate to="/404" replace />} />
             </Routes>
             <WhatsAppFloat />
         </Router>
