@@ -18,7 +18,7 @@ export const DataTable = ({ data, columns, isLoading, emptyMessage = "No data fo
         return (
             <div className="w-full h-64 flex flex-col items-center justify-center bg-white rounded-none border border-slate-100 shadow-sm">
                 <div className="w-8 h-8 border-2 border-slate-100 border-t-primary rounded-full animate-spin mb-4"></div>
-                <p className="text-slate-400 text-sm font-medium uppercase tracking-widest">Loading Records</p>
+                <p className="text-slate-400 text-base font-medium uppercase tracking-widest">Loading Records</p>
             </div>
         );
     }
@@ -29,7 +29,7 @@ export const DataTable = ({ data, columns, isLoading, emptyMessage = "No data fo
                 <div className="w-12 h-12 bg-white rounded-none flex items-center justify-center border border-slate-200 mb-4 shadow-sm pb-1">
                     <CheckSquare className="w-5 h-5 text-slate-300" />
                 </div>
-                <p className="text-slate-400 text-sm font-medium uppercase tracking-widest">{emptyMessage}</p>
+                <p className="text-slate-400 text-base font-medium uppercase tracking-widest">{emptyMessage}</p>
             </div>
         );
     }
@@ -59,7 +59,7 @@ export const DataTable = ({ data, columns, isLoading, emptyMessage = "No data fo
                                 {columns.map((col, colIndex) => (
                                     <td
                                         key={colIndex}
-                                        className="px-6 py-4 text-sm text-slate-600 whitespace-nowrap group-hover:text-slate-900"
+                                        className="px-6 py-4 text-base text-slate-600 whitespace-nowrap group-hover:text-slate-900"
                                     >
                                         {col.render ? col.render(row[col.accessor], row) : row[col.accessor] || <span className="text-slate-300">-</span>}
                                     </td>

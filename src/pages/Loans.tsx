@@ -51,7 +51,7 @@ export const LoansPage = () => {
                             <h2 className="text-neutral-900 text-3xl md:text-4xl font-medium mb-3">
                                 Why choose Healthy Home Loans?
                             </h2>
-                            <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
+                            <p className="text-zinc-600 text-base md:text-lg leading-[27px] md:leading-[28.8px]">
                                 Your journey to home ownership should be smooth and transparent. At Healthy Home Loans, we simplify finance with personalized solutions, quick approvals, and dedicated support every step of the way.
                             </p>
                             <ul className="mt-4 mb-[18px] pl-0">
@@ -85,7 +85,7 @@ export const LoansPage = () => {
                             <div>
                                 <a
                                     href="/contact"
-                                    className="relative text-white text-[15px] md:text-base bg-primary inline-block text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
+                                    className="relative text-white text-base md:text-lg bg-primary inline-block text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
                                 >
                                     Apply now
                                 </a>
@@ -186,7 +186,7 @@ export const LoansPage = () => {
                                     <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
                                         Free Consultation
                                     </h4>
-                                    <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
+                                    <p className="text-zinc-600 text-base md:text-lg leading-[27px] md:leading-[28.8px]">
                                         We analyze your financial profile and requirements to suggest the best loan options.
                                     </p>
                                 </div>
@@ -201,7 +201,7 @@ export const LoansPage = () => {
                                     <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
                                         Document Collection
                                     </h4>
-                                    <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
+                                    <p className="text-zinc-600 text-base md:text-lg leading-[27px] md:leading-[28.8px]">
                                         Our team collects necessary documents from your doorstep and prepares your file.
                                     </p>
                                 </div>
@@ -216,7 +216,7 @@ export const LoansPage = () => {
                                     <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
                                         Legal & Technical Verification
                                     </h4>
-                                    <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
+                                    <p className="text-zinc-600 text-base md:text-lg leading-[27px] md:leading-[28.8px]">
                                         We handle all verifications with the bank to ensure smooth processing.
                                     </p>
                                 </div>
@@ -231,7 +231,7 @@ export const LoansPage = () => {
                                     <h4 className="text-neutral-900 text-xl md:text-[22px] font-medium mb-2.5">
                                         Sanction & Disbursal
                                     </h4>
-                                    <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
+                                    <p className="text-zinc-600 text-base md:text-lg leading-[27px] md:leading-[28.8px]">
                                         Once approved, the loan amount is disbursed directly to your account.
                                     </p>
                                 </div>
@@ -240,7 +240,7 @@ export const LoansPage = () => {
                             <div className="text-center md:text-start mt-[25px]">
                                 <a
                                     href="/contact"
-                                    className="relative text-white text-[15px] md:text-base bg-primary inline-block text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
+                                    className="relative text-white text-base md:text-lg bg-primary inline-block text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
                                 >
                                     Get Started
                                 </a>
@@ -273,7 +273,7 @@ export const LoansPage = () => {
                                     <h2 className="text-neutral-900 text-3xl md:text-4xl font-medium mb-3">
                                         Loan Enquiry
                                     </h2>
-                                    <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
+                                    <p className="text-zinc-600 text-base md:text-lg leading-[27px] md:leading-[28.8px]">
                                         Please complete the short form below with your details and one
                                         of our advisors will be touch shortly
                                     </p>
@@ -348,7 +348,7 @@ export const LoansPage = () => {
                                     <div className="mt-5">
                                         <button
                                             type="submit"
-                                            className="relative text-white text-[15px] md:text-base bg-primary text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
+                                            className="relative text-white text-base md:text-lg bg-primary text-center z-[1] overflow-hidden px-[30px] md:px-[45px] py-3 rounded-[5px] hover:bg-neutral-900"
                                         >
                                             Submit
                                         </button>

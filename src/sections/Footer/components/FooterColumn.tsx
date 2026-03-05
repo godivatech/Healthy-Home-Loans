@@ -53,13 +53,13 @@ export const FooterColumn = (props: FooterColumnProps) => {
                             />
                         </a>
                     </div>
-                    <p className="text-white text-[15px] box-border caret-transparent leading-[27px] mb-[25px] md:text-base md:leading-[28.8px]">
+                    <p className="text-white text-base box-border caret-transparent leading-[27px] mb-[25px] md:text-lg md:leading-[28.8px]">
                         {props.description}
                     </p>
 
                     {/* Social Links Styled Section */}
                     <div className="flex items-center gap-4 text-white">
-                        <span className="font-medium text-[15px]">Follow us</span>
+                        <span className="font-medium text-base">Follow us</span>
                         <span className="h-[1px] w-8 bg-white/50 block"></span>
 
                         <div className="flex items-center gap-5">
@@ -139,10 +139,10 @@ export const FooterColumn = (props: FooterColumnProps) => {
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-4">
                                 {props.addresses.map((addr, index) => (
                                     <div key={index} className="text-white box-border caret-transparent">
-                                        {addr.label && <div className="font-bold text-primary mb-1 text-sm uppercase tracking-wider">{addr.label}</div>}
-                                        <div className="text-sm leading-relaxed text-zinc-300 mb-2">{addr.content}</div>
+                                        {addr.label && <div className="font-bold text-primary mb-1 text-base uppercase tracking-wider">{addr.label}</div>}
+                                        <div className="text-base leading-relaxed text-zinc-300 mb-2">{addr.content}</div>
                                         {addr.phones && addr.phones.map((phone, pIndex) => (
-                                            <a key={pIndex} href={phone.url} className="block text-sm text-zinc-400 hover:text-primary transition-colors">
+                                            <a key={pIndex} href={phone.url} className="block text-base text-zinc-400 hover:text-primary transition-colors">
                                                 {phone.text}
                                             </a>
                                         ))}

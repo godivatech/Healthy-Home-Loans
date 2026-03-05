@@ -96,7 +96,7 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
                                     <div className="flex justify-between items-start mb-6">
                                         <div>
                                             <h3 className="text-2xl font-bold text-gray-900 font-rubik_0b5097">Get Started</h3>
-                                            <p className="text-gray-500 text-sm mt-1">Fill in your details to process your application.</p>
+                                            <p className="text-gray-500 text-base mt-1">Fill in your details to process your application.</p>
                                         </div>
                                         <button
                                             onClick={handleClose}
@@ -108,14 +108,14 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
 
                                     {loanDetails && (
                                         <div className="bg-primary/5 rounded-lg p-4 mb-6 border border-primary/10">
-                                            <p className="text-sm font-medium text-primary mb-2">Applying for:</p>
+                                            <p className="text-base font-medium text-primary mb-2">Applying for:</p>
                                             <div className="flex justify-between items-end">
                                                 <div>
-                                                    <span className="text-xs text-gray-500 uppercase tracking-wider block">Loan Amount</span>
+                                                    <span className="text-base text-gray-500 uppercase tracking-wider block">Loan Amount</span>
                                                     <span className="font-bold text-gray-900">{loanDetails.amount}</span>
                                                 </div>
                                                 <div className="text-right">
-                                                    <span className="text-xs text-gray-500 uppercase tracking-wider block">Est. EMI</span>
+                                                    <span className="text-base text-gray-500 uppercase tracking-wider block">Est. EMI</span>
                                                     <span className="font-bold text-gray-900">₹ {loanDetails.emi}</span>
                                                 </div>
                                             </div>
@@ -123,7 +123,7 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
                                     )}
 
                                     {submitError && (
-                                        <div className="mb-6 p-3 bg-red-50 text-red-700 text-sm border border-red-200 rounded-lg flex items-start gap-2">
+                                        <div className="mb-6 p-3 bg-red-50 text-red-700 text-base border border-red-200 rounded-lg flex items-start gap-2">
                                             <AlertCircle size={18} className="shrink-0 mt-0.5" />
                                             <span>{submitError}</span>
                                         </div>
@@ -131,7 +131,7 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
 
                                     <form onSubmit={handleSubmit} className="space-y-4">
                                         <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                            <label className="block text-base font-medium text-gray-700 mb-1">Full Name</label>
                                             <input
                                                 type="text"
                                                 value={formData.name}
@@ -139,11 +139,11 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
                                                 className={`w-full px-4 py-2 rounded-lg border ${errors.name ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:ring-primary/20'} focus:outline-none focus:ring-4 transition-all`}
                                                 placeholder="Enter your name"
                                             />
-                                            {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
+                                            {errors.name && <p className="text-red-500 text-base mt-1">{errors.name}</p>}
                                         </div>
 
                                         <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-1">City</label>
+                                            <label className="block text-base font-medium text-gray-700 mb-1">City</label>
                                             <input
                                                 type="text"
                                                 value={formData.city}
@@ -151,11 +151,11 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
                                                 className={`w-full px-4 py-2 rounded-lg border ${errors.city ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:ring-primary/20'} focus:outline-none focus:ring-4 transition-all`}
                                                 placeholder="Enter your city"
                                             />
-                                            {errors.city && <p className="text-red-500 text-xs mt-1">{errors.city}</p>}
+                                            {errors.city && <p className="text-red-500 text-base mt-1">{errors.city}</p>}
                                         </div>
 
                                         <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-1">Mobile Number</label>
+                                            <label className="block text-base font-medium text-gray-700 mb-1">Mobile Number</label>
                                             <div className="relative">
                                                 <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 font-medium">+91</span>
                                                 <input
@@ -169,7 +169,7 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
                                                     placeholder="98765 43210"
                                                 />
                                             </div>
-                                            {errors.mobile && <p className="text-red-500 text-xs mt-1">{errors.mobile}</p>}
+                                            {errors.mobile && <p className="text-red-500 text-base mt-1">{errors.mobile}</p>}
                                         </div>
 
                                         <button

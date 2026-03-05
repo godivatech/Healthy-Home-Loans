@@ -22,7 +22,7 @@ export const EligibilitySection = () => {
                                 <h3 className="text-neutral-900 text-[26px] md:text-4xl font-medium mb-3">
                                     Eligibility Criteria
                                 </h3>
-                                <p className="text-zinc-600 text-[15px] md:text-base leading-[27px] md:leading-[28.8px]">
+                                <p className="text-zinc-600 text-base md:text-lg leading-[27px] md:leading-[28.8px]">
                                     We assist both salaried and self-employed individuals. Our team helps optimize your profile to meet bank usage for maximum eligibility.
                                 </p>
                             </div>

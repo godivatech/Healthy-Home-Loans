@@ -85,20 +85,20 @@ export const ContactPage = () => {
                                         {/* Head Office */}
                                         <div className="bg-white p-4 rounded border border-gray-100 shadow-sm relative pl-4 border-l-4 border-l-primary">
                                             <h4 className="font-bold text-lg mb-2 text-primary">Head Office</h4>
-                                            <p className="text-zinc-600 text-sm leading-relaxed mb-3">
+                                            <p className="text-zinc-600 text-base leading-relaxed mb-3">
                                                 423/6, JK Complex,<br />
                                                 Veeramudian Barathi Nagar,<br />
                                                 Alagappan Nagar, Near Railway Gate,<br />
                                                 Muthupatti, Madurai – 625003
                                             </p>
                                             <div className="space-y-1 pt-2 border-t border-gray-50">
-                                                <p className="text-zinc-600 text-sm">
-                                                    <span className="font-medium text-neutral-900 block text-xs uppercase tracking-wider mb-1">Mobile</span>
+                                                <p className="text-zinc-600 text-base">
+                                                    <span className="font-medium text-neutral-900 block text-base uppercase tracking-wider mb-1">Mobile</span>
                                                     <a href="tel:+919677719848" className="hover:text-primary transition-colors block font-medium">+91 96777 19848</a>
                                                     <a href="tel:+917845837740" className="hover:text-primary transition-colors block font-medium">+91 78458 37740</a>
                                                 </p>
-                                                <p className="text-zinc-600 text-sm mt-2">
-                                                    <span className="font-medium text-neutral-900 block text-xs uppercase tracking-wider mb-1">Office</span>
+                                                <p className="text-zinc-600 text-base mt-2">
+                                                    <span className="font-medium text-neutral-900 block text-base uppercase tracking-wider mb-1">Office</span>
                                                     <a href="tel:+919360319848" className="hover:text-primary transition-colors block font-medium">+91 93603 19848</a>
                                                     <a href="tel:+919087407771" className="hover:text-primary transition-colors block font-medium">+91 90874 07771</a>
                                                 </p>
@@ -108,14 +108,14 @@ export const ContactPage = () => {
                                         {/* Branch Office */}
                                         <div className="bg-white p-4 rounded border border-gray-100 shadow-sm relative pl-4 border-l-4 border-l-neutral-700">
                                             <h4 className="font-bold text-lg mb-2 text-neutral-800">Tenkasi Branch</h4>
-                                            <p className="text-zinc-600 text-sm leading-relaxed mb-3">
+                                            <p className="text-zinc-600 text-base leading-relaxed mb-3">
                                                 36/ Byraha Complex,<br />
                                                 Thavalapuram 2nd Street,<br />
                                                 Tenkasi – 627811
                                             </p>
                                             <div className="space-y-1 pt-2 border-t border-gray-50">
-                                                <p className="text-zinc-600 text-sm">
-                                                    <span className="font-medium text-neutral-900 block text-xs uppercase tracking-wider mb-1">Contact</span>
+                                                <p className="text-zinc-600 text-base">
+                                                    <span className="font-medium text-neutral-900 block text-base uppercase tracking-wider mb-1">Contact</span>
                                                     <a href="tel:+916301581831" className="hover:text-primary transition-colors block font-medium">+91 63015 81831</a>
                                                     <a href="tel:+919677719848" className="hover:text-primary transition-colors block font-medium">+91 96777 19848</a>
                                                 </p>
@@ -133,8 +133,8 @@ export const ContactPage = () => {
 
                                         <div>
                                             <h4 className="font-bold text-base mb-1 text-primary">Office Hours</h4>
-                                            <p className="text-zinc-600 text-sm">Mon - Sat: 9:30 AM - 6:00 PM</p>
-                                            <p className="text-zinc-600 text-sm">Sunday: By Appointment</p>
+                                            <p className="text-zinc-600 text-base">Mon - Sat: 9:30 AM - 6:00 PM</p>
+                                            <p className="text-zinc-600 text-base">Sunday: By Appointment</p>
                                         </div>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@ export const ContactPage = () => {
                                     <form onSubmit={handleSubmit}>
                                         <div className="flex flex-wrap -mx-3 mb-4">
                                             <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                                                <label className="block text-sm font-medium text-zinc-700 mb-1">Name</label>
+                                                <label className="block text-base font-medium text-zinc-700 mb-1">Name</label>
                                                 <input
                                                     type="text"
                                                     name="name"
@@ -174,7 +174,7 @@ export const ContactPage = () => {
                                                 />
                                             </div>
                                             <div className="w-full md:w-1/2 px-3">
-                                                <label className="block text-sm font-medium text-zinc-700 mb-1">Email</label>
+                                                <label className="block text-base font-medium text-zinc-700 mb-1">Email</label>
                                                 <input
                                                     type="email"
                                                     name="email"
@@ -188,7 +188,7 @@ export const ContactPage = () => {
                                         </div>
                                         <div className="flex flex-wrap -mx-3 mb-4">
                                             <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                                                <label className="block text-sm font-medium text-zinc-700 mb-1">Phone</label>
+                                                <label className="block text-base font-medium text-zinc-700 mb-1">Phone</label>
                                                 <input
                                                     type="text"
                                                     name="phone"
@@ -200,7 +200,7 @@ export const ContactPage = () => {
                                                 />
                                             </div>
                                             <div className="w-full md:w-1/2 px-3">
-                                                <label className="block text-sm font-medium text-zinc-700 mb-1">Subject</label>
+                                                <label className="block text-base font-medium text-zinc-700 mb-1">Subject</label>
                                                 <input
                                                     type="text"
                                                     name="subject"
@@ -212,7 +212,7 @@ export const ContactPage = () => {
                                             </div>
                                         </div>
                                         <div className="mb-6">
-                                            <label className="block text-sm font-medium text-zinc-700 mb-1">Message</label>
+                                            <label className="block text-base font-medium text-zinc-700 mb-1">Message</label>
                                             <textarea
                                                 name="message"
                                                 required

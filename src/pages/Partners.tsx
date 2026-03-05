@@ -221,7 +221,7 @@ export const PartnersPage = () => {
                                         className={`max-h-full max-w-full object-contain transition-transform duration-500 ${hoverScale} ${scaleClass}`}
                                     />
                                 </div>
-                                <h4 className="text-sm font-medium text-neutral-700 text-center group-hover:text-primary transition-colors">
+                                <h4 className="text-base font-medium text-neutral-700 text-center group-hover:text-primary transition-colors">
                                     {bank.name}
                                 </h4>
                             </div>
@@ -296,7 +296,7 @@ export const PartnersPage = () => {
                                                     className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110"
                                                 />
                                             </div>
-                                            <h3 className="text-xs md:text-sm font-medium text-neutral-700 text-center group-hover:text-primary transition-colors">
+                                            <h3 className="text-base md:text-base font-medium text-neutral-700 text-center group-hover:text-primary transition-colors">
                                                 {nbfc.name}
                                             </h3>
                                         </div>

@@ -40,7 +40,7 @@ export const AdminDashboard = () => {
                 <span className="text-slate-800 font-medium">
                     {new Intl.DateTimeFormat('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }).format(date)}
                 </span>
-                <span className="text-xs text-slate-500">
+                <span className="text-base text-slate-500">
                     {new Intl.DateTimeFormat('en-IN', { hour: '2-digit', minute: '2-digit' }).format(date)}
                 </span>
             </div>
@@ -52,7 +52,7 @@ export const AdminDashboard = () => {
         { header: "Client Name", accessor: "name", render: (val: string) => <span className="font-bold text-primary">{val}</span> },
         { header: "Email Address", accessor: "email" },
         { header: "Phone Number", accessor: "phone" },
-        { header: "Inquiry Subject", accessor: "subject", render: (val: string) => <span className="text-slate-700 bg-slate-100 px-2.5 py-1 rounded truncate max-w-[200px] inline-block text-xs font-medium">{val}</span> },
+        { header: "Inquiry Subject", accessor: "subject", render: (val: string) => <span className="text-slate-700 bg-slate-100 px-2.5 py-1 rounded truncate max-w-[200px] inline-block text-base font-medium">{val}</span> },
         { header: "Message", accessor: "message", render: (val: string) => <div className="max-w-[250px] truncate text-slate-500" title={val}>{val}</div> }
     ];
 
@@ -61,7 +61,7 @@ export const AdminDashboard = () => {
         { header: "Client Name", accessor: "name", render: (val: string) => <span className="font-bold text-primary">{val}</span> },
         { header: "City", accessor: "city" },
         { header: "Mobile", accessor: "mobile" },
-        { header: "Loan Amount", accessor: "loanDetails", render: (val: any) => val?.amount ? <span className="text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded font-bold text-xs border border-emerald-100">{val.amount}</span> : '-' },
+        { header: "Loan Amount", accessor: "loanDetails", render: (val: any) => val?.amount ? <span className="text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded font-bold text-base border border-emerald-100">{val.amount}</span> : '-' },
         { header: "Est. EMI", accessor: "loanDetails", render: (val: any) => val?.emi ? <span className="font-medium text-slate-700">₹{val.emi}</span> : '-' }
     ];
 
@@ -107,7 +107,7 @@ export const AdminDashboard = () => {
 
                 <button
                     onClick={() => exportToCsv(activeTab === 'contacts' ? contacts : leads, activeTab)}
-                    className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2.5 rounded text-sm font-bold uppercase tracking-wider transition-colors shadow-sm"
+                    className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2.5 rounded text-base font-bold uppercase tracking-wider transition-colors shadow-sm"
                 >
                     <Download className="w-4 h-4" />
                     Export {activeTab === 'contacts' ? 'Contacts' : 'Leads'}
@@ -132,7 +132,7 @@ export const AdminDashboard = () => {
                             <FileText className="w-7 h-7" />
                         </div>
                         <div>
-                            <p className={`text-xs font-bold uppercase tracking-widest mb-1 ${activeTab === 'contacts' ? 'text-primary-foreground/70' : 'text-slate-500'}`}>
+                            <p className={`text-base font-bold uppercase tracking-widest mb-1 ${activeTab === 'contacts' ? 'text-primary-foreground/70' : 'text-slate-500'}`}>
                                 Gen. Inquiries
                             </p>
                             <h3 className={`text-4xl font-black tracking-tighter ${activeTab === 'contacts' ? 'text-primary-foreground' : 'text-primary'}`}>
@@ -158,7 +158,7 @@ export const AdminDashboard = () => {
                             <Users className="w-7 h-7" />
                         </div>
                         <div>
-                            <p className={`text-xs font-bold uppercase tracking-widest mb-1 ${activeTab === 'leads' ? 'text-primary-foreground/70' : 'text-slate-500'}`}>
+                            <p className={`text-base font-bold uppercase tracking-widest mb-1 ${activeTab === 'leads' ? 'text-primary-foreground/70' : 'text-slate-500'}`}>
                                 Loan Check Leads
                             </p>
                             <h3 className={`text-4xl font-black tracking-tighter ${activeTab === 'leads' ? 'text-primary-foreground' : 'text-primary'}`}>

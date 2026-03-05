@@ -21,7 +21,7 @@ export const FeatureCard = (props: FeatureCardProps) => {
             <h3 className="text-neutral-900 text-xl md:text-2xl font-bold box-border caret-transparent leading-tight mb-3 font-rubik_0b5097">
                 {props.title}
             </h3>
-            <p className="text-zinc-600 text-[15px] md:text-base box-border caret-transparent leading-relaxed z-10 relative flex-grow">
+            <p className="text-zinc-600 text-base md:text-lg box-border caret-transparent leading-relaxed z-10 relative flex-grow">
                 {props.description}
             </p>
         </div>

@@ -42,14 +42,14 @@ export const AdminAuth = ({ onAuthenticated }: AdminAuthProps) => {
                         className="h-28 scale-125 w-auto object-contain mb-8"
                     />
                     <h1 className="text-2xl font-bold text-primary tracking-tight">Admin Portal</h1>
-                    <p className="text-slate-500 text-sm mt-2 text-center">Secure access to management dashboard</p>
+                    <p className="text-slate-500 text-base mt-2 text-center">Secure access to management dashboard</p>
                 </div>
 
                 {/* Form Area */}
                 <div className="p-10 bg-white">
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div>
-                            <label className="block text-[13px] font-bold text-primary mb-2 uppercase tracking-wider">
+                            <label className="block text-base font-bold text-primary mb-2 uppercase tracking-wider">
                                 Secure Passcode
                             </label>
                             <div className="relative">
@@ -72,7 +72,7 @@ export const AdminAuth = ({ onAuthenticated }: AdminAuthProps) => {
                                 <motion.p
                                     initial={{ opacity: 0, x: -10 }}
                                     animate={{ opacity: 1, x: 0 }}
-                                    className="mt-2 text-sm text-red-600 font-medium flex items-center gap-1.5"
+                                    className="mt-2 text-base text-red-600 font-medium flex items-center gap-1.5"
                                 >
                                     <span className="w-1.5 h-1.5 rounded-full bg-red-600 inline-block"></span>
                                     Incorrect passcode. Please try again.
@@ -90,7 +90,7 @@ export const AdminAuth = ({ onAuthenticated }: AdminAuthProps) => {
                     </form>
 
                     <div className="mt-8 text-center pt-6 border-t border-slate-50">
-                        <a href="/" className="text-sm font-medium text-slate-400 hover:text-primary transition-colors">
+                        <a href="/" className="text-base font-medium text-slate-400 hover:text-primary transition-colors">
                             &larr; Return to main site
                         </a>
                     </div>

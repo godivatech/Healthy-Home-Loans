@@ -12,7 +12,7 @@ export const AboutContent = () => {
                     <h3 className="text-neutral-900 text-[25px] font-medium box-border caret-transparent leading-[30px] mt-2.5 mb-3.5 font-rubik_0b5097 md:text-4xl md:leading-[43.2px] md:mb-4">
                         Providing holistically-designed financial solutions for over 15 years.
                     </h3>
-                    <p className="text-zinc-600 text-[15px] box-border caret-transparent leading-[27px] mb-[15px] md:text-base md:leading-[28.8px]">
+                    <p className="text-zinc-600 text-base box-border caret-transparent leading-[27px] mb-[15px] md:text-lg md:leading-[28.8px]">
                         We are dedicated to optimizing each family's current financial health and long-term wealth. Our mission is to make loans easy and living peaceful by providing accessible and transparent financial services.
                     </p>
                     <strong className="text-zinc-600 text-lg box-border caret-transparent leading-[27px]">
@@ -35,10 +35,10 @@ export const AboutContent = () => {
                     <div className="box-border caret-transparent">
                         <a
                             href="/about"
-                            className="relative text-white text-[15px] bg-primary box-border caret-transparent inline-block leading-[22.5px] text-center z-[1] overflow-hidden px-[30px] py-3 rounded-[5px] md:text-base md:leading-6 md:px-[45px] hover:bg-neutral-900 transition-colors"
+                            className="relative text-white text-base bg-primary box-border caret-transparent inline-block leading-[22.5px] text-center z-[1] overflow-hidden px-[30px] py-3 rounded-[5px] md:text-lg md:leading-6 md:px-[45px] hover:bg-neutral-900 transition-colors"
                         >
                             Learn More{" "}
-                            <span className="absolute text-primary text-[15px] bg-neutral-900 box-border caret-transparent block h-0 leading-[22.5px] w-0 z-[-1] rounded-[5px] md:text-base md:leading-6"></span>
+                            <span className="absolute text-primary text-base bg-neutral-900 box-border caret-transparent block h-0 leading-[22.5px] w-0 z-[-1] rounded-[5px] md:text-lg md:leading-6"></span>
                         </a>
                     </div>
                 </div>

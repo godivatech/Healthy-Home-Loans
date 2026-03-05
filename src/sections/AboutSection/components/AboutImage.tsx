@@ -15,7 +15,7 @@ export const AboutImage = () => {
                             <h3 className="text-primary text-[70px] font-medium box-border caret-transparent leading-[70px] mb-[5px] font-rubik_0b5097">
                                 15
                             </h3>
-                            <span className="text-neutral-900 text-sm font-medium box-border caret-transparent leading-[21px] font-rubik_0b5097">
+                            <span className="text-neutral-900 text-base font-medium box-border caret-transparent leading-[21px] font-rubik_0b5097">
                                 Years Of Experience
                             </span>
                         </div>

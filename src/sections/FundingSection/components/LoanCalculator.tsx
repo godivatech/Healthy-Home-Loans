@@ -26,7 +26,7 @@ export const LoanCalculator = () => {
             <FadeIn direction="left" delay={0.4} fullWidth>
                 <div className="bg-primary box-border px-5 py-[30px] md:px-[45px] md:py-[50px] rounded-lg shadow-xl">
                     <div className="box-border text-center mb-[30px] md:mb-[35px]">
-                        <span className="text-white/80 box-border font-medium tracking-wide uppercase text-sm">
+                        <span className="text-white/80 box-border font-medium tracking-wide uppercase text-base">
                             Calculate your rate
                         </span>
                         <h3 className="text-white text-xl font-bold box-border leading-6 mt-2.5 font-rubik_0b5097 md:text-3xl md:leading-tight">
@@ -51,7 +51,7 @@ export const LoanCalculator = () => {
                             {/* Fixed height container to prevent layout shift */}
                             <div className="min-h-[20px] mt-1">
                                 {amount && (
-                                    <p className="text-white/70 text-xs text-right animate-in fade-in slide-in-from-top-1">
+                                    <p className="text-white/70 text-base text-right animate-in fade-in slide-in-from-top-1">
                                         {formatCurrency(amount)}
                                     </p>
                                 )}
@@ -112,7 +112,7 @@ export const LoanCalculator = () => {
                         {/* Results Section */}
                         <div className="bg-white/10 rounded-lg p-5 mt-6 border border-white/10 backdrop-blur-sm">
                             <div className="box-border mb-4">
-                                <label className="text-white/80 text-sm box-border inline-block mb-1">
+                                <label className="text-white/80 text-base box-border inline-block mb-1">
                                     Est. Monthly EMI
                                 </label>
                                 <div className="text-white text-3xl font-bold tracking-tight">
@@ -123,7 +123,7 @@ export const LoanCalculator = () => {
                             <div className="h-px bg-white/20 my-3"></div>
 
                             <div className="box-border">
-                                <label className="text-white/80 text-sm box-border inline-block mb-1">
+                                <label className="text-white/80 text-base box-border inline-block mb-1">
                                     Total Amount Payable
                                 </label>
                                 <div className="text-white text-xl font-medium">
@@ -136,7 +136,7 @@ export const LoanCalculator = () => {
                             <button
                                 type="button"
                                 onClick={() => setIsModalOpen(true)}
-                                className="relative text-primary text-[15px] font-bold bg-white leading-[22.5px] text-center align-middle w-full overflow-hidden px-[30px] py-[15px] rounded-md md:text-base md:leading-6 hover:bg-gray-100 transition-colors shadow-lg active:scale-[0.98] transform duration-100"
+                                className="relative text-primary text-base font-bold bg-white leading-[22.5px] text-center align-middle w-full overflow-hidden px-[30px] py-[15px] rounded-md md:text-lg md:leading-6 hover:bg-gray-100 transition-colors shadow-lg active:scale-[0.98] transform duration-100"
                             >
                                 Apply for this loan
                             </button>

@@ -64,12 +64,12 @@ export const AdminLayout = () => {
                             <span className="w-2 h-2 rounded-full bg-primary relative">
                                 <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75"></span>
                             </span>
-                            <span className="text-xs font-bold text-primary uppercase tracking-wider">System Online</span>
+                            <span className="text-base font-bold text-primary uppercase tracking-wider">System Online</span>
                         </div>
                         <div className="h-6 w-px bg-slate-200 hidden sm:block"></div>
                         <button
                             onClick={handleLogout}
-                            className="flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-red-600 transition-colors group uppercase tracking-wider"
+                            className="flex items-center gap-2 text-base font-bold text-slate-500 hover:text-red-600 transition-colors group uppercase tracking-wider"
                         >
                             <LogOut className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                             Sign Out

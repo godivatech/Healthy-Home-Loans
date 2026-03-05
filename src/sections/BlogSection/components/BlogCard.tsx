@@ -23,7 +23,7 @@ export const BlogCard = (props: BlogCardProps) => {
                 </a>
             </div>
             <div className="box-border caret-transparent mt-[25px]">
-                <span className="text-primary text-sm box-border caret-transparent leading-[21px] font-rubik_0b5097">
+                <span className="text-primary text-base box-border caret-transparent leading-[21px] font-rubik_0b5097">
                     {props.date}
                 </span>
                 <h3 className="text-neutral-900 text-xl font-medium box-border caret-transparent leading-7 mt-3 mb-3.5 font-rubik_0b5097 md:text-[25px] md:leading-[35px]">

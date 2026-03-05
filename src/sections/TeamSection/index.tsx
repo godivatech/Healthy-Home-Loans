@@ -11,7 +11,7 @@ export const TeamSection = () => {
                     <h2 className="text-neutral-900 text-[28px] font-medium box-border caret-transparent leading-[33.6px] mt-2.5 mb-3.5 font-rubik_0b5097 md:text-[40px] md:leading-[48px]">
                         Global leadership team
                     </h2>
-                    <p className="text-zinc-600 text-[15px] box-border caret-transparent leading-[27px] max-w-[570px] m-auto md:text-base md:leading-[28.8px]">
+                    <p className="text-zinc-600 text-base box-border caret-transparent leading-[27px] max-w-[570px] m-auto md:text-lg md:leading-[28.8px]">
                         Meet our experienced team dedicated to making your loan journey smooth and successful. With 15 years of industry expertise, we're here to guide you every step of the way.
                     </p>
                 </div>

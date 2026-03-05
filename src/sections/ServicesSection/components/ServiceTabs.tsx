@@ -79,7 +79,7 @@ export const ServiceTabs = () => {
                     <div className="h-full flex flex-col">
                         <FadeIn direction="right" delay={0.2} fullWidth>
                             <div className="mb-8">
-                                <span className="text-white/80 font-medium tracking-wide text-sm uppercase mb-2 block">
+                                <span className="text-white/80 font-medium tracking-wide text-base uppercase mb-2 block">
                                     // Our Expertise
                                 </span>
                                 <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight mb-6 font-rubik_0b5097">
@@ -168,7 +168,7 @@ export const ServiceTabs = () => {
                                                         href={getWhatsAppUrl(DEFAULT_WHATSAPP_NUMBER, getLoanInquiryMessage(service.title))}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="inline-flex items-center gap-2 bg-white/10 hover:bg-[#25D366] border border-white/20 hover:border-[#25D366] text-white text-sm font-semibold px-4 py-2.5 rounded-full transition-all duration-300 group/wa"
+                                                        className="inline-flex items-center gap-2 bg-white/10 hover:bg-[#25D366] border border-white/20 hover:border-[#25D366] text-white text-base font-semibold px-4 py-2.5 rounded-full transition-all duration-300 group/wa"
                                                     >
                                                         <WhatsAppIcon size={16} className="shrink-0 group-hover/wa:scale-110 transition-transform duration-200" />
                                                         <span>Enquire on WhatsApp</span>

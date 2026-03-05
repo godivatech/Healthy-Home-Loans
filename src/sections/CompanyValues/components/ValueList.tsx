@@ -14,7 +14,7 @@ export const ValuesList = () => {
                     <h4 className="text-neutral-900 text-xl font-medium box-border caret-transparent leading-6 mb-2.5 font-rubik_0b5097 md:text-[22px] md:leading-[26.4px]">
                         Trust & Transparency
                     </h4>
-                    <p className="text-zinc-600 text-[15px] box-border caret-transparent leading-[27px] md:text-base md:leading-[28.8px]">
+                    <p className="text-zinc-600 text-base box-border caret-transparent leading-[27px] md:text-lg md:leading-[28.8px]">
                         Building lasting relationships through transparent dealings and honest communication. No hidden charges, no surprises.
                     </p>
                 </div>
@@ -27,7 +27,7 @@ export const ValuesList = () => {
                     <h4 className="text-neutral-900 text-xl font-medium box-border caret-transparent leading-6 mb-2.5 font-rubik_0b5097 md:text-[22px] md:leading-[26.4px]">
                         Speed & Efficiency
                     </h4>
-                    <p className="text-zinc-600 text-[15px] box-border caret-transparent leading-[27px] md:text-base md:leading-[28.8px]">
+                    <p className="text-zinc-600 text-base box-border caret-transparent leading-[27px] md:text-lg md:leading-[28.8px]">
                         Delivering quick solutions without compromising quality. 1 hour eligibility report, 7 days sanction guarantee.
                     </p>
                 </div>
@@ -40,7 +40,7 @@ export const ValuesList = () => {
                     <h4 className="text-neutral-900 text-xl font-medium box-border caret-transparent leading-6 mb-2.5 font-rubik_0b5097 md:text-[22px] md:leading-[26.4px]">
                         Industry Expertise
                     </h4>
-                    <p className="text-zinc-600 text-[15px] box-border caret-transparent leading-[27px] md:text-base md:leading-[28.8px]">
+                    <p className="text-zinc-600 text-base box-border caret-transparent leading-[27px] md:text-lg md:leading-[28.8px]">
                         15 years of deep knowledge in financial services. Strong relationships with 160+ lending partners for best rates.
                     </p>
                 </div>
@@ -53,7 +53,7 @@ export const ValuesList = () => {
                     <h4 className="text-neutral-900 text-xl font-medium box-border caret-transparent leading-6 mb-2.5 font-rubik_0b5097 md:text-[22px] md:leading-[26.4px]">
                         Customer-First Approach
                     </h4>
-                    <p className="text-zinc-600 text-[15px] box-border caret-transparent leading-[27px] md:text-base md:leading-[28.8px]">
+                    <p className="text-zinc-600 text-base box-border caret-transparent leading-[27px] md:text-lg md:leading-[28.8px]">
                         Tailoring solutions to your unique needs. Personal attention, dedicated support, and post-disbursement assistance.
                     </p>
                 </div>

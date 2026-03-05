@@ -11,13 +11,13 @@ export const NavbarActions = () => {
                         </svg>
                     </div>
                     <div className="text-center md:text-left">
-                        <span className="text-zinc-600 text-[13px] box-border caret-transparent leading-[19.5px] md:text-base md:leading-6 block">
+                        <span className="text-zinc-600 text-base box-border caret-transparent leading-[19.5px] md:text-base md:leading-6 block">
                             Call Us
                         </span>
-                        <p className="text-zinc-600 text-[13px] font-medium box-border caret-transparent leading-[23.4px] font-rubik_0b5097 md:text-base md:leading-[28.8px]">
+                        <p className="text-zinc-600 text-base font-medium box-border caret-transparent leading-[23.4px] font-rubik_0b5097 md:text-base md:leading-[28.8px]">
                             <a
                                 href="tel:+919677719848"
-                                className="text-neutral-900 text-[13px] box-border caret-transparent leading-[23.4px] md:text-base md:leading-[28.8px]"
+                                className="text-neutral-900 text-base box-border caret-transparent leading-[23.4px] md:text-base md:leading-[28.8px]"
                             >
                                 +91 96777 19848
                             </a>
@@ -28,7 +28,7 @@ export const NavbarActions = () => {
             <div className="relative box-border caret-transparent min-h-0 min-w-0 md:min-h-[auto] md:min-w-[auto] w-full md:w-auto">
                 <Link
                     to="/contact"
-                    className="relative text-neutral-900 text-[13px] bg-accent box-border caret-transparent block md:inline-block leading-[19.5px] text-center z-[1] overflow-hidden mt-[5px] px-5 py-3 rounded-[5px] font-medium md:text-base md:leading-6 md:px-8 hover:bg-accent/80 transition-colors w-full md:w-auto"
+                    className="relative text-neutral-900 text-base bg-accent box-border caret-transparent block md:inline-block leading-[19.5px] text-center z-[1] overflow-hidden mt-[5px] px-5 py-3 rounded-[5px] font-medium md:text-base md:leading-6 md:px-8 hover:bg-accent/80 transition-colors w-full md:w-auto"
                 >
                     Get Loan
                 </Link>

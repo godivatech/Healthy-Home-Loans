@@ -12,7 +12,7 @@ export const FundingSection = () => {
                     <h2 className="text-neutral-900 text-[28px] font-medium box-border leading-[33.6px] mt-2.5 mb-3.5 font-rubik_0b5097 md:text-[40px] md:leading-[48px]">
                         How We Make Loans Easy
                     </h2>
-                    <p className="text-zinc-600 text-[15px] box-border leading-[27px] max-w-[570px] m-auto md:text-base md:leading-[28.8px]">
+                    <p className="text-zinc-600 text-base box-border leading-[27px] max-w-[570px] m-auto md:text-lg md:leading-[28.8px]">
                         Experience a transparent and quick loan approval process designed to get you the funds you need without the stress.
                     </p>
                 </div>

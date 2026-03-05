@@ -142,13 +142,13 @@ export const ServicesPage = () => {
                                         <h3 className="text-xl font-bold font-rubik_0b5097 mb-3 text-neutral-900">
                                             {service.title}
                                         </h3>
-                                        <p className="text-zinc-600 mb-5 text-sm leading-6">
+                                        <p className="text-zinc-600 mb-5 text-base leading-6">
                                             {service.description}
                                         </p>
 
                                         <div className="mb-4 text-left">
-                                            <h4 className="font-medium text-neutral-800 mb-2 text-sm text-center">Key Features:</h4>
-                                            <ul className="list-disc pl-5 text-sm text-zinc-600">
+                                            <h4 className="font-medium text-neutral-800 mb-2 text-base text-center">Key Features:</h4>
+                                            <ul className="list-disc pl-5 text-base text-zinc-600">
                                                 {service.features.map((feature, idx) => (
                                                     <li key={idx} className="mb-1">{feature}</li>
                                                 ))}
@@ -156,11 +156,11 @@ export const ServicesPage = () => {
                                         </div>
 
                                         <div className="mt-auto pt-4 border-t border-gray-100 w-full">
-                                            <div className="flex justify-between text-sm mb-1 px-2">
+                                            <div className="flex justify-between text-base mb-1 px-2">
                                                 <span className="text-zinc-500">Amount:</span>
                                                 <span className="font-medium text-neutral-800">{service.amount}</span>
                                             </div>
-                                            <div className="flex justify-between text-sm mb-4 px-2">
+                                            <div className="flex justify-between text-base mb-4 px-2">
                                                 <span className="text-zinc-500">Tenure:</span>
                                                 <span className="font-medium text-neutral-800">{service.tenure}</span>
                                             </div>
@@ -169,7 +169,7 @@ export const ServicesPage = () => {
                                                 href={getWhatsAppUrl(DEFAULT_WHATSAPP_NUMBER, getLoanInquiryMessage(service.title))}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="w-full flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] active:scale-[0.98] text-white font-semibold text-sm py-3 rounded-xl transition-all duration-300 shadow-sm hover:shadow-[0_4px_20px_rgba(37,211,102,0.35)] group/wa"
+                                                className="w-full flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] active:scale-[0.98] text-white font-semibold text-base py-3 rounded-xl transition-all duration-300 shadow-sm hover:shadow-[0_4px_20px_rgba(37,211,102,0.35)] group/wa"
                                             >
                                                 <WhatsAppIcon size={18} className="shrink-0 group-hover/wa:scale-110 transition-transform duration-200" />
                                                 <span>Enquire on WhatsApp</span>
@@ -218,15 +218,15 @@ export const ServicesPage = () => {
                                                 className="overflow-hidden"
                                             >
                                                 <div className="p-4 pt-0 border-t border-gray-100">
-                                                    <p className="text-zinc-600 text-sm leading-6 mb-4">
+                                                    <p className="text-zinc-600 text-base leading-6 mb-4">
                                                         {service.description}
                                                     </p>
 
                                                     <div className="mb-4">
-                                                        <h4 className="font-medium text-neutral-800 mb-2 text-sm">Key Features:</h4>
+                                                        <h4 className="font-medium text-neutral-800 mb-2 text-base">Key Features:</h4>
                                                         <ul className="space-y-1">
                                                             {service.features.map((feature, idx) => (
-                                                                <li key={idx} className="text-sm text-zinc-600 flex items-start">
+                                                                <li key={idx} className="text-base text-zinc-600 flex items-start">
                                                                     <span className="text-primary mr-2">•</span>
                                                                     <span>{feature}</span>
                                                                 </li>
@@ -235,11 +235,11 @@ export const ServicesPage = () => {
                                                     </div>
 
                                                     <div className="bg-gray-50 rounded-lg p-3 mb-4">
-                                                        <div className="flex justify-between text-sm mb-2">
+                                                        <div className="flex justify-between text-base mb-2">
                                                             <span className="text-zinc-500">Amount:</span>
                                                             <span className="font-medium text-neutral-800">{service.amount}</span>
                                                         </div>
-                                                        <div className="flex justify-between text-sm">
+                                                        <div className="flex justify-between text-base">
                                                             <span className="text-zinc-500">Tenure:</span>
                                                             <span className="font-medium text-neutral-800">{service.tenure}</span>
                                                         </div>
@@ -249,7 +249,7 @@ export const ServicesPage = () => {
                                                         href={getWhatsAppUrl(DEFAULT_WHATSAPP_NUMBER, getLoanInquiryMessage(service.title))}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="w-full flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] active:scale-[0.98] text-white font-semibold text-sm py-3 rounded-xl transition-all duration-300 shadow-sm hover:shadow-[0_4px_20px_rgba(37,211,102,0.35)] group/wa"
+                                                        className="w-full flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] active:scale-[0.98] text-white font-semibold text-base py-3 rounded-xl transition-all duration-300 shadow-sm hover:shadow-[0_4px_20px_rgba(37,211,102,0.35)] group/wa"
                                                     >
                                                         <WhatsAppIcon size={18} className="shrink-0 group-hover/wa:scale-110 transition-transform duration-200" />
                                                         <span>Enquire on WhatsApp</span>

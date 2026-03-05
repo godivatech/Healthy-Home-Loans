@@ -14,7 +14,7 @@ export const WhyChooseContent = () => {
                     <h2 className="text-neutral-900 text-[25px] font-medium box-border caret-transparent leading-[30px] text-center mt-2.5 mb-3.5 font-rubik_0b5097 md:text-4xl md:leading-[43.2px] md:text-start">
                         Why Choose Healthy Home Loans?
                     </h2>
-                    <p className="text-zinc-600 text-[15px] box-border caret-transparent leading-[27px] max-w-full text-center m-auto md:text-base md:leading-[28.8px] md:max-w-[570px] md:text-start">
+                    <p className="text-zinc-600 text-base box-border caret-transparent leading-[27px] max-w-full text-center m-auto md:text-lg md:leading-[28.8px] md:max-w-[570px] md:text-start">
                         We are dedicated to making your financial journey smooth and stress-free. With our "Easy Loans, Peaceful Living" philosophy, we handle the complexities of bank financing so you can focus on your dreams.
                     </p>
                     <div className="mt-6 space-y-3">
