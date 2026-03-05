@@ -40,7 +40,7 @@ export const FooterColumn = (props: FooterColumnProps) => {
     if (props.variant === "logo") {
         return (
             <div className={`box-border caret-transparent shrink-0 max-w-full w-full px-3 ${widthClass}`}>
-                <div className="box-border caret-transparent mb-[25px] -mt-8">
+                <div className="box-border caret-transparent mb-[25px]">
                     <div className="box-border caret-transparent">
                         <a
                             href="/"
@@ -49,7 +49,7 @@ export const FooterColumn = (props: FooterColumnProps) => {
                             <img
                                 alt={props.logoAlt || "image"}
                                 src={props.logoUrl}
-                                className="text-transparent box-border max-w-full w-[150px] mb-[-30px] ml-[-30px] brightness-0 invert scale-[1.8] origin-left"
+                                className="w-[160px] h-auto object-contain mb-4"
                             />
                         </a>
                     </div>

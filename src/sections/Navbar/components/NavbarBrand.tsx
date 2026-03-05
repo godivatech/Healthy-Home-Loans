@@ -9,7 +9,7 @@ export const NavbarBrand = () => {
             <img
                 alt="Healthy Home Loans"
                 src={logo}
-                className="text-transparent h-[100px] w-auto box-border max-w-full text-nowrap object-contain scale-[2.5]"
+                className="w-[150px] md:w-[210px] h-auto object-contain"
             />
         </a>
     );
