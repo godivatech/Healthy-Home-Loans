@@ -11,7 +11,7 @@ interface SEOProps {
 }
 
 const DEFAULT_DESCRIPTION = "Healthy Home Loans offers easy, transparent, and hassle-free home financing solutions for your dream home or plot.";
-const BASE_URL = "https://healthyhomeloans.in"; // User should update this domain
+const BASE_URL = "https://www.healthyhomeloans.in";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/assets/og-image-default.jpg`;
 
 export const SEO = ({

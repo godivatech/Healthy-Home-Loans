@@ -5,4 +5,4 @@ Allow: /
 Disallow: /api/
 Disallow: /*?*
 
-Sitemap: https://healthyhomeloans.in/sitemap.xml
+Sitemap: https://www.healthyhomeloans.in/sitemap.xml

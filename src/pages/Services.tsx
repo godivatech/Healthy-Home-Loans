@@ -117,7 +117,7 @@ export const ServicesPage = () => {
                 description="Explore Healthy Home Loans services including Home Loans, Personal Loans, Mortgage Loans, Business Loans, and more. Serving Madurai, Tenkasi, and all of Tamil Nadu."
                 canonicalUrl="/services"
             />
-            <StructuredData type="WebPage" data={{ name: "Healthy Home Loans Services", url: "https://healthyhomeloans.in/services" }} />
+            <StructuredData type="WebPage" data={{ name: "Healthy Home Loans Services", url: "https://www.healthyhomeloans.in/services" }} />
             <Navbar />
 
             <PageBanner title="Our Services" breadcrumb="Home" headingLevel="h1" />

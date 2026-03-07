@@ -239,7 +239,7 @@ export const PartnersPage = () => {
                 description="View our extensive network of 160+ Public, Private, Small Finance Banks, and NBFC partners. We guarantee the best home loan options in Tamil Nadu."
                 canonicalUrl="/partners"
             />
-            <StructuredData type="WebPage" data={{ name: "Healthy Home Loans Bank Partners", url: "https://healthyhomeloans.in/partners" }} />
+            <StructuredData type="WebPage" data={{ name: "Healthy Home Loans Bank Partners", url: "https://www.healthyhomeloans.in/partners" }} />
             <Navbar />
 
             <PageBanner title="Our Partners" headingLevel="h1" />

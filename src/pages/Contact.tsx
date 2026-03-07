@@ -40,9 +40,9 @@ export const ContactPage = () => {
 
     const localBusinessSchema = {
         name: "Healthy Home Loans",
-        image: "https://healthyhomeloans.in/assets/og-image-default.jpg",
-        "@id": "https://healthyhomeloans.in",
-        url: "https://healthyhomeloans.in/contact",
+        image: "https://www.healthyhomeloans.in/assets/og-image-default.jpg",
+        "@id": "https://www.healthyhomeloans.in",
+        url: "https://www.healthyhomeloans.in/contact",
         telephone: "+919677719848",
         address: {
             "@type": "PostalAddress",

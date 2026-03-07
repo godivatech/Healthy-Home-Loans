@@ -20,7 +20,7 @@ export const LoansPage = () => {
                 description="Check your home loan eligibility, interest rates, and required documents. We simplify the mortgage process for salaried and self-employed individuals."
                 canonicalUrl="/loans"
             />
-            <StructuredData type="WebPage" data={{ name: "Loans and Eligibility - Healthy Home Loans", url: "https://healthyhomeloans.in/loans" }} />
+            <StructuredData type="WebPage" data={{ name: "Loans and Eligibility - Healthy Home Loans", url: "https://www.healthyhomeloans.in/loans" }} />
             <Navbar />
 
             <PageBanner title="Loans" headingLevel="h1" />

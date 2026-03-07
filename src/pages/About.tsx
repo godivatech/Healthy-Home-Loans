@@ -19,7 +19,7 @@ export const AboutPage = () => {
                 description="Learn about Healthy Home Loans and our Managing Director, S. Mabubasha Shah Hussain. We have helped over 1000+ clients achieve their financial dreams in Tamil Nadu."
                 canonicalUrl="/about"
             />
-            <StructuredData type="WebPage" data={{ name: "About Healthy Home Loans", url: "https://healthyhomeloans.in/about" }} />
+            <StructuredData type="WebPage" data={{ name: "About Healthy Home Loans", url: "https://www.healthyhomeloans.in/about" }} />
             <Navbar />
 
             <PageBanner title="About Us" headingLevel="h1" />
