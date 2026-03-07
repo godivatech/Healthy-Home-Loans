@@ -79,7 +79,7 @@ import { ServicesPage } from "@/pages/Services";
 import { ContactPage } from "@/pages/Contact";
 import { PartnersPage } from "@/pages/Partners";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
-// import { AdminLayout } from "@/pages/admin/AdminLayout";
+import { AdminLayout } from "@/pages/admin/AdminLayout";
 import { NotFoundPage } from "@/pages/NotFound";
 
 export const App = () => {
@@ -92,8 +92,7 @@ export const App = () => {
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/partners" element={<PartnersPage />} />
                 <Route path="/loans" element={<LoansPage />} />
-                {/* <Route path="/admin/*" element={<AdminLayout />} /> */}
-                <Route path="/admin/*" element={<Navigate to="/404" replace />} />
+                <Route path="/admin/*" element={<AdminLayout />} />
                 <Route path="/404" element={<NotFoundPage />} />
                 <Route path="*" element={<Navigate to="/404" replace />} />
             </Routes>

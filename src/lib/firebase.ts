@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc, serverTimestamp, query, orderBy, getDocs } from 'firebase/firestore';
+import { getFirestore, collection, addDoc, serverTimestamp, query, orderBy, getDocs, doc, deleteDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -80,5 +80,25 @@ export const getLoanLeads = async () => {
     } catch (error) {
         console.error("Error fetching loan leads:", error);
         return [];
+    }
+};
+
+export const deleteContactSubmission = async (id: string) => {
+    try {
+        await deleteDoc(doc(db, "websites", "healthy-home-loans", "contact-submissions", id));
+        return { success: true };
+    } catch (error) {
+        console.error("Error deleting contact submission:", error);
+        return { success: false, error };
+    }
+};
+
+export const deleteLoanLead = async (id: string) => {
+    try {
+        await deleteDoc(doc(db, "websites", "healthy-home-loans", "loan-leads", id));
+        return { success: true };
+    } catch (error) {
+        console.error("Error deleting loan lead:", error);
+        return { success: false, error };
     }
 };

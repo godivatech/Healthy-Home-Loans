@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Users, FileText, Download } from "lucide-react";
+import { Users, FileText, Download, Trash2 } from "lucide-react";
 import { DataTable } from "@/components/admin/DataTable";
-import { getContactSubmissions, getLoanLeads } from "@/lib/firebase";
+import { ConfirmModal } from "@/components/admin/ConfirmModal";
+import { getContactSubmissions, getLoanLeads, deleteContactSubmission, deleteLoanLead } from "@/lib/firebase";
 
 export const AdminDashboard = () => {
     const [activeTab, setActiveTab] = useState<'contacts' | 'leads'>('contacts');
@@ -10,6 +11,12 @@ export const AdminDashboard = () => {
     const [contacts, setContacts] = useState<any[]>([]);
     const [leads, setLeads] = useState<any[]>([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [deleteModal, setDeleteModal] = useState<{ isOpen: boolean; id: string | null; type: 'contacts' | 'leads' | null }>({
+        isOpen: false,
+        id: null,
+        type: null
+    });
 
     useEffect(() => {
         const fetchData = async () => {
@@ -47,13 +54,58 @@ export const AdminDashboard = () => {
         );
     };
 
+    const promptDelete = (id: string, type: 'contacts' | 'leads') => {
+        setDeleteModal({ isOpen: true, id, type });
+    };
+
+    const confirmDelete = async () => {
+        const { id, type } = deleteModal;
+        if (!id || !type) return;
+
+        setIsDeleting(true);
+        try {
+            if (type === 'contacts') {
+                const result = await deleteContactSubmission(id);
+                if (result.success) {
+                    setContacts(prev => prev.filter(item => item.id !== id));
+                } else {
+                    alert("Failed to delete contact submission.");
+                }
+            } else {
+                const result = await deleteLoanLead(id);
+                if (result.success) {
+                    setLeads(prev => prev.filter(item => item.id !== id));
+                } else {
+                    alert("Failed to delete loan lead.");
+                }
+            }
+        } catch (error) {
+            console.error("Error deleting record:", error);
+            alert("An error occurred while deleting the record.");
+        } finally {
+            setIsDeleting(false);
+            setDeleteModal({ isOpen: false, id: null, type: null });
+        }
+    };
+
     const contactColumns = [
         { header: "Date Received", accessor: "timestamp", render: formatDate },
         { header: "Client Name", accessor: "name", render: (val: string) => <span className="font-bold text-primary">{val}</span> },
         { header: "Email Address", accessor: "email" },
         { header: "Phone Number", accessor: "phone" },
         { header: "Inquiry Subject", accessor: "subject", render: (val: string) => <span className="text-slate-700 bg-slate-100 px-2.5 py-1 rounded truncate max-w-[200px] inline-block text-base font-medium">{val}</span> },
-        { header: "Message", accessor: "message", render: (val: string) => <div className="max-w-[250px] truncate text-slate-500" title={val}>{val}</div> }
+        { header: "Message", accessor: "message", render: (val: string) => <div className="max-w-[250px] truncate text-slate-500" title={val}>{val}</div> },
+        {
+            header: "Actions", accessor: "id", render: (val: string) => (
+                <button
+                    onClick={() => promptDelete(val, 'contacts')}
+                    className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
+                    title="Delete Record"
+                >
+                    <Trash2 className="w-4 h-4" />
+                </button>
+            )
+        }
     ];
 
     const leadColumns = [
@@ -62,7 +114,18 @@ export const AdminDashboard = () => {
         { header: "City", accessor: "city" },
         { header: "Mobile", accessor: "mobile" },
         { header: "Loan Amount", accessor: "loanDetails", render: (val: any) => val?.amount ? <span className="text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded font-bold text-base border border-emerald-100">{val.amount}</span> : '-' },
-        { header: "Est. EMI", accessor: "loanDetails", render: (val: any) => val?.emi ? <span className="font-medium text-slate-700">₹{val.emi}</span> : '-' }
+        { header: "Est. EMI", accessor: "loanDetails", render: (val: any) => val?.emi ? <span className="font-medium text-slate-700">₹{val.emi}</span> : '-' },
+        {
+            header: "Actions", accessor: "id", render: (val: string) => (
+                <button
+                    onClick={() => promptDelete(val, 'leads')}
+                    className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
+                    title="Delete Record"
+                >
+                    <Trash2 className="w-4 h-4" />
+                </button>
+            )
+        }
     ];
 
     const exportToCsv = (data: any[], filename: string) => {
@@ -195,6 +258,14 @@ export const AdminDashboard = () => {
                 )}
             </div>
 
+            <ConfirmModal
+                isOpen={deleteModal.isOpen}
+                onClose={() => !isDeleting && setDeleteModal({ isOpen: false, id: null, type: null })}
+                onConfirm={confirmDelete}
+                title="Delete Record"
+                message="Are you sure you want to delete this record? This action cannot be undone."
+                isProcessing={isDeleting}
+            />
         </div>
     );
 };
