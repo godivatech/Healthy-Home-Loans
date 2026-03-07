@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Users, FileText, Download, Trash2 } from "lucide-react";
+import { Users, FileText, Download, Trash2, Eye } from "lucide-react";
 import { DataTable } from "@/components/admin/DataTable";
 import { ConfirmModal } from "@/components/admin/ConfirmModal";
+import { ViewModal } from "@/components/admin/ViewModal";
 import { getContactSubmissions, getLoanLeads, deleteContactSubmission, deleteLoanLead } from "@/lib/firebase";
 
 export const AdminDashboard = () => {
@@ -15,6 +16,11 @@ export const AdminDashboard = () => {
     const [deleteModal, setDeleteModal] = useState<{ isOpen: boolean; id: string | null; type: 'contacts' | 'leads' | null }>({
         isOpen: false,
         id: null,
+        type: null
+    });
+    const [viewModal, setViewModal] = useState<{ isOpen: boolean; data: any; type: 'contacts' | 'leads' | null }>({
+        isOpen: false,
+        data: null,
         type: null
     });
 
@@ -52,6 +58,10 @@ export const AdminDashboard = () => {
                 </span>
             </div>
         );
+    };
+
+    const promptView = (data: any, type: 'contacts' | 'leads') => {
+        setViewModal({ isOpen: true, data, type });
     };
 
     const promptDelete = (id: string, type: 'contacts' | 'leads') => {
@@ -96,14 +106,23 @@ export const AdminDashboard = () => {
         { header: "Inquiry Subject", accessor: "subject", render: (val: string) => <span className="text-slate-700 bg-slate-100 px-2.5 py-1 rounded truncate max-w-[200px] inline-block text-base font-medium">{val}</span> },
         { header: "Message", accessor: "message", render: (val: string) => <div className="max-w-[250px] truncate text-slate-500" title={val}>{val}</div> },
         {
-            header: "Actions", accessor: "id", render: (val: string) => (
-                <button
-                    onClick={() => promptDelete(val, 'contacts')}
-                    className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
-                    title="Delete Record"
-                >
-                    <Trash2 className="w-4 h-4" />
-                </button>
+            header: "Actions", accessor: "id", render: (val: string, row: any) => (
+                <div className="flex items-center gap-1">
+                    <button
+                        onClick={() => promptView(row, 'contacts')}
+                        className="p-2 text-slate-400 hover:text-primary hover:bg-primary/10 rounded transition-colors"
+                        title="View Submission"
+                    >
+                        <Eye className="w-4 h-4" />
+                    </button>
+                    <button
+                        onClick={() => promptDelete(val, 'contacts')}
+                        className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
+                        title="Delete Record"
+                    >
+                        <Trash2 className="w-4 h-4" />
+                    </button>
+                </div>
             )
         }
     ];
@@ -116,14 +135,23 @@ export const AdminDashboard = () => {
         { header: "Loan Amount", accessor: "loanDetails", render: (val: any) => val?.amount ? <span className="text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded font-bold text-base border border-emerald-100">{val.amount}</span> : '-' },
         { header: "Est. EMI", accessor: "loanDetails", render: (val: any) => val?.emi ? <span className="font-medium text-slate-700">₹{val.emi}</span> : '-' },
         {
-            header: "Actions", accessor: "id", render: (val: string) => (
-                <button
-                    onClick={() => promptDelete(val, 'leads')}
-                    className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
-                    title="Delete Record"
-                >
-                    <Trash2 className="w-4 h-4" />
-                </button>
+            header: "Actions", accessor: "id", render: (val: string, row: any) => (
+                <div className="flex items-center gap-1">
+                    <button
+                        onClick={() => promptView(row, 'leads')}
+                        className="p-2 text-slate-400 hover:text-primary hover:bg-primary/10 rounded transition-colors"
+                        title="View Submission"
+                    >
+                        <Eye className="w-4 h-4" />
+                    </button>
+                    <button
+                        onClick={() => promptDelete(val, 'leads')}
+                        className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
+                        title="Delete Record"
+                    >
+                        <Trash2 className="w-4 h-4" />
+                    </button>
+                </div>
             )
         }
     ];
@@ -265,6 +293,13 @@ export const AdminDashboard = () => {
                 title="Delete Record"
                 message="Are you sure you want to delete this record? This action cannot be undone."
                 isProcessing={isDeleting}
+            />
+
+            <ViewModal
+                isOpen={viewModal.isOpen}
+                onClose={() => setViewModal({ isOpen: false, data: null, type: null })}
+                data={viewModal.data}
+                type={viewModal.type}
             />
         </div>
     );
