@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { Navbar } from "@/sections/Navbar";
 import { Hero } from "@/sections/Hero";
 import { LogoSlider } from "@/sections/LogoSlider";
@@ -15,6 +16,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { LoansPage } from "@/pages/Loans";
 import { SEO } from "@/components/SEO";
 import { StructuredData } from "@/components/SEO/StructuredData";
+import { LeadCaptureModal } from "@/components/LeadCaptureModal";
 
 const HomePage = () => {
     const financialServiceSchema = {
@@ -82,9 +84,25 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { AdminLayout } from "@/pages/admin/AdminLayout";
 import { NotFoundPage } from "@/pages/NotFound";
 
-export const App = () => {
+const AppContent = () => {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const location = useLocation();
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsPopupOpen(true);
+        }, 1000);
+        return () => clearTimeout(timer);
+    }, []);
+
+    const handleClosePopup = () => {
+        setIsPopupOpen(false);
+    };
+
+    const isAdmin = location.pathname.startsWith("/admin");
+
     return (
-        <Router>
+        <>
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
@@ -97,6 +115,21 @@ export const App = () => {
                 <Route path="*" element={<Navigate to="/404" replace />} />
             </Routes>
             <WhatsAppFloat />
+            {!isAdmin && (
+                <LeadCaptureModal 
+                    isOpen={isPopupOpen} 
+                    onClose={handleClosePopup} 
+                    loanDetails={null} 
+                />
+            )}
+        </>
+    );
+};
+
+export const App = () => {
+    return (
+        <Router>
+            <AppContent />
         </Router>
     );
 };
