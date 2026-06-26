@@ -34,7 +34,7 @@ export const ContactPage = () => {
         }
     };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
@@ -200,15 +200,26 @@ export const ContactPage = () => {
                                                 />
                                             </div>
                                             <div className="w-full md:w-1/2 px-3">
-                                                <label className="block text-base font-medium text-zinc-700 mb-1">Subject</label>
-                                                <input
-                                                    type="text"
+                                                <label className="block text-base font-medium text-zinc-700 mb-1">Reason for Inquiry</label>
+                                                <select
                                                     name="subject"
+                                                    required
                                                     value={formData.subject}
                                                     onChange={handleChange}
-                                                    className="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:border-primary transition-colors"
-                                                    placeholder="Subject"
-                                                />
+                                                    className="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:border-primary transition-colors bg-white text-zinc-800"
+                                                >
+                                                    <option value="" disabled>Select a topic...</option>
+                                                    <option value="New Housing Loan">New Housing Loan</option>
+                                                    <option value="Personal Loan">Personal Loan</option>
+                                                    <option value="Mortgage Loan">Mortgage Loan</option>
+                                                    <option value="Business Loan">Business Loan</option>
+                                                    <option value="Car Loan">Car Loan</option>
+                                                    <option value="Land Purchase Loan">Land Purchase Loan</option>
+                                                    <option value="Credit Card Inquiry">Credit Card Inquiry</option>
+                                                    <option value="Fixed Deposit Inquiry">Fixed Deposit Inquiry</option>
+                                                    <option value="Insurance Services">Insurance Services</option>
+                                                    <option value="General Inquiry">General / Other Inquiry</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div className="mb-6">
