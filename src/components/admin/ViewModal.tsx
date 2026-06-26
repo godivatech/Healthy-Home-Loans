@@ -63,10 +63,20 @@ export const ViewModal = ({ isOpen, onClose, data, type }: ViewModalProps) => {
                         </div>
 
                         {type === 'leads' && (
-                            <div className="space-y-1">
-                                <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">City</span>
-                                <div className="text-slate-700 font-medium bg-slate-50 px-4 py-2.5 rounded-lg border border-slate-100">{data.city || '-'}</div>
-                            </div>
+                            <>
+                                {data.loanType && (
+                                    <div className="space-y-1">
+                                        <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Loan Type</span>
+                                        <div className="text-slate-800 font-bold bg-primary/5 px-4 py-2.5 rounded-lg border border-primary/10">{data.loanType}</div>
+                                    </div>
+                                )}
+                                {data.city && (
+                                    <div className="space-y-1">
+                                        <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">City</span>
+                                        <div className="text-slate-700 font-medium bg-slate-50 px-4 py-2.5 rounded-lg border border-slate-100">{data.city}</div>
+                                    </div>
+                                )}
+                            </>
                         )}
 
                         {type === 'leads' && data.loanDetails && (

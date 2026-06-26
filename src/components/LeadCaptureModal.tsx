@@ -21,7 +21,7 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
     // Form State
     const [formData, setFormData] = useState({
         name: "",
-        city: "",
+        loanType: "",
         mobile: ""
     });
     const [errors, setErrors] = useState<Record<string, string>>({});
@@ -29,7 +29,7 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
     const validate = () => {
         const newErrors: Record<string, string> = {};
         if (!formData.name.trim()) newErrors.name = "Name is required";
-        if (!formData.city.trim()) newErrors.city = "City is required";
+        if (!loanDetails && !formData.loanType) newErrors.loanType = "Loan type is required";
         if (!formData.mobile.trim()) {
             newErrors.mobile = "Mobile number is required";
         } else if (!/^\d{10}$/.test(formData.mobile.replace(/\D/g, ''))) {
@@ -41,29 +41,37 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!validate()) return;
+        try {
+            if (!validate()) return;
 
-        setIsLoading(true);
-        setSubmitError(null);
+            setIsLoading(true);
+            setSubmitError(null);
 
-        const result = await submitLeadCapture({
-            ...formData,
-            loanDetails: loanDetails || null
-        });
+            const result = await submitLeadCapture({
+                name: formData.name,
+                mobile: formData.mobile,
+                loanType: loanDetails ? "Housing Loan" : formData.loanType,
+                loanDetails: loanDetails || null
+            });
 
-        setIsLoading(false);
+            setIsLoading(false);
 
-        if (result.success) {
-            setStep('success');
-        } else {
-            console.error(result.error);
-            setSubmitError("Failed to submit. Please try again or call us directly.");
+            if (result.success) {
+                setStep('success');
+            } else {
+                console.error(result.error);
+                setSubmitError("Failed to submit. Please try again or call us directly.");
+            }
+        } catch (error: any) {
+            console.error("Submit error:", error);
+            alert("Error: " + (error?.message || error));
+            setIsLoading(false);
         }
     };
 
     const handleClose = () => {
         setStep('form');
-        setFormData({ name: "", city: "", mobile: "" });
+        setFormData({ name: "", loanType: "", mobile: "" });
         setErrors({});
         setSubmitError(null);
         onClose();
@@ -139,20 +147,29 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
                                                 className={`w-full px-4 py-2 rounded-lg border ${errors.name ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:ring-primary/20'} focus:outline-none focus:ring-4 transition-all`}
                                                 placeholder="Enter your name"
                                             />
-                                            {errors.name && <p className="text-red-500 text-base mt-1">{errors.name}</p>}
+                                            {errors.name && <p className="text-red-600 text-base mt-1 font-medium" style={{ color: '#dc2626', display: 'block' }}>{errors.name}</p>}
                                         </div>
 
-                                        <div>
-                                            <label className="block text-base font-medium text-gray-700 mb-1">City</label>
-                                            <input
-                                                type="text"
-                                                value={formData.city}
-                                                onChange={e => setFormData({ ...formData, city: e.target.value })}
-                                                className={`w-full px-4 py-2 rounded-lg border ${errors.city ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:ring-primary/20'} focus:outline-none focus:ring-4 transition-all`}
-                                                placeholder="Enter your city"
-                                            />
-                                            {errors.city && <p className="text-red-500 text-base mt-1">{errors.city}</p>}
-                                        </div>
+                                        {!loanDetails && (
+                                            <div>
+                                                <label className="block text-base font-medium text-gray-700 mb-1">Loan Type</label>
+                                                <select
+                                                    value={formData.loanType}
+                                                    onChange={e => setFormData({ ...formData, loanType: e.target.value })}
+                                                    className={`w-full px-4 py-2 rounded-lg border ${errors.loanType ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:ring-primary/20'} focus:outline-none focus:ring-4 transition-all bg-white text-gray-800`}
+                                                >
+                                                    <option value="" disabled>Select loan type...</option>
+                                                    <option value="Housing Loan">Housing Loan</option>
+                                                    <option value="Personal Loan">Personal Loan</option>
+                                                    <option value="Mortgage Loan">Mortgage Loan</option>
+                                                    <option value="Business Loan">Business Loan</option>
+                                                    <option value="Car Loan">Car Loan</option>
+                                                    <option value="Land Purchase Loan">Land Purchase Loan</option>
+                                                    <option value="Other">Other / General Enquiry</option>
+                                                </select>
+                                                {errors.loanType && <p className="text-red-600 text-base mt-1 font-medium" style={{ color: '#dc2626', display: 'block' }}>{errors.loanType}</p>}
+                                            </div>
+                                        )}
 
                                         <div>
                                             <label className="block text-base font-medium text-gray-700 mb-1">Mobile Number</label>
@@ -169,11 +186,12 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
                                                     placeholder="98765 43210"
                                                 />
                                             </div>
-                                            {errors.mobile && <p className="text-red-500 text-base mt-1">{errors.mobile}</p>}
+                                            {errors.mobile && <p className="text-red-600 text-base mt-1 font-medium" style={{ color: '#dc2626', display: 'block' }}>{errors.mobile}</p>}
                                         </div>
 
                                         <button
                                             type="submit"
+                                            onClick={handleSubmit}
                                             disabled={isLoading}
                                             className="w-full bg-primary text-white font-bold py-3 rounded-lg mt-6 hover:bg-neutral-900 active:scale-[0.98] transition-all flex items-center justify-center gap-2 shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
                                         >

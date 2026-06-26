@@ -130,7 +130,8 @@ export const AdminDashboard = () => {
     const leadColumns = [
         { header: "Date Received", accessor: "timestamp", render: formatDate },
         { header: "Client Name", accessor: "name", render: (val: string) => <span className="font-bold text-primary">{val}</span> },
-        { header: "City", accessor: "city" },
+        { header: "Loan Type", accessor: "loanType", render: (val: string) => val ? <span className="font-medium text-slate-700 bg-slate-100 px-2.5 py-1 rounded inline-block text-base">{val}</span> : '-' },
+        { header: "City", accessor: "city", render: (val: string) => val || '-' },
         { header: "Mobile", accessor: "mobile" },
         { header: "Loan Amount", accessor: "loanDetails", render: (val: any) => val?.amount ? <span className="text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded font-bold text-base border border-emerald-100">{val.amount}</span> : '-' },
         { header: "Est. EMI", accessor: "loanDetails", render: (val: any) => val?.emi ? <span className="font-medium text-slate-700">₹{val.emi}</span> : '-' },
