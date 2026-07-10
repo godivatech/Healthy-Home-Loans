@@ -1,5 +1,5 @@
 import bannerImage from "@/assets/images/banner 3.jpeg";
-import bannerImageMobile from "@/assets/images/Banner 1 mobile.jpeg";
+import bannerImageMobile from "@/assets/images/NEW MOBILE-1.png";
 
 export const Hero = () => {
     return (
