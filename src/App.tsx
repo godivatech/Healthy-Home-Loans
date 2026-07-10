@@ -83,6 +83,8 @@ import { PartnersPage } from "@/pages/Partners";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { AdminLayout } from "@/pages/admin/AdminLayout";
 import { NotFoundPage } from "@/pages/NotFound";
+import { PrivacyPolicyPage } from "@/pages/PrivacyPolicy";
+import { TermsAndConditionsPage } from "@/pages/TermsAndConditions";
 
 const AppContent = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -110,6 +112,8 @@ const AppContent = () => {
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/partners" element={<PartnersPage />} />
                 <Route path="/loans" element={<LoansPage />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+                <Route path="/terms-and-conditions" element={<TermsAndConditionsPage />} />
                 <Route path="/admin/*" element={<AdminLayout />} />
                 <Route path="/404" element={<NotFoundPage />} />
                 <Route path="*" element={<Navigate to="/404" replace />} />

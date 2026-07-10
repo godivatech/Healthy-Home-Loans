@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Check, Loader2, AlertCircle } from "lucide-react";
 import { submitLeadCapture } from "@/lib/firebase";
+import popupImg from "@/assets/pop up.png";
 
 interface LeadCaptureModalProps {
     isOpen: boolean;
@@ -97,8 +98,19 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
                             animate={{ scale: 1, opacity: 1, y: 0 }}
                             exit={{ scale: 0.95, opacity: 0, y: 20 }}
                             transition={{ type: "spring", duration: 0.5 }}
-                            className="bg-white w-full max-w-md rounded-xl shadow-2xl overflow-hidden pointer-events-auto"
+                            className="bg-white w-full max-w-md md:max-w-4xl rounded-xl shadow-2xl overflow-hidden pointer-events-auto flex flex-col md:flex-row"
                         >
+                            {/* Left Column (Image) */}
+                            <div className="hidden md:block md:w-1/2 bg-[#b71c1c] flex items-center justify-center overflow-hidden">
+                                <img
+                                    src={popupImg}
+                                    alt="Healthy Home Loans"
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+
+                            {/* Right Column (Form / Content) */}
+                            <div className="w-full md:w-1/2 flex flex-col justify-center">
                             {step === 'form' ? (
                                 <div className="p-6 md:p-8">
                                     <div className="flex justify-between items-start mb-6">
@@ -223,6 +235,7 @@ export const LeadCaptureModal = ({ isOpen, onClose, loanDetails }: LeadCaptureMo
                                     </button>
                                 </div>
                             )}
+                            </div>
                         </motion.div>
                     </div>
                 </>
